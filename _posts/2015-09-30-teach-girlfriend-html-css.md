@@ -1,40 +1,45 @@
-##innerHtml、innerText、textContent、html别傻傻分不清楚啦  
-* innerText和textContent推荐使用textContent
-    *  textContent会获取所有元素的内容，包括 script 和 style元素，然而IE里面的innerText不会
-    *  innerText会受样式的影响，他不返回隐藏元素，而textContent返回
-    *  由于innerText会受样式的影响，所以它会触发重排（reflow）,但textContent不会
-*  当需要往一个元素里面写文本的时候，innerHtml和textContent推荐使用textContent
-    *  因为textContent文本不会解析html，所以他很可能在性能上表现更好，同时还能避免XSS攻击
-*  当需要往一个元素里面写html内容的时候，innerHtml和html推荐使用html
+---
+layout: post
+title:  "Teach Girlfriend to make a Web Pages like Zhihu"
+date:   2015-03-21 15:14:54
+categories: Bootstrap
+excerpt: Girlfriend learning write code to copy zhihu 仿造知乎zhihu，今天教女朋友编程，仿造知乎做了一个页面，使用了bootstrap, html, css
+---
 
-##获取数据  
-* data["00340F0R"]和data.00340F0R前者更好些
-* html5 element.dataset API
-   *  这是html5的新功能，用来取代jquery中的$.data()
-   *  如果你的页面只需要简单的操作data-*自定义属性,可以用它
-*  使用方法  
+* content
+{:toc}
 
-```html
-    <div id="myDiv" data-name="myDiv" data-id="myId" data-my-custom-key="This is the value"></div>
-```
-```javascript
-    //获取数据
-    // Get the element
-    var element = document.getElementById("myDiv");
 
-    // Get the id
-    var id = element.dataset.id;
-    
-    // Retrieves "data-my-custom-key"
-    var customKey = element.dataset.myCustomKey;
-    
-    // 可以赋值
-    element.dataset.myCustomKey = "Some other value";
-    
-    //给不存在的data-属性赋值，会自动创建
-    element.dataset.mootoolsFtw = "true";
-```  
-###相关链接  
-* https://jsperf.com/jquery-html-vs-innerhtml-the-better-way/3
-* https://jsperf.com/jquery-html-vs-text-vs-innerhtml-vs-innertext-textconte/2
-* https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
+My girlfriend is learning html and css recently. I told her to follow the video. Here, I recommend a video in Chinese that suite for new learners. The name of course is Getting HTML web pages dev in 8 hours ( 8小时学会HTML网页开发 ) . I watched this video at very first time. The teacher named Eighteen Swallows ( 燕十八 ) . He teached very clear even himself being on screen to show what is float or box-model.    
+<!-- ![燕十八](http://7q5cdt.com1.z0.glb.clouddn.com/teach-girlfriend-html-18swallows.png) -->
+
+> Here is the site of the free online video.   
+> [http://study.163.com/course/courseMain.htm?courseId=432008](http://study.163.com/course/courseMain.htm?courseId=432008)    
+
+> I did the detailed note about this course. You can read here:   
+> [http://wenku.baidu.com/view/aa136099f90f76c660371a35](http://wenku.baidu.com/view/aa136099f90f76c660371a35)   
+
+<br>
+<br>
+
+
+Now I'll tell something happend today. She has watched the video above, and knows a little on BootStrap. So she wants to do some pages with BootStrap.    
+
+We determined to copy the pages on [Zhihu](http://zhihu.com)   
+Like this:   
+![知乎zhihu](http://7q5cdt.com1.z0.glb.clouddn.com/teach-girlfriend-html-zhihu.jpg)   
+
+I teached her [Boostrap](http://www.bootcss.com/) this afternoon. She has already got to read the docs and can code simple statics pages.   
+
+She seems to like Web Pages Design. Though she used to be a Graphic Designer. And now, she really works hard.
+
+<br>
+<br>
+
+
+At last I'll show the works that we did together in 2 hours. It's unfinished. I guess she will do it later. It's a nice weekend, isn't it?   
+
+> [*to see Copy Zhihu, click here*](http://gaohaoyang.github.io/works/bootstrap-zhihu/)   
+
+screenshot of copy Zhihu
+![Copy Zhihu](http://7q5cdt.com1.z0.glb.clouddn.com/teach-girlfriend-html-CopyZhihu.jpg)
