@@ -3,6 +3,7 @@ layout: post
 title:  "关于一些dom操作的优化"
 date:   2015-09-30 15:44:54
 categories: Bootstrap
+excerpt: 关于一些dom操作的优化。
 ---
 
 * content
@@ -24,11 +25,8 @@ categories: Bootstrap
    *  这是html5的新功能，用来取代jquery中的$.data()
    *  如果你的页面只需要简单的操作data-*自定义属性,可以用它
 *  使用方法  
+    <div id="myDiv" data-name="myDiv" data-id="myId" data-my-custom-key="This is the value"></div>  
 
-```html
-    <div id="myDiv" data-name="myDiv" data-id="myId" data-my-custom-key="This is the value"></div>
-```
-```javascript
     //获取数据
     // Get the element
     var element = document.getElementById("myDiv");
@@ -43,8 +41,7 @@ categories: Bootstrap
     element.dataset.myCustomKey = "Some other value";
     
     //给不存在的data-属性赋值，会自动创建
-    element.dataset.mootoolsFtw = "true";
-```  
+    element.dataset.mootoolsFtw = "true"; 
 ###相关链接  
 * https://jsperf.com/jquery-html-vs-innerhtml-the-better-way/3
 * https://jsperf.com/jquery-html-vs-text-vs-innerhtml-vs-innertext-textconte/2
