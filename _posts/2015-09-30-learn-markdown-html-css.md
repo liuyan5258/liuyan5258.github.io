@@ -12,8 +12,10 @@ excerpt: Markdown语法总结。
 
 ------
 
-# 标题1  
+# 标题1   
+
 ## 标题2 
+
 ### 标题3 
 
 ------
@@ -45,8 +47,10 @@ excerpt: Markdown语法总结。
 #### 嵌套列表
 
 - 项目1
+
  - 子项目1
  - 子项目2
+
 - 项目2  
 
 ------
@@ -54,7 +58,9 @@ excerpt: Markdown语法总结。
 #### 带文本说明的无序列表
 
 * A list item.
+
 With multiple paragraphs.
+
 * Another item in the list.
 
 ------
@@ -66,7 +72,9 @@ This is an [example link](http://example.com/ "带标题的链接").
 
 #### 参考链接
 
-I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].
+I get 10 times more traffic from [Google]  
+[1]: than from [Yahoo]  
+[2]: or [MSN][3].
 
 ------
 
