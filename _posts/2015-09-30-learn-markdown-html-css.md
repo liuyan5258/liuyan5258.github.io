@@ -1,4 +1,15 @@
-# Markdown语法总结
+---
+layout: post
+title:  "Markdown语法总结"
+date:   2015-09-30 13:44:54
+categories: tools
+excerpt: Markdown语法总结。
+---
+
+* content
+{:toc}
+
+
 -----------------------
 # 标题1
 ## 标题2
