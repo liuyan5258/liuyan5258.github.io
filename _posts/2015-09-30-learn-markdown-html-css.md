@@ -74,7 +74,7 @@ This is an [example link](http://example.com/ "带标题的链接").
 
 I get 10 times more traffic from [Google]  
 [1]: than from [Yahoo]  
-[2]: or [MSN][3].
+[2]: [markdown](https://www.zybuluo.com/mdeditor)
 
 ------
 
