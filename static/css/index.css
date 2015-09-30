@@ -3,8 +3,9 @@
  */
 /* commom */
 body {
-	background-image: url(http://7q5cdt.com1.z0.glb.clouddn.com/bg-canvas_bg.jpg);
-    font-family: 'Microsoft YaHei', 'SimHei', sans-serif;
+	background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/geometry2.png);
+  font-family: 'Microsoft YaHei', 'SimHei', sans-serif;
+  background-color: #F9FAFB;
 }
 article p{
 	/*text-indent: 2em;*/
