@@ -17,18 +17,18 @@ excerpt: 移动开发。
 
 另一种方式是移动优先，并在桌面设备上优雅降级。  
 
-  @media only screen and (min-width:320px) {
-      /* style */
-  }
-  @media only screen and (min-width:640px) {
-  	/* style */
-  }
-  @media only screen and (min-width:800px) {
-  	/* style */
-  }
-  @media only screen and (min-width:1024px) {
-  	/* style */
-  }
+    @media only screen and (min-width:320px) {
+        /* style */
+    }
+    @media only screen and (min-width:640px) {
+    	/* style */
+    }
+    @media only screen and (min-width:800px) {
+    	/* style */
+    }
+    @media only screen and (min-width:1024px) {
+    	/* style */
+    }
 
 ##一站方式  
 
@@ -40,73 +40,73 @@ excerpt: 移动开发。
 
 解决方式：  
 
-  html{
-      -webkit-text-size-adjust: none;
-  }
+    html{
+        -webkit-text-size-adjust: none;
+    }
 
 但这样设置会导致非移动设备下的浏览器访问时页面缩放功能被禁用。为了防止这种易用性问题，可以把none改为100%.    
 
-  html{
-      -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;  //ms是windows Mobile的前缀
-      text-size-adjust: 100%;  //是为了应对未来的变化
-  }
+    html{
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;  //ms是windows Mobile的前缀
+        text-size-adjust: 100%;  //是为了应对未来的变化
+    }
 
 ##优化浏览器视口宽度设置  
 
 有些移动设备，他们在横屏和竖屏下的视口宽度是不一样的，我们需要把视口宽度设置为匹配设备宽度。  
 
-  <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width">
 
 ##修复移动版Safari的re-flow scale问题  
 
 问题：当你从竖屏模式切换到横屏模式的时候，浏览器上的文本字体会突然变大。  
 如果只有如下的代码：  
 
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
 
 解决方法，加一段js：  
 
-  <script>
-      var metas = document.getElementsByTagName('meta');
-  	var i;
-  	if(navigator.userAgent.match(/iPhone/i)) {
-  		for(i=0;len=metas.length;i<len;i++){
-  			if(metas[i].name == "viewport") {
-  				metas[i].content = "width=device-width,minimum-scale=1.0,maximum-scale=1.0";
-  			}
-  		}
-  		document.addEventListener("gesturestart",gestureStart,false);
-  	}
-  	function gestureStart() {
-  		if(i=0;len=metas.length;i<len;i++) {
-  			if(metas[i].name == "viewport") {
-  				metas[i].content = "width=device-width,minimum-scale=0.25,maximum-scale=1.6";
-  			}
-  		}
-  	}
-  </script>
+    <script>
+        var metas = document.getElementsByTagName('meta');
+    	var i;
+    	if(navigator.userAgent.match(/iPhone/i)) {
+    		for(i=0;len=metas.length;i<len;i++){
+    			if(metas[i].name == "viewport") {
+    				metas[i].content = "width=device-width,minimum-scale=1.0,maximum-scale=1.0";
+    			}
+    		}
+    		document.addEventListener("gesturestart",gestureStart,false);
+    	}
+    	function gestureStart() {
+    		if(i=0;len=metas.length;i<len;i++) {
+    			if(metas[i].name == "viewport") {
+    				metas[i].content = "width=device-width,minimum-scale=0.25,maximum-scale=1.6";
+    			}
+    		}
+    	}
+    </script>
 
 这段代码解决了切换到横屏字体变大的问题，同时又可以像以前一样使用页面的缩放功能。  
 理解这段代码：这需要你知道设备所支持的最小缩小的比例，和最大放大的比例，不过上面的代码只支持iphone。  
 
-  !function(doc) {
-    var addEvent = 'addEventListener',
-        type = 'gesturestart',
-        qsa = 'querySelectorAll',
-        scales = [1, 1],
-        meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
+    !function(doc) {
+      var addEvent = 'addEventListener',
+          type = 'gesturestart',
+          qsa = 'querySelectorAll',
+          scales = [1, 1],
+          meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
 
-    function fix() {
-      meta.content = 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1];
-      doc.removeEventListener(type, fix, !0);
-    }
-    if ((meta = meta[meta.length - 1]) && addEvent in doc) {
-      fix();
-      scales = [.25, 1.6];
-      doc[addEvent](type, fix, !0);
-    }
-  }(document);
+      function fix() {
+        meta.content = 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1];
+        doc.removeEventListener(type, fix, !0);
+      }
+      if ((meta = meta[meta.length - 1]) && addEvent in doc) {
+        fix();
+        scales = [.25, 1.6];
+        doc[addEvent](type, fix, !0);
+      }
+    }(document);
 
 这是John-David dalton做的修改，似乎是更好的版本，请戳原地址：https://gist.github.com/jdalton/903131  
 
@@ -115,11 +115,11 @@ excerpt: 移动开发。
 使用设备：基于浏览器的所有设备    
 具体能够启动哪些应用：这取决于该移动设备上哪些原生应用是否允许从浏览器启动。  
 
-  <a href="http://maps.google.com/maps?q=cupertino">directions</a>
+    <a href="http://maps.google.com/maps?q=cupertino">directions</a>
 
 在palm os的浏览器中访问该页面，并点击directions链接，会启动你手机上的原生的GoogleMap应用。  
 
-  <a href="http://maps.google.com/maps?daddr=San+Francisco,+CA&saddr=cupertino">derections</a>
+    <a href="http://maps.google.com/maps?daddr=San+Francisco,+CA&saddr=cupertino">derections</a>
 
 并不只是打开，还可以直接定位初始位置SanFrancisco和终点位置cupertino。    
 想了解更多移动版的Safari的URL scheme，请戳：http://developer.apple.com/library/safari/#featuredarticles/iPhoneURLScheme_Reference/Introduction/Introduction.html  
@@ -133,22 +133,22 @@ excerpt: 移动开发。
 
 如何做到全屏模式启动：  
 
-  <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
 这段代码的意思是当web应用从界面图标启动时，以全屏模式启动，隐藏浏览器上部的工具栏、地址栏和底部的加载状态栏。  
 
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 这段代码的状态是在浏览器的顶部显示一个状态栏。  
 
-  <link rel="apple-touch-startup-image" href="img/l/splash.png">
+    <link rel="apple-touch-startup-image" href="img/l/splash.png">
 
 这段代码的作用是，在程序启动、加载的时候，显示一个预加载的界面，告诉用户该程序正在加载。  
 问题：ipad和iphone因为屏幕大小的差异，因此需要不同大小的预加载界面，因此，如果你希望你的web应用可以动态地选择对应的预加载界面，
 你可以使用如下js代码：  
 
-  var filename = navigator.platform === 'iPad' ? 'h/' : 'l/';
-  document.write('<link rel="apple-touch-startup-image" href="/img/'+ filename + 'splash.png" />');
+    var filename = navigator.platform === 'iPad' ? 'h/' : 'l/';
+    document.write('<link rel="apple-touch-startup-image" href="/img/'+ filename + 'splash.png" />');
 
 ##防止ios在聚焦时自动缩放  
 
@@ -157,12 +157,12 @@ excerpt: 移动开发。
 当你在ios设备的浏览器上碰触一个表单元素触发onfocus事件时，这个元素会在屏幕上自动放大。这样的自动缩放
 对做了优化的应用来说是不好的，我们可以通过修改视口meta标签的onfocus和onblur属性的值来禁用这个自动缩放的特性。  
 
-  <script>
-  var $viewportMeta = $('meta[name="viewport"]');
-  $('input,select,textarea').bind('focus blur',function(event){
-      $viewportMeta.attr('content','width=device-width,initial-scale=1,maximum-scale='+(event.type == 'blur'?10:1));
-  });
-  </script>
+    <script>
+    var $viewportMeta = $('meta[name="viewport"]');
+    $('input,select,textarea').bind('focus blur',function(event){
+        $viewportMeta.attr('content','width=device-width,initial-scale=1,maximum-scale='+(event.type == 'blur'?10:1));
+    });
+    </script>
 
 ##禁用或限制部分webkit特性  
 
@@ -174,18 +174,18 @@ excerpt: 移动开发。
 
 如果你想禁用这个特性，你可以在这个链接上或父级上添加css样式：  
 
-  a {
-      -webkit-touch-callout:none;
-  }
+    a {
+        -webkit-touch-callout:none;
+    }
 
 更多的webkit css拓展请戳：http://www.css88.com/book/css/webkit/behavior/touch-callout.htm  
 为狭窄的屏幕添加省略号功能：  
 
-  .ellipsis {
-      text-overflow: ellipsis;
-  	overflow: hidden;
-  	white-space: nowrap;
-  }
+    .ellipsis {
+        text-overflow: ellipsis;
+    	overflow: hidden;
+    	white-space: nowrap;
+    }
 
 ##移动设备的交互方式  
 
@@ -203,18 +203,18 @@ excerpt: 移动开发。
 通过监听window.onorientationchange事件，当竖屏切换事件触发时，orientationchange会被触发，同时我们得到event.orientation作为参数传递该方法并输出。  
 也可以通过media query来控制横屏和竖屏时的样式：  
 
-  <style type="text/css">  
-      @media all and (orientation : landscape) {  
-          body {   
-              background-color: #ff0000;   
-          }  
-      }  
+    <style type="text/css">  
+        @media all and (orientation : landscape) {  
+            body {   
+                background-color: #ff0000;   
+            }  
+        }  
 
-      @media all and (orientation : portrait){  
-          body {  
-              background-color: #00ff00;  
-          }  
-      }  
-  </style> 
+        @media all and (orientation : portrait){  
+            body {  
+                background-color: #00ff00;  
+            }  
+        }  
+    </style> 
 
 具体代码看 移动web开发实战demo/demo_02  
