@@ -52,7 +52,7 @@ excerpt: 收集一些前端开发规范。
         alert(3); 
         alert(4); //执行顺序 1 → 3 → 4 → 2  
     
-相关延伸阅读: http://ejohn.org/blog/how-javascript-timers-work/   
+    相关延伸阅读: http://ejohn.org/blog/how-javascript-timers-work/   
 
 16. 在创建img时，src不要设置为空或者#，否则会对页面再次发生请求，建议设置为about:blank;在创建a时，href也不要设置为空或者#，否则会对页面再次发生请求，建议设置为javascript:void(0);  
 17. 逻辑运算符&&和||的“短路”原理，如&&中第一个表达式为假就不会去处理第二个表达式，而||正好相反。在js中有意思的是它们的返回值： 例：var attr = true && 4 && “aaa”;那么运行的结果attr就不是简单的true或这false，而是”aaa” 。 例：var Yahoo = Yahoo || {};经常用来判断一个变量是否已定义，如果没有定义就给他一个初始值。 那么，可以这样优化代码： if(a >=5){alert(“你好”);} 可以写成： a >= 5 && alert(“你好”); 注：js中||和&&的特性帮我们精简了代码的同时，也带来了代码可读性的降低。需要我们自己来权衡了！  
@@ -74,29 +74,29 @@ excerpt: 收集一些前端开发规范。
 
 1. 强制WEB App在iPhone中全屏模式运行
 
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"/>  
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"/>  
 
 
 2. 移动设备上的CSS媒体查询应用：
-    
-    img {
-        margin:0 0 10px 10px; 
-        float:right; 
-    } 
-    @media all and (max-width: 480px) {
-        img { 
-        margin:10px auto; 
-        float:none; 
-        display:block; 
+        
+        img {
+            margin:0 0 10px 10px; 
+            float:right; 
         } 
-    } 
-    @media all and (max-width: 240px) {
-        img { 
-        display:none; 
+        @media all and (max-width: 480px) {
+            img { 
+            margin:10px auto; 
+            float:none; 
+            display:block; 
+            } 
         } 
-    }  
+        @media all and (max-width: 240px) {
+            img { 
+            display:none; 
+            } 
+        }  
 
 释义：浏览器中的图片在屏幕大于480px时会向右浮动，当屏幕小于480px时图片display:block并居中，屏幕小于240px非常小时，直接让图片消失掉 (Opera/Safari3 only)  
 3. GIF、PNG、TIFF最大尺寸上限是300万像素，也就是说，确保width * height ≤ 3 * 1024 * 1024。JPEG二次采样（颜色压缩）后的最大尺寸上限是3200万像  
@@ -109,49 +109,49 @@ http://www.sitepoint.com/blogs/2010/07/06/canvas-vs-svg-how-to-choose/
 9. 样式的解析规则是从右到左，比如 div p {},浏览器解析是先匹配到 p，再匹配到 div。  
 10. 兼容iPhone/Android的屏幕旋转事件：
     
-    var supportsOrientationChange = “onorientationchange” in window, 
-    orientationEvent = supportsOrientationChange ? “orientationchange” : “resize”; 
-    window.addEventListener(orientationEvent, function() {
-      switch(window.orientation){ 
-        case 0: 
-        //do sth; 
-        break; 
-        case 90: 
-        //do sth; 
-        break; 
-      } 
-    }, false);  
+        var supportsOrientationChange = “onorientationchange” in window, 
+        orientationEvent = supportsOrientationChange ? “orientationchange” : “resize”; 
+        window.addEventListener(orientationEvent, function() {
+          switch(window.orientation){ 
+            case 0: 
+            //do sth; 
+            break; 
+            case 90: 
+            //do sth; 
+            break; 
+          } 
+        }, false);  
 
 
 11. 获取当前地理位置的方法：
     
-    /*
-      showMap:回调函数
-      latitude:坐标变量
-     */
-    navigator.geolocation.getCurrentPosition(showMap),
-    latitude = position.coords.latitude; 
-    longitude = position.coords.longitude;  
+        /*
+          showMap:回调函数
+          latitude:坐标变量
+         */
+        navigator.geolocation.getCurrentPosition(showMap),
+        latitude = position.coords.latitude; 
+        longitude = position.coords.longitude;  
 
 
 12. Android 2.2   webkit新APIs：navigator.connection.type可以判断当前网络连接的类型；navigator.onLine检测设备是否联网；navigator.isApplicationInstalled检测是否安装某一个本地应用  
 13. iPhone上使用Gestures API来实现缩放和旋转：
     
-    var width = 100, height = 200, rotation = ; 
-    node.ongesturechange = function(e){ 
-      var node = e.target; 
-      // 缩放和旋转都是相对值， 
-      // 所以要等手势结束时再更改我们的变量 
-      node.style.width = (width * e.scale) + "px"; 
-      node.style.height = (height * e.scale) + "px"; 
-      node.style.webkitTransform = "rotate(" + ((rotation + e.rotation) % 360) + "deg)"; 
-    } 
-    node.ongestureend = function(e){ 
-      // 更新这些变量，以备后用 
-      width *= e.scale; 
-      height *= e.scale; 
-      rotation = (rotation + e.rotation) % 360; 
-    }  
+        var width = 100, height = 200, rotation = ; 
+        node.ongesturechange = function(e){ 
+          var node = e.target; 
+          // 缩放和旋转都是相对值， 
+          // 所以要等手势结束时再更改我们的变量 
+          node.style.width = (width * e.scale) + "px"; 
+          node.style.height = (height * e.scale) + "px"; 
+          node.style.webkitTransform = "rotate(" + ((rotation + e.rotation) % 360) + "deg)"; 
+        } 
+        node.ongestureend = function(e){ 
+          // 更新这些变量，以备后用 
+          width *= e.scale; 
+          height *= e.scale; 
+          rotation = (rotation + e.rotation) % 360; 
+        }  
 
 
 14. iPhone/Android 如何去掉超链接点击高亮的边框?   dom.ontouchstart = function(){ return false; } 即可去除  
