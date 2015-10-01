@@ -6,6 +6,7 @@ categories: html
 excerpt: 收集一些前端开发规范。
 ---
 
+###前端开发规范  
 
 为什么要做前端开发规范呢，规范并不是一种限制，它是一种约定，它能提高工作效率，促进团队之间的协作，形成一种团队文化。  
 
@@ -28,7 +29,7 @@ excerpt: 收集一些前端开发规范。
     var myString = "Hello"; 
     for ( var i = 0, len = myString.length; i < len; i++ )     { 
         alert( myString.charAt( i ) ); 
-    }  
+    }
 
 13. 条件判断时，比如 if ( myNum == 3 )，建议书写为 if ( 3 == myNum )，因为后者在你误写 == 为 = 或者其它失误时，错误发生后你可以很容易的发行问题，浏览器的报错提示也会有更友好的提示。  
 14. 在使用 `setTimeout` 或者 `setInterval` 函数时，需要注意，如果第一个参数传入的是字符串，那么将在全局作用域里寻找此函数，而不会在当前作用域中寻找，所以建议第一个参数传入函数，比如：
@@ -138,7 +139,7 @@ http://www.sitepoint.com/blogs/2010/07/06/canvas-vs-svg-how-to-choose/
       height *= e.scale; 
       rotation = (rotation + e.rotation) % 360; 
     }  
-    
+
 14. iPhone/Android 如何去掉超链接点击高亮的边框?   dom.ontouchstart = function(){ return false; } 即可去除  
 15. 创建复杂的HTML标签或是多层的嵌套标签时，可以选择使用DocumentFragment机制，它可以提供一个缓冲的机制，将DOM节点先放到内存中，当节点都构造完成后，再将DocumentFragment对象添加到页面中，这时所有的节点都会一次渲染出来，能减少浏览器很多的负担，明显的提高页面渲染速度。  
 16. <link rel=“apple-touch-icon” href=“apple-touch-icon.png”/>，第一行就是设置桌面快捷方式图标的，图标必须是57*57像素的文件，不需要自己做圆角和高亮效果，系统会自动帮你搞定这个，放在网页根目录会作用于下面的全部网页，当然也可以为每个页面设置单独的图标。  
