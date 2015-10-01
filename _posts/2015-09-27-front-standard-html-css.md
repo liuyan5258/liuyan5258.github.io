@@ -15,6 +15,7 @@ excerpt: 收集一些前端开发规范。
 ###【约定】规范  
 
 文件命名全部都用小写和下划线，样式命名全部使用小写和连接符，JS的钩子使用“J_HiTao”  
+
 ###【js】规范  
 
 1. 在书写代码时，应该尽量在函数开始地方统一进行变量声明，变量名注意语义化，一般使用名词来命名，不要在意名字的长度，压缩后会替换为简短的变量名的。  
@@ -30,10 +31,10 @@ excerpt: 收集一些前端开发规范。
 11. 在使用 parseInt 函数转换数字的时候，尽量带上第二个参数，强制转换为某一进制类型的数字，否则，如 parseInt('080') 可能不能获得你想要的结果，推荐使用 parseInt('080', 10)  
 12. 在做数组或者其它依赖 length 属性的循环时，建议先对 length 赋值，这样可以避免每次循环都去计算 length（特殊情况除外），例如:
     
-    var myString = "Hello"; 
-    for ( var i = 0, len = myString.length; i < len; i++ )     { 
-        alert( myString.charAt( i ) ); 
-    }
+        var myString = "Hello"; 
+        for ( var i = 0, len = myString.length; i < len; i++ )     { 
+            alert( myString.charAt( i ) ); 
+        }
 
 
 13. 条件判断时，比如 if ( myNum == 3 )，建议书写为 if ( 3 == myNum )，因为后者在你误写 == 为 = 或者其它失误时，错误发生后你可以很容易的发行问题，浏览器的报错提示也会有更友好的提示。  
