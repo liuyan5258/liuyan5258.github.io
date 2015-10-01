@@ -29,10 +29,12 @@ excerpt: 收集一些前端开发规范。
     for ( var i = 0, len = myString.length; i < len; i++ )     { 
         alert( myString.charAt( i ) ); 
     }  
+
 13. 条件判断时，比如 if ( myNum == 3 )，建议书写为 if ( 3 == myNum )，因为后者在你误写 == 为 = 或者其它失误时，错误发生后你可以很容易的发行问题，浏览器的报错提示也会有更友好的提示。  
 14. 在使用 `setTimeout` 或者 `setInterval` 函数时，需要注意，如果第一个参数传入的是字符串，那么将在全局作用域里寻找此函数，而不会在当前作用域中寻找，所以建议第一个参数传入函数，比如：
 
     setTimeout( function() { loop(counter); }, 1000 )  
+
 15. setTimeout可以改变调用栈的顺序：
  
     alert(1); 
@@ -51,6 +53,7 @@ excerpt: 收集一些前端开发规范。
     Var cc = aa.replace(”{”,”LEFTQUOTE”);//只做一次匹配 console.log(cc); 
     var bb = ”{}{}{}”; 
     Cc = bb.replace(/{/g,”LEFTQUOTE”);//可做全部的替换 console.log(cc);  
+
 19. JavaScript不支持重载，在JavaScript中，脚本在执行时不会顾及函数定义时的参数，而是直接使用在作用域链中最后定义的那个函数。这意味着，相同名称的函数永远只存在一个实例。  
 20. 将函数的引用作为参数传递到setTimeout()和setInterval()里优于将函数名作为字符串参数传递（硬编码）。例如，setTimeout(”someFunc()”, 1000)执行效率慢于setTimeout(someFunc, 1000)。  
 21. 对于简单的任务，最好使用基本操作方式来实现，而不是使用函数调用实现。例如val1 < val2 ? val1 : val2;执行速度快于Math.min(val1, val2);，类似的，myArr.push(newEle);慢于myArr[myArr.length] = newEle;  
@@ -63,6 +66,7 @@ excerpt: 收集一些前端开发规范。
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"/>  
+
 2. 移动设备上的CSS媒体查询应用：
     
     img {
@@ -81,6 +85,7 @@ excerpt: 收集一些前端开发规范。
         display:none; 
         } 
     }  
+
 释义：浏览器中的图片在屏幕大于480px时会向右浮动，当屏幕小于480px时图片display:block并居中，屏幕小于240px非常小时，直接让图片消失掉 (Opera/Safari3 only)  
 3. GIF、PNG、TIFF最大尺寸上限是300万像素，也就是说，确保width * height ≤ 3 * 1024 * 1024。JPEG二次采样（颜色压缩）后的最大尺寸上限是3200万像  
 4. canvas元素的最大尺寸上限是3百万像素，canvas对象的默认宽高是150 x 300像素  
@@ -104,6 +109,7 @@ http://www.sitepoint.com/blogs/2010/07/06/canvas-vs-svg-how-to-choose/
         break; 
       } 
     }, false);  
+
 11. 获取当前地理位置的方法：
     
     /*
@@ -113,6 +119,7 @@ http://www.sitepoint.com/blogs/2010/07/06/canvas-vs-svg-how-to-choose/
     navigator.geolocation.getCurrentPosition(showMap),
     latitude = position.coords.latitude; 
     longitude = position.coords.longitude;  
+
 12. Android 2.2   webkit新APIs：navigator.connection.type可以判断当前网络连接的类型；navigator.onLine检测设备是否联网；navigator.isApplicationInstalled检测是否安装某一个本地应用  
 13. iPhone上使用Gestures API来实现缩放和旋转：
     
@@ -131,6 +138,7 @@ http://www.sitepoint.com/blogs/2010/07/06/canvas-vs-svg-how-to-choose/
       height *= e.scale; 
       rotation = (rotation + e.rotation) % 360; 
     }  
+    
 14. iPhone/Android 如何去掉超链接点击高亮的边框?   dom.ontouchstart = function(){ return false; } 即可去除  
 15. 创建复杂的HTML标签或是多层的嵌套标签时，可以选择使用DocumentFragment机制，它可以提供一个缓冲的机制，将DOM节点先放到内存中，当节点都构造完成后，再将DocumentFragment对象添加到页面中，这时所有的节点都会一次渲染出来，能减少浏览器很多的负担，明显的提高页面渲染速度。  
 16. <link rel=“apple-touch-icon” href=“apple-touch-icon.png”/>，第一行就是设置桌面快捷方式图标的，图标必须是57*57像素的文件，不需要自己做圆角和高亮效果，系统会自动帮你搞定这个，放在网页根目录会作用于下面的全部网页，当然也可以为每个页面设置单独的图标。  
