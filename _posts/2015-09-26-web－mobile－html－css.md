@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "移动web开发实战"
-date:   2015-09-25 15:44:54
+date:   2015-09-24 15:44:54
 categories: 移动开发
 excerpt: 移动开发。
 ---
