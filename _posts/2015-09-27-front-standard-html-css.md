@@ -40,27 +40,28 @@ excerpt: 收集一些前端开发规范。
 13. 条件判断时，比如 if ( myNum == 3 )，建议书写为 if ( 3 == myNum )，因为后者在你误写 == 为 = 或者其它失误时，错误发生后你可以很容易的发行问题，浏览器的报错提示也会有更友好的提示。  
 14. 在使用 `setTimeout` 或者 `setInterval` 函数时，需要注意，如果第一个参数传入的是字符串，那么将在全局作用域里寻找此函数，而不会在当前作用域中寻找，所以建议第一个参数传入函数，比如：
 
-    setTimeout( function() { loop(counter); }, 1000 )  
+        setTimeout( function() { loop(counter); }, 1000 )  
 
 
 15. setTimeout可以改变调用栈的顺序：
  
-    alert(1); 
-    setTimeout(function (){
-        alert(2) 
-    },0); 
-    alert(3); 
-    alert(4); //执行顺序 1 → 3 → 4 → 2  
+        alert(1); 
+        setTimeout(function (){
+            alert(2) 
+        },0); 
+        alert(3); 
+        alert(4); //执行顺序 1 → 3 → 4 → 2  
     
 相关延伸阅读: http://ejohn.org/blog/how-javascript-timers-work/   
+
 16. 在创建img时，src不要设置为空或者#，否则会对页面再次发生请求，建议设置为about:blank;在创建a时，href也不要设置为空或者#，否则会对页面再次发生请求，建议设置为javascript:void(0);  
 17. 逻辑运算符&&和||的“短路”原理，如&&中第一个表达式为假就不会去处理第二个表达式，而||正好相反。在js中有意思的是它们的返回值： 例：var attr = true && 4 && “aaa”;那么运行的结果attr就不是简单的true或这false，而是”aaa” 。 例：var Yahoo = Yahoo || {};经常用来判断一个变量是否已定义，如果没有定义就给他一个初始值。 那么，可以这样优化代码： if(a >=5){alert(“你好”);} 可以写成： a >= 5 && alert(“你好”); 注：js中||和&&的特性帮我们精简了代码的同时，也带来了代码可读性的降低。需要我们自己来权衡了！  
 18. 对一个字符串使用replace方法的时候，用正则模式可以替换掉字符串里面的全部子字符串，用字符串模式则只做一次匹配,只替换第一个匹配，
 
-    var aa = ”{}{}{}”;
-    Var cc = aa.replace(”{”,”LEFTQUOTE”);//只做一次匹配 console.log(cc); 
-    var bb = ”{}{}{}”; 
-    Cc = bb.replace(/{/g,”LEFTQUOTE”);//可做全部的替换 console.log(cc);  
+        var aa = ”{}{}{}”;
+        Var cc = aa.replace(”{”,”LEFTQUOTE”);//只做一次匹配 console.log(cc); 
+        var bb = ”{}{}{}”; 
+        Cc = bb.replace(/{/g,”LEFTQUOTE”);//可做全部的替换 console.log(cc);
 
 
 19. JavaScript不支持重载，在JavaScript中，脚本在执行时不会顾及函数定义时的参数，而是直接使用在作用域链中最后定义的那个函数。这意味着，相同名称的函数永远只存在一个实例。  
