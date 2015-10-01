@@ -108,7 +108,7 @@ excerpt: 移动开发。
       }
     }(document);
 
-这是John-David dalton做的修改，似乎是更好的版本，［请戳］（https://gist.github.com/jdalton/903131）  
+这是John-David dalton做的修改，似乎是更好的版本，[请戳](https://gist.github.com/jdalton/903131)  
 
 ##在浏览器中启动手机原生应用（地图、电话、短信等）  
 
@@ -122,7 +122,7 @@ excerpt: 移动开发。
     <a href="http://maps.google.com/maps?daddr=San+Francisco,+CA&saddr=cupertino">derections</a>
 
 并不只是打开，还可以直接定位初始位置SanFrancisco和终点位置cupertino。    
-想了解更多移动版的Safari的URL scheme，［请戳］（http://developer.apple.com/library/safari/#featuredarticles/iPhoneURLScheme_Reference/Introduction/Introduction.html）  
+想了解更多移动版的Safari的URL scheme，[请戳](http://developer.apple.com/library/safari/#featuredarticles/iPhoneURLScheme_Reference/Introduction/Introduction.html)  
 
 ##iPhone下的全屏模式启动  
 
@@ -178,7 +178,7 @@ excerpt: 移动开发。
         -webkit-touch-callout:none;
     }
 
-更多的webkit css拓展［请戳］（http://www.css88.com/book/css/webkit/behavior/touch-callout.htm）  
+更多的webkit css拓展[请戳](http://www.css88.com/book/css/webkit/behavior/touch-callout.htm)  
 为狭窄的屏幕添加省略号功能：  
 
     .ellipsis {
@@ -195,7 +195,7 @@ excerpt: 移动开发。
 
 具体代码看 移动web开发实战demo/demo_01  
 问题：移动版safari不允许event对象的touches和changedTouches属性被拷贝给其他对象，我们可以用e.originalEvent来解决。  
-更多关于移动版safari的移动事件处理指南，［请戳］（https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/HandlingEvents/HandlingEvents.html）  
+更多关于移动版safari的移动事件处理指南，[请戳](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/HandlingEvents/HandlingEvents.html)  
 
 ###检测和处理横竖屏切换事件  
 
