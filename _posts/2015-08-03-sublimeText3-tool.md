@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Mac下sublimeText3的安装配置及使用"
-date:   2015-09-24 15:44:54
+date:   2015-08-03 12:44:54
 categories: tools
 excerpt: 前端工具的使用。
 ---
