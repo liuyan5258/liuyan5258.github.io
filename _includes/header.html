@@ -24,8 +24,6 @@
           <li>
         {% endif %}
           <a href="{{ site.baseurl }}/"><span class="glyphicon glyphicon-th-large"></span> Blog</a></li>
-          <a href="{{ site.baseurl }}/pages/2demo.html"><span class="glyphicon glyphicon-play"></span> Demo</a></li>
-
         {% for p in site.pages %}
           {% if p.title %}
             {% if p.url == page.url %}
@@ -36,6 +34,9 @@
             <a href="{{ p.url | prepend: site.baseurl }}"><span class="glyphicon {{ p.icon }}"></span> {{ p.title }}</a></li>
           {% endif %}
         {% endfor %}
+        <li class="active">
+        <a href="{{ site.baseurl }}/pages/2demo.html"><span class="glyphicon glyphicon-play"></span> Demo</a></li>
+        <li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
