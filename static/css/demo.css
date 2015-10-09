@@ -9,6 +9,10 @@ img{
 body {
   background-color: #fffdf5;
 }
+pre {
+  word-wrap: break-word;
+  word-break: normal;
+}
 
 .demo {
   position: relative;
@@ -23,6 +27,7 @@ body {
 .demo-box {
   margin: 15px 15px;
   height: 312px;
+  overflow: hidden;
 }
 
 .demo-title {
@@ -59,6 +64,21 @@ body {
   transition: margin-top 250ms ease-in;
 }
 
+pre, code { 
+  font-family: "Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+
+/* demo-01 style */
+.grayscale { 
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: url(grayscale.svg); /* Firefox 4+ */
+  filter: gray; /* IE 6-9 */
+}
+/* demo-02 style */
 .demo-text {
   direction: rtl!important;/*设置文字在FF中竖排*/
   direction:inherit;
@@ -84,25 +104,60 @@ body {
   overflow: hidden;
 }
 
-pre, code { 
-  font-family: "Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-}
-
 .demo-02 img{
   position: absolute;
   bottom: 43px;
   z-index: 8;
 }
-
-/* demo-01 style */
-.grayscale { 
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  filter: grayscale(100%);
-  filter: url(grayscale.svg); /* Firefox 4+ */
-  filter: gray; /* IE 6-9 */
-}
 /* demo-03 style*/
+.demo-btn {
+  position: relative;
+  width: 200px;
+  height: 20px;
+  line-height: 1;
+  font-size: 20px;
+  padding: 10px 0;
+  text-align: center;
+  margin: 15px auto;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+.demo-btn::before,
+.demo-btn::after {
+  position: absolute;
+  display: block;
+  content: '';
+}
+.demo-btn,
+.demo-btn::before,
+.demo-btn::after {
+  s-webkit-box-sizing: border-box;
+  s-moz-box-sizing: border-box;
+  sbox-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  }
+.demo-btn::before,
+.demo-btn::after {
+  top: 0;
+  width: 50%;
+  height: 100%;
+}
+.demo-btn::before {
+  right: 0;
+}
+.demo-btn::after {
+  left: 0;
+}
+.demo-btn:hover::before,
+.demo-btn:hover::after{
+  width: 0;
+  background-color: #59b1eb;
+}
+.demo-btn:hover{
+  background-color: #3DC4D8;
+  border-color: #3DC4D8;
+  color: #FFF;
+}
 

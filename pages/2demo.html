@@ -14,13 +14,13 @@
       <div class="details">
         <pre>
 .grayscale { 
-	-webkit-filter: grayscale(100%);
-	-moz-filter: grayscale(100%);
-	-ms-filter: grayscale(100%);
-	-o-filter: grayscale(100%);
-	filter: grayscale(100%);
-	filter: url(grayscale.svg); /* Firefox 4+ */
-	filter: gray; /* IE 6-9 */
+-webkit-filter: grayscale(100%);
+-moz-filter: grayscale(100%);
+-ms-filter: grayscale(100%);
+-o-filter: grayscale(100%);
+filter: grayscale(100%);
+filter: url(grayscale.svg); /* Firefox 4+ */
+filter: gray; /* IE 6-9 */
 }
         </pre>
       </div>
@@ -39,28 +39,28 @@
       <div class="details">
         <pre>
 .demo-text {
-	direction: rtl!important;/*设置文字在FF中竖排*/
-	direction:inherit;
-	writing-mode: tb-rl;
-	-webkit-writing-mode: vertical-rl;
-	font-family: "minion-pro";
-	font-size: 55px;
-	position: absolute;
-	top: 15px;
-	right: 20px;
+direction: rtl!important;/*设置文字在FF中竖排*/
+direction:inherit;
+writing-mode: tb-rl;
+-webkit-writing-mode: vertical-rl;
+font-family: "minion-pro";
+font-size: 55px;
+position: absolute;
+top: 15px;
+right: 20px;
 }
 
 .demo-text.black {
-	color: #000;
-	z-index: 3;
+color: #000;
+z-index: 3;
 }
 
 .demo-text.white {
-	color: #fff;
-	z-index: 9;
-	height: 35px;
-	margin-top: 157px;
-	overflow: hidden;
+color: #fff;
+z-index: 9;
+height: 35px;
+margin-top: 157px;
+overflow: hidden;
 }
         </pre>
       </div>
@@ -69,13 +69,25 @@
   </div>
 
   <div class="demo demo-03">
-    <div class="demo-box"></div>
+    <div class="demo-box">
+      <div class="demo-btn">::before</div>
+      <div class="demo-btn">::after</div>
+      <div class="demo-info">
+        <pre>
+element::before { 样式 }  /* CSS3 语法 */
+
+element:before  { 样式 }  /* （单冒号）CSS2 过时语法 (仅用来支持 IE8) */
+
+p::before { content: "Hello world!"; } /* 在每一个P元素前插入内容 */
+        </pre>
+      </div>
+    </div>
     <div class="demo-title">demo-03</div>
   </div>
 
-  <div class="demo demo-03">
+  <div class="demo demo-04">
     <div class="demo-box"></div>
-    <div class="demo-title">demo-03</div>
+    <div class="demo-title">demo-04</div>
   </div>
 </div>
 <div id="top" data-toggle="tooltip" data-placement="left" title="回到顶部">
