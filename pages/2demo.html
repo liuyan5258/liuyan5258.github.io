@@ -1,25 +1,78 @@
-<!-- ---
+---
 layout: page
 title: Demo
 permalink: /demo/
 icon: glyphicon-play
---- -->
-<!-- <div id="fall">
-	
-	<ul>
+---
+<div class="demo-container">
+  <div class="demo demo-01">
+    <div class="demo-box">
+      <img src="http://litalico.co.jp/assets/img/service-figure_u2plus.png" alt="">
+      <img class="grayscale" src="images/img-01.png" alt="">
+      <div class="details">
+        <pre>
+.grayscale { 
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: url(grayscale.svg); /* Firefox 4+ */
+	filter: gray; /* IE 6-9 */
+}
+        </pre>
+      </div>
+    </div>
+    <div class="demo-title">demo-01</div>
+  </div>
+  <div class="demo demo-02">
+    <div class="demo-box">
+      <div class="demo-text black">
+        picture
+      </div>
+      <div class="demo-text white">
+        picture
+      </div>
+      <img src="http://litalico.co.jp/assets/img/service-figure_qremo.jpg" alt="">
+      <div class="details">
+        <pre>
+.demo-text {
+	direction: rtl!important;/*设置文字在FF中竖排*/
+	direction:inherit;
+	writing-mode: tb-rl;
+	-webkit-writing-mode: vertical-rl;
+	font-family: "minion-pro";
+	font-size: 55px;
+	position: absolute;
+	top: 15px;
+	right: 20px;
+}
 
-		
-	</ul>
-	
-	<ul>
+.demo-text.black {
+	color: #000;
+	z-index: 3;
+}
 
-	</ul>
-	
-	<ul>
-		
-	</ul>
-	
-	<ul>
+.demo-text.white {
+	color: #fff;
+	z-index: 9;
+	height: 35px;
+	margin-top: 157px;
+	overflow: hidden;
+}
+        </pre>
+      </div>
+    </div>
+    <div class="demo-title">demo-02</div>
+  </div>
 
-	</ul>
-</div> -->
+  <div class="demo demo-03">
+    <div class="demo-box"></div>
+    <div class="demo-title">demo-03</div>
+  </div>
+
+  <div class="demo demo-03">
+    <div class="demo-box"></div>
+    <div class="demo-title">demo-03</div>
+  </div>
+</div>

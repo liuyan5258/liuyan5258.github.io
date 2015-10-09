@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+img{
+  vertical-align: top;
+}
+body {
+  background-color: #fffdf5;
+}
+
+.demo {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin: 30px 0 30px 30px;
+  width: 284px;
+  height: 370px;
+  border: 1px solid #C39;
+}
+
+.demo-box {
+  margin: 15px 15px;
+  height: 312px;
+}
+
+.demo-title {
+  height: 28px;line-height: 28px;
+  text-align: center;
+  background-color: #C39;
+  color: #fff;
+}
+
+.demo-box:hover .details {
+  margin-top: 0px;
+}
+
+.details {
+  cursor: text;
+  color: #fff;
+  font-size: 13px;
+  width: 254px;
+  height: 310px;
+  background-color: #000;
+  padding: 15px;
+  text-align: left;
+  opacity: 0.8;
+  filter:alpha(opacity=8);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  margin-top: -370px;
+  -webkit-transition: margin-top 250ms ease-in;
+  -moz-transition: margin-top 250ms ease-in;
+  -ms-transition: margin-top 250ms ease-in;
+  transition: margin-top 250ms ease-in;
+}
+
+.demo-text {
+  direction: rtl!important;/*设置文字在FF中竖排*/
+  direction:inherit;
+  writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  font-family: "minion-pro";
+  font-size: 55px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.demo-text.black {
+  color: #000;
+  z-index: 3;
+}
+
+.demo-text.white {
+  color: #fff;
+  z-index: 9;
+  height: 35px;
+  margin-top: 157px;
+  overflow: hidden;
+}
+
+pre, code { 
+  font-family: "Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+
+.demo-02 img{
+  position: absolute;
+  bottom: 43px;
+  z-index: 8;
+}
+
+/* demo-01 style */
+.grayscale { 
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: url(grayscale.svg); /* Firefox 4+ */
+  filter: gray; /* IE 6-9 */
+}
+/* demo-03 style*/
+
