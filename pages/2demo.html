@@ -4,11 +4,19 @@ title: Demo
 permalink: /demo/
 icon: glyphicon-play
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>css3 demo</title>
+  <link rel="stylesheet" type="text/css" href="{{ "/static/css/demo.css" | prepend: site.baseurl }}">
+</head>
+<body>
 <div class="demo-container">
   <div class="demo demo-01">
     <div class="demo-box">
       <img src="http://litalico.co.jp/assets/img/service-figure_u2plus.png" alt="">
-      <img class="grayscale" src="images/img-01.png" alt="">
+      <img class="grayscale" src="http://litalico.co.jp/assets/img/service-figure_u2plus.png" alt="">
       <div class="details">
         <pre>
 .grayscale { 
@@ -76,3 +84,11 @@ icon: glyphicon-play
     <div class="demo-title">demo-03</div>
   </div>
 </div>
+<div id="top" data-toggle="tooltip" data-placement="left" title="回到顶部">
+  <a href="javascript:;">
+    <div class="arrow"></div>
+    <div class="stick"></div>
+  </a>
+</div>
+</body>
+</html>
