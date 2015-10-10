@@ -43,17 +43,34 @@ $(function(){
           handle = window.requestAnimationFrame(draw);
         }
       };
+
       init();
       draw();
-    }    
+      
+    }  
     
-    for(var i = 0; i < path.length; i++) {
-      (function(e) {
-        setTimeout(function() {
-            main(e);
-        }, 2000);
-      })(i);
-    }
-    
+    // 异步加载
+    // for(var i = 0; i < path.length; i++) {
+    //   (function(e) {
+    //     setTimeout(function() {
+    //         main(e);
+    //     }, 2000);
+    //   })(i);
+    // }
+
+    // setTimeout嵌套模拟程序同步进行，一般在编程的时候这样会出现页面卡死
+    setTimeout(function() {
+      main(0);
+      setTimeout(function(){
+        main(1);
+        setTimeout(function(){
+          main(2);
+          setTimeout(function(){
+            main(3);
+          },3000);
+        },2000);
+      },2000);
+    }, 1000);
+
   });
 });
