@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "如何用gulp搭建一个自动化的（gulp+browserify+react+less+es6）前端开发环境"
+title:  "如何用gulp搭建一个自动化的(gulp+browserify+react+less+es6)前端开发环境"
 date:   2015-10-23 15:42:00
 categories: tools
 excerpt: 前端项目框架
@@ -211,7 +211,7 @@ react-example（项目名称）
 	    "less": "assets/less/*.less",
 	    "js": "./app/**/*.js",
 	    "jsx": "./app/**/*.jsx",
-	    "app": "./app/app.js",
+	    "app": "./app/app.jsx",
 	    "html": "*.html"
 	  },
 	  "dest": {
@@ -227,6 +227,37 @@ react-example（项目名称）
 	  }
 	}  
 
+###用es6编写react组件  
+
+组件`Hello.jsx`  
+
+	import React from 'react';
+	export default class Hello extends React.Component {
+	  render() {
+	    return (
+	      <h1>Hello {this.props.name}!</h1>
+	    );
+	  }
+	}  
+
+`app.jsx`  
+
+	import Hello from './components/Hello.jsx';
+
+	var render = function() {
+
+	  ReactDOM.render(
+	    <div>
+	      <Hello name="kenan"/>
+	      <p>how are you?</p>
+	    </div>,
+	    document.getElementById("example")
+	 );
+	};
+
+	render();  
+
+
 ###运行项目  
 
 gulp serve  
@@ -237,6 +268,7 @@ https://github.com/liuyan5258/react-example.git
 
 ###学习资源链接  
 
+0. [《ECMAScript 6入门》阮一峰](http://es6.ruanyifeng.com/)
 1. [通过 Browserify 在浏览器中使用 NodeJS 模块](http://www.ibm.com/developerworks/cn/web/1501_chengfu_browserify/)    
 2. [browserify运行原理分析](http://blog.jobbole.com/78825/)  
 3. [Gulp思维——Gulp高级技巧](http://segmentfault.com/a/1190000000711469#articleHeader2)  
