@@ -62,7 +62,7 @@ gulp的组件：
 
 ###安装所有组件  
 
-		npm install .  
+	npm install .  
 
 ###项目目录结构  
 
@@ -88,144 +88,144 @@ react-example（项目名称）
 
 ###编写gulp任务  
 
-		var gulp = require('gulp'),
-		    del = require('del'),
-		    run = require('gulp-run'),
-		    less = require('gulp-less'),
-		    cssmin = require('gulp-minify-css'),
-		    browserify = require('browserify'),
-		    uglify = require('gulp-uglify'),
-		    concat = require('gulp-concat'),
-		    jshint = require('gulp-jshint'),
-		    browserSync = require('browser-sync'),
-		    source = require('vinyl-source-stream'),
-		    buffer = require('vinyl-buffer'),
-		    package = require('./package.json'),
-		    babelify = require('babelify'),
-		    reload = browserSync.reload;
+	var gulp = require('gulp'),
+	    del = require('del'),
+	    run = require('gulp-run'),
+	    less = require('gulp-less'),
+	    cssmin = require('gulp-minify-css'),
+	    browserify = require('browserify'),
+	    uglify = require('gulp-uglify'),
+	    concat = require('gulp-concat'),
+	    jshint = require('gulp-jshint'),
+	    browserSync = require('browser-sync'),
+	    source = require('vinyl-source-stream'),
+	    buffer = require('vinyl-buffer'),
+	    package = require('./package.json'),
+	    babelify = require('babelify'),
+	    reload = browserSync.reload;
 
 
-		/**
-		 * Cleaning dist/ folder
-		 */
-		gulp.task('clean', function(cb) {
-		  del(['dist/**'], cb);
-		})
+	/**
+	 * Cleaning dist/ folder
+	 */
+	gulp.task('clean', function(cb) {
+	  del(['dist/**'], cb);
+	})
 
-		/**
-		 * Running livereload server
-		 */
-		.task('server', function() {
-		  browserSync({
-		    server: {
-		     baseDir: './' 
-		    }
-		  });
-		})
+	/**
+	 * Running livereload server
+	 */
+	.task('server', function() {
+	  browserSync({
+	    server: {
+	     baseDir: './' 
+	    }
+	  });
+	})
 
-		/**
-		 * Less compilation
-		 */
-		.task('less', function() {
-		  return gulp.src(package.paths.less)
-		  .pipe(less())
-		  .pipe(concat(package.dest.style))
-		  .pipe(gulp.dest(package.dest.dist));
-		})
-		.task('less:min', function() {
-		  return gulp.src(package.paths.less)
-		  .pipe(less())
-		  .pipe(concat(package.dest.style))
-		  .pipe(cssmin())
-		  .pipe(gulp.dest(package.dest.dist));
-		})
+	/**
+	 * Less compilation
+	 */
+	.task('less', function() {
+	  return gulp.src(package.paths.less)
+	  .pipe(less())
+	  .pipe(concat(package.dest.style))
+	  .pipe(gulp.dest(package.dest.dist));
+	})
+	.task('less:min', function() {
+	  return gulp.src(package.paths.less)
+	  .pipe(less())
+	  .pipe(concat(package.dest.style))
+	  .pipe(cssmin())
+	  .pipe(gulp.dest(package.dest.dist));
+	})
 
-		/**
-		 * JSLint/JSHint validation
-		 */
-		.task('lint', function() {
-		  return gulp.src(package.paths.js)
-		  .pipe(jshint())
-		  .pipe(jshint.reporter('default'));
-		})
+	/**
+	 * JSLint/JSHint validation
+	 */
+	.task('lint', function() {
+	  return gulp.src(package.paths.js)
+	  .pipe(jshint())
+	  .pipe(jshint.reporter('default'));
+	})
 
-		/** JavaScript compilation */
-		.task('js', function() {
-		  return browserify(package.paths.app)
-		  .transform(babelify)
-		  .bundle()
-		  .pipe(source(package.dest.app))
-		  .pipe(gulp.dest(package.dest.dist));
-		})
-		.task('js:min', function() {
-		  return browserify(package.paths.app)
-		  .transform(babelify)
-		  .bundle()
-		  .pipe(source(package.dest.app))
-		  .pipe(buffer())
-		  .pipe(uglify())
-		  .pipe(gulp.dest(package.dest.dist));
-		})
+	/** JavaScript compilation */
+	.task('js', function() {
+	  return browserify(package.paths.app)
+	  .transform(babelify)
+	  .bundle()
+	  .pipe(source(package.dest.app))
+	  .pipe(gulp.dest(package.dest.dist));
+	})
+	.task('js:min', function() {
+	  return browserify(package.paths.app)
+	  .transform(babelify)
+	  .bundle()
+	  .pipe(source(package.dest.app))
+	  .pipe(buffer())
+	  .pipe(uglify())
+	  .pipe(gulp.dest(package.dest.dist));
+	})
 
-		/**
-		 * Compiling resources and serving application
-		 */
-		.task('serve', ['clean', 'lint', 'less', 'js', 'server'], function() {
-		  return gulp.watch([
-		    package.paths.js, package.paths.jsx, package.paths.html, package.paths.less
-		  ], [
-		   'lint', 'less', 'js', browserSync.reload
-		  ]);
-		})
-		.task('serve:minified', ['clean', 'lint', 'less:min', 'js:min', 'server'], function() {
-		  return gulp.watch([
-		    package.paths.js, package.paths.jsx, package.paths.html, package.paths.less
-		  ], [
-		   'lint', 'less:min', 'js:min', browserSync.reload
-		  ]);
-		});  
+	/**
+	 * Compiling resources and serving application
+	 */
+	.task('serve', ['clean', 'lint', 'less', 'js', 'server'], function() {
+	  return gulp.watch([
+	    package.paths.js, package.paths.jsx, package.paths.html, package.paths.less
+	  ], [
+	   'lint', 'less', 'js', browserSync.reload
+	  ]);
+	})
+	.task('serve:minified', ['clean', 'lint', 'less:min', 'js:min', 'server'], function() {
+	  return gulp.watch([
+	    package.paths.js, package.paths.jsx, package.paths.html, package.paths.less
+	  ], [
+	   'lint', 'less:min', 'js:min', browserSync.reload
+	  ]);
+	});  
 
 ###package.json配置文件  
 
-		{
-		  "name": "react-test",
-		  "version": "0.0.0",
-		  "devDependencies": {
-		    "gulp-run": "1.6.5",
-		    "gulp-less": "2.0.1",
-		    "gulp-concat": "2.4.3",
-		    "gulp-uglify": "1.0.2",
-		    "gulp-minify-css": "0.3.11",
-		    "gulp-jshint": "1.9.0",
-		    "browser-sync": "1.8.2",
-		    "browserify": "^10.2.1",
-		    "vinyl-source-stream": "^1.1.0",
-		    "vinyl-buffer": "1.0.0",
-		    "jquery": "^2.0.3",
-		    "react": "0.14.0",
-		    "react-dom": "0.14.0",
-		    "babelify": "^6.1.1",
-		    "del": "1.1.1"
-		  },
-		  "paths": {
-		    "less": "assets/less/*.less",
-		    "js": "./app/**/*.js",
-		    "jsx": "./app/**/*.jsx",
-		    "app": "./app/app.js",
-		    "html": "*.html"
-		  },
-		  "dest": {
-		    "style": "style.css",
-		    "app": "app.js",
-		    "dist": "dist"
-		  },
-		  "dependencies": {
-		    "gulp": "^3.9.0"
-		  },
-		  "engines": {
-		    "node": ">=0.10.0"
-		  }
-		}  
+	{
+	  "name": "react-test",
+	  "version": "0.0.0",
+	  "devDependencies": {
+	    "gulp-run": "1.6.5",
+	    "gulp-less": "2.0.1",
+	    "gulp-concat": "2.4.3",
+	    "gulp-uglify": "1.0.2",
+	    "gulp-minify-css": "0.3.11",
+	    "gulp-jshint": "1.9.0",
+	    "browser-sync": "1.8.2",
+	    "browserify": "^10.2.1",
+	    "vinyl-source-stream": "^1.1.0",
+	    "vinyl-buffer": "1.0.0",
+	    "jquery": "^2.0.3",
+	    "react": "0.14.0",
+	    "react-dom": "0.14.0",
+	    "babelify": "^6.1.1",
+	    "del": "1.1.1"
+	  },
+	  "paths": {
+	    "less": "assets/less/*.less",
+	    "js": "./app/**/*.js",
+	    "jsx": "./app/**/*.jsx",
+	    "app": "./app/app.js",
+	    "html": "*.html"
+	  },
+	  "dest": {
+	    "style": "style.css",
+	    "app": "app.js",
+	    "dist": "dist"
+	  },
+	  "dependencies": {
+	    "gulp": "^3.9.0"
+	  },
+	  "engines": {
+	    "node": ">=0.10.0"
+	  }
+	}  
 
 ###运行项目  
 
@@ -237,17 +237,17 @@ https://github.com/liuyan5258/react-example.git
 
 ###学习资源链接  
 
-1. [http://www.ibm.com/developerworks/cn/web/1501_chengfu_browserify/](通过 Browserify 在浏览器中使用 NodeJS 模块)    
-2. [http://blog.jobbole.com/78825/](browserify运行原理分析)  
-3. [http://segmentfault.com/a/1190000000711469#articleHeader2](Gulp思维——Gulp高级技巧)  
-4. [http://www.gulpjs.com.cn/docs/api/](gulp api文档)  
-5. [http://www.csdn.net/article/2015-05-24/2824757-building-modular-javascript-applications-in-es6-with-react-webpack-and-babel?reload=1](基于ES6，使用React、Webpack、Babel构建模块化JavaScript应用)  
-6. [http://www.tuicool.com/articles/rY7FR32](React 入门–高效开发环境的搭建)  
-7. [http://qiita.com/hkusu/items/e068bba0ae036b447754](React.js + Babel + Browserify + gulp の環境を作ってみた)  
-8. [http://www.tuicool.com/articles/MFjAZn6](在 Gulp 中使用 Browserify)  
-9. [http://blog.csdn.net/woxueliuyun/article/details/39294375](package.json字段全解)  
-10. [http://www.jianshu.com/p/tY6UPN](当 React 遇见 Gulp 和 Browserify)  
-11. [https://webpack.github.io/docs/webpack-for-browserify-users.html](WEBPACK FOR BROWSERIFY USERS)  
+1. [通过 Browserify 在浏览器中使用 NodeJS 模块](http://www.ibm.com/developerworks/cn/web/1501_chengfu_browserify/)    
+2. [browserify运行原理分析](http://blog.jobbole.com/78825/)  
+3. [Gulp思维——Gulp高级技巧](http://segmentfault.com/a/1190000000711469#articleHeader2)  
+4. [gulp api文档](http://www.gulpjs.com.cn/docs/api/)  
+5. [基于ES6，使用React、Webpack、Babel构建模块化JavaScript应用](http://www.csdn.net/article/2015-05-24/2824757-building-modular-javascript-applications-in-es6-with-react-webpack-and-babel?reload=1)  
+6. [React 入门–高效开发环境的搭建](http://www.tuicool.com/articles/rY7FR32)  
+7. [React.js + Babel + Browserify + gulp の環境を作ってみた](http://qiita.com/hkusu/items/e068bba0ae036b447754)  
+8. [在 Gulp 中使用 Browserify](http://www.tuicool.com/articles/MFjAZn6)  
+9. [package.json字段全解](http://blog.csdn.net/woxueliuyun/article/details/39294375)  
+10. [当 React 遇见 Gulp 和 Browserify](http://www.jianshu.com/p/tY6UPN)  
+11. [WEBPACK FOR BROWSERIFY USERS](https://webpack.github.io/docs/webpack-for-browserify-users.html)  
 
 
 
