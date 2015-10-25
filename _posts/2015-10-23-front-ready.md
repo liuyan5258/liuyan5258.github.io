@@ -31,28 +31,28 @@ Gulp 是一款基于任务的设计模式的自动化工具，通过插件的配
 ###选择gulp组件  
 
 前端项目的功能：  
-1. 样式 （支持less 同时支持合并、压缩、重命名）
-2. javascript （检查、合并、压缩、重命名）
-3. 利用node.js实现js模块化加载
-4. 浏览器自动刷新
-5. 保持发布环境的清洁  
+1. 样式 （支持less 同时支持合并、压缩、重命名）  
+2. javascript （检查、合并、压缩、重命名）  
+3. 利用node.js实现js模块化加载  
+4. 浏览器自动刷新  
+5. 保持发布环境的清洁   
 
 gulp的组件：  
 
-1. del：删除文件／文件夹  
-2. gulp-run：让gulp任务，可以相互独立，解除任务间的依赖，增强task复用  
-3. gulp-less：支持less  
-4. gulp-minify-css：压缩css   
-5. gulp-uglify：压缩js代码  
-6. gulp-concat：合并文件  
-7. gulp-jshint：检查js  
+1. `del`：删除文件／文件夹  
+2. `gulp-run`：让gulp任务，可以相互独立，解除任务间的依赖，增强task复用  
+3. `gulp-less`：支持less  
+4. `gulp-minify-css`：压缩css   
+5. `gulp-uglify`：压缩js代码  
+6. `gulp-concat`：合并文件  
+7. `gulp-jshint`：检查js  
 
 其他组件：  
 
-1. browserify：前端模块及依赖管理  
-2. browser-sync：浏览器同步刷新  
-3. vinyl-source-stream ＋ vinyl-buffer：把browserify 输出的数据进行准换，使之流符合 gulp 的标准  
-4. babelify：合并模块时对 ES6 和 ES7 进行编译转换  
+1. `browserify`：前端模块及依赖管理  
+2. `browser-sync`：浏览器同步刷新  
+3. `vinyl-source-stream` ＋ `vinyl-buffer`：把browserify 输出的数据进行准换，使之流符合 gulp 的标准  
+4. `babelify`：合并模块时对 ES6 和 ES7 进行编译转换  
 
 实际编程用到的组件库：  
 
@@ -70,8 +70,8 @@ react-example（项目名称）
 |-app（生产环境下的所有react组件和js文件）  
 |-assets（生产环境下的所有less文件）  
 |-dist（发布环境）  
-	|-app.js（合并之后的js文件）  
-	|-style.css（合并之后的css文件）  
+	&emsp;&emsp;|-app.js（合并之后的js文件）  
+	&emsp;&emsp;|-style.css（合并之后的css文件）  
 |-node_modules（组件目录）  
 |-.gitignore （不需要加入版本管理的文件）  
 |-gulpfile.js（gulp任务文件）  
@@ -82,8 +82,8 @@ react-example（项目名称）
 
 > gulpfile.js中gulp有五个方法：src、dest、task、run、watch  
 > src和dest：指定源文件和处理后文件的路径  
-> watch：用来监听文件的变化
-> task：指定任务
+> watch：用来监听文件的变化  
+> task：指定任务  
 > run：执行任务  
 
 ###编写gulp任务  
@@ -233,7 +233,22 @@ gulp serve
 
 ###git 仓库  
 
-https://github.com/liuyan5258/react-example.git
+https://github.com/liuyan5258/react-example.git  
+
+###学习资源链接  
+
+1. [http://www.ibm.com/developerworks/cn/web/1501_chengfu_browserify/](通过 Browserify 在浏览器中使用 NodeJS 模块)    
+2. [http://blog.jobbole.com/78825/](browserify运行原理分析)  
+3. [http://segmentfault.com/a/1190000000711469#articleHeader2](Gulp思维——Gulp高级技巧)  
+4. [http://www.gulpjs.com.cn/docs/api/](gulp api文档)  
+5. [http://www.csdn.net/article/2015-05-24/2824757-building-modular-javascript-applications-in-es6-with-react-webpack-and-babel?reload=1](基于ES6，使用React、Webpack、Babel构建模块化JavaScript应用)  
+6. [http://www.tuicool.com/articles/rY7FR32](React 入门–高效开发环境的搭建)  
+7. [http://qiita.com/hkusu/items/e068bba0ae036b447754](React.js + Babel + Browserify + gulp の環境を作ってみた)  
+8. [http://www.tuicool.com/articles/MFjAZn6](在 Gulp 中使用 Browserify)  
+9. [http://blog.csdn.net/woxueliuyun/article/details/39294375](package.json字段全解)  
+10. [http://www.jianshu.com/p/tY6UPN](当 React 遇见 Gulp 和 Browserify)  
+11. [https://webpack.github.io/docs/webpack-for-browserify-users.html](WEBPACK FOR BROWSERIFY USERS)  
+
 
 
 
