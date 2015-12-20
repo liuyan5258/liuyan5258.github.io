@@ -1,8 +1,19 @@
+---
+layout: post
+title:  "从微信内置浏览器打开appStore下载客户端"
+date:   2015-09-24 15:44:54
+categories: 移动开发
+excerpt: 移动开发。
+---
+
+* content
+{:toc}
+
 ## 从微信内置浏览器打开appStore下载客户端
 
 ### 原理：
 
-![原理](./static/images/img-01.png)  
+![原理](https://github.com/liuyan5258/liuyan5258.github.io/blob/master/static/images/img-01.png?raw=true)  
 
 在中间页面的时候需要判断是在微信内置的浏览器打开还是在safari里面打开。
 
