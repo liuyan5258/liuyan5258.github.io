@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "从微信内置浏览器打开appStore下载客户端"
-date:   2015-12-20 15:44:54
+date:   2015-12-20 12:50:00
 categories: 移动开发
-excerpt: 移动开发。
+excerpt: 移动开发
 ---
 
 * content
