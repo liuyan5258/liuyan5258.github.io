@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "从微信内置浏览器打开appStore下载客户端"
-date:   2015-09-24 15:44:54
+date:   2015-12-20 15:44:54
 categories: 移动开发
 excerpt: 移动开发。
 ---
@@ -11,7 +11,7 @@ excerpt: 移动开发。
 
 ## 从微信内置浏览器打开appStore下载客户端
 
-### 原理：
+原理：
 
 ![原理](https://github.com/liuyan5258/liuyan5258.github.io/blob/master/static/images/img-01.png?raw=true)  
 
