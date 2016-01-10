@@ -7,7 +7,7 @@ img{
   vertical-align: top;
 }
 body {
-  background-color: #fffdf5;
+  /*background-color: #fffdf5;*/
 }
 pre {
   word-wrap: break-word;
@@ -15,26 +15,26 @@ pre {
 }
 
 .demo {
-  position: relative;
-  overflow: hidden;
   float: left;
-  margin: 30px 0 30px 30px;
+  overflow: hidden;
+  position: relative;
   width: 284px;
   height: 370px;
+  margin: 30px 0 30px 30px;
   border: 1px solid #C39;
 }
 
 .demo-box {
-  margin: 15px 15px;
-  height: 312px;
   overflow: hidden;
+  height: 312px;
+  margin: 15px 15px;
 }
 
 .demo-title {
-  height: 28px;line-height: 28px;
-  text-align: center;
-  background-color: #C39;
+  height: 28px;
   color: #fff;
+  text-align: center;line-height: 28px;
+  background-color: #C39;
 }
 
 .demo-box:hover .details {
@@ -42,22 +42,22 @@ pre {
 }
 
 .details {
-  cursor: text;
-  color: #fff;
-  font-size: 13px;
-  width: 254px;
-  height: 310px;
-  background-color: #000;
-  padding: 15px;
-  text-align: left;
-  opacity: 0.8;
-  filter:alpha(opacity=8);
   overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 99;
+  width: 254px;
+  height: 310px;
   margin-top: -370px;
+  padding: 15px;
+  color: #fff;
+  font-size: 13px;
+  text-align: left;
+  background-color: #000;
+  opacity: 0.8;
+  filter:alpha(opacity=8);
+  cursor: text;
   -webkit-transition: margin-top 250ms ease-in;
   -moz-transition: margin-top 250ms ease-in;
   -ms-transition: margin-top 250ms ease-in;
@@ -71,37 +71,37 @@ pre, code {
 /* demo-01 style */
 .grayscale { 
   -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
   -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
   filter: grayscale(100%);
   filter: url(grayscale.svg); /* Firefox 4+ */
   filter: gray; /* IE 6-9 */
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
 }
 /* demo-02 style */
 .demo-text {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 55px;
+  font-family: "minion-pro";
   direction: rtl!important;/*设置文字在FF中竖排*/
   direction:inherit;
   writing-mode: tb-rl;
   -webkit-writing-mode: vertical-rl;
-  font-family: "minion-pro";
-  font-size: 55px;
-  position: absolute;
-  top: 15px;
-  right: 20px;
 }
 
 .demo-text.black {
-  color: #000;
   z-index: 3;
+  color: #000;
 }
 
 .demo-text.white {
-  color: #fff;
+  overflow: hidden;
   z-index: 9;
   height: 35px;
   margin-top: 157px;
-  overflow: hidden;
+  color: #fff;
 }
 
 .demo-02 img{
@@ -114,29 +114,29 @@ pre, code {
   position: relative;
   width: 200px;
   height: 20px;
-  line-height: 1;
-  font-size: 20px;
-  padding: 10px 0;
-  text-align: center;
   margin: 15px auto;
-  background-color: #000;
+  padding: 10px 0;
   color: #fff;
+  font-size: 20px;
+  text-align: center;
+  line-height: 1;
+  background-color: #000;
   cursor: pointer;
 }
 .demo-btn::before,
 .demo-btn::after {
-  position: absolute;
   display: block;
   content: '';
+  position: absolute;
 }
 .demo-btn,
 .demo-btn::before,
 .demo-btn::after {
+  -webkit-transition: all .3s;
+  transition: all .3s;
   s-webkit-box-sizing: border-box;
   s-moz-box-sizing: border-box;
   sbox-sizing: border-box;
-  -webkit-transition: all .3s;
-  transition: all .3s;
   }
 .demo-btn::before,
 .demo-btn::after {
@@ -156,8 +156,42 @@ pre, code {
   background-color: #59b1eb;
 }
 .demo-btn:hover{
-  background-color: #3DC4D8;
   border-color: #3DC4D8;
   color: #FFF;
+  background-color: #3DC4D8;
 }
+/*demo5 style*/
+.demo-05 .demo-box {
+  /*flexbox水平垂直居中*/
+  display: -webkit-flex;
+  display: flex;
 
+  background: url(http://img4.duitang.com/uploads/item/201312/24/20131224112821_LARU2.thumb.700_0.jpeg) 0 / cover fixed;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.demo-05 main {
+  overflow: hidden;
+  position: relative;
+  width: 200px;
+  height: 100px;
+  border-radius: 5px;
+  background: hsla(0,0%,100%,.3);
+}
+.demo-05 main::before {
+  content: '';
+  position: absolute;
+  top: 0;right: 0;bottom: 0;left: 0;
+  margin: -30px;
+  background: url(http://img4.duitang.com/uploads/item/201312/24/20131224112821_LARU2.thumb.700_0.jpeg) 0 / cover fixed;
+  -webkit-filter: blur(20px);
+  filter: blur(20px);
+}
+.demo-05 cite {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  line-height: 100px;
+}
