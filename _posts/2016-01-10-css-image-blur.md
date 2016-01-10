@@ -15,14 +15,13 @@ excerpt: css特效
 代码：  
 
 		<div class="demo demo-05">
-	    <div class="demo-box">
-	      <main>
-	        <cite>来自一个异次元的二笔</cite>
-	    </blockquote>
-	      </main>
-	    </div>
-	    <div class="demo-title">demo-05</div>
-	  </div>  
+		  <div class="demo-box">
+		    <main>
+		      <cite>来自一个异次元的二笔</cite>
+		    </main>
+		  </div>
+		  <div class="demo-title">demo-05</div>
+		</div> 
 	  
 		/*demo5 style*/
 		.demo-05 .demo-box {
