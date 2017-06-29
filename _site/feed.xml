@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LY</title>
+    <description></description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 29 Jun 2017 18:57:17 +0800</pubDate>
+    <lastBuildDate>Thu, 29 Jun 2017 18:57:17 +0800</lastBuildDate>
+    <generator>Jekyll v3.5.0</generator>
+    
+      <item>
+        <title>window.history</title>
+        <description>
+浏览器窗口有一个history对象，用来保存浏览历史。
+
+最常用的属性：&lt;code class=&quot;highlighter-rouge&quot;&gt;length&lt;/code&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;history&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+history是不可遍历的.
+
+</description>
+        <pubDate>Tue, 28 Mar 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/03/28/history-goback/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/28/history-goback/</guid>
+        
+        <category>Html5</category>
+        
+        <category>Javascript</category>
+        
+        
+        <category>Javascript</category>
+        
+      </item>
+    
+      <item>
+        <title>在工作中遇到的一些问题</title>
+        <description>
+纪录在工作中遇到的一些问题：
+
+&lt;ol&gt;
+  &lt;li&gt;在ios里面长按无法识别二维码&lt;/li&gt;
+  &lt;li&gt;新学了几个Linux命令&lt;/li&gt;
+  &lt;li&gt;解决1px像素的问题&lt;/li&gt;
+  &lt;li&gt;flex垂直居中&lt;/li&gt;
+  &lt;li&gt;善用:not()选择器&lt;/li&gt;
+  &lt;li&gt;给body添加line-height属性&lt;/li&gt;
+  &lt;li&gt;使用负的nth-child选取元素&lt;/li&gt;
+  &lt;li&gt;紧贴底部的页脚&lt;/li&gt;
+  &lt;li&gt;在css中利用attr()显示html中的属性值&lt;/li&gt;
+  &lt;li&gt;使用content在列表中自动添加序号&lt;/li&gt;
+  &lt;li&gt;innerHtml、innerText、textContent、html区分&lt;/li&gt;
+  &lt;li&gt;data[“00340F0R”]和data.00340F0R&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Thu, 14 Apr 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/04/14/some-tips/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/04/14/some-tips/</guid>
+        
+        <category>tips</category>
+        
+        <category>Javascript</category>
+        
+        <category>qrcode</category>
+        
+        <category>CSS3</category>
+        
+        <category>Linux</category>
+        
+        
+        <category>Javascript</category>
+        
+      </item>
+    
+      <item>
+        <title>css实现ripple点击效果</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#利用transitionbeforeafter实现ripple的效果&quot; id=&quot;markdown-toc-利用transitionbeforeafter实现ripple的效果&quot;&gt;利用transition、before、after实现ripple的效果&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;利用transitionbeforeafter实现ripple的效果&quot;&gt;利用transition、before、after实现ripple的效果&lt;/h3&gt;
+
+&lt;img src=&quot;https://github.com/liuyan5258/liuyan5258.github.io/blob/master/static/images/ripple.png?raw=true&quot; alt=&quot;原理&quot; /&gt;
+
+</description>
+        <pubDate>Mon, 18 Jan 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/01/18/css3-ripple/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/01/18/css3-ripple/</guid>
+        
+        <category>CSS3</category>
+        
+        <category>demo</category>
+        
+        
+        <category>css3</category>
+        
+      </item>
+    
+      <item>
+        <title>最近做angualr项目的一些问题</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#angularjs-and-scopeapply&quot; id=&quot;markdown-toc-angularjs-and-scopeapply&quot;&gt;AngularJS and scope.$apply&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;angularjs-and-scopeapply&quot;&gt;AngularJS and scope.$apply&lt;/h3&gt;
+
+&lt;code class=&quot;highlighter-rouge&quot;&gt;$apply&lt;/code&gt;决定什么事件进入angular content。
+
+当你点击带有&lt;code class=&quot;highlighter-rouge&quot;&gt;ng-click&lt;/code&gt;的元素时，事件就会被封装到一个&lt;code class=&quot;highlighter-rouge&quot;&gt;$apply&lt;/code&gt;调用。如果你有一个&lt;code class=&quot;highlighter-rouge&quot;&gt;ng-model=&quot;foo&quot;&lt;/code&gt;的输入框，然后敲一个f，事件就会被调用&lt;code class=&quot;highlighter-rouge&quot;&gt;$apply(&quot;foo='f';&quot;)&lt;/code&gt;。
+
+angular什么时候不会自动$apply？
+
+&lt;blockquote&gt;
+  用jquery写的代码，应用双向绑定的时候数据并没有自动更新。 &lt;br /&gt;
+原因：jquery没有调用$apply,事件没有进入angular content，而angular content没有变化，$digest循环永远不会执行。
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Mon, 26 Oct 2015 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2015/10/26/angular-01/</link>
+        <guid isPermaLink="true">http://localhost:4000/2015/10/26/angular-01/</guid>
+        
+        <category>Angular</category>
+        
+        <category>Javascript</category>
+        
+        <category>fiddler</category>
+        
+        
+        <category>Angular</category>
+        
+      </item>
+    
+      <item>
+        <title>如何用gulp搭建一个自动化的(gulp+browserify+react+less+es6)前端开发环境</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#一些前期准备&quot; id=&quot;markdown-toc-一些前期准备&quot;&gt;一些前期准备&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;一些前期准备&quot;&gt;一些前期准备&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;node&lt;/li&gt;
+  &lt;li&gt;browserify VS webpack&lt;/li&gt;
+  &lt;li&gt;npm VS bower&lt;/li&gt;
+  &lt;li&gt;npm的package.json配置文件&lt;/li&gt;
+  &lt;li&gt;webpack的配置文件webpack.config.js&lt;/li&gt;
+  &lt;li&gt;ES6 (babel-loader组件，有了babel工具就可以用ES6编写react组件了)&lt;/li&gt;
+  &lt;li&gt;grunt vs gulp&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Fri, 23 Oct 2015 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2015/10/23/gulp-browserify-react/</link>
+        <guid isPermaLink="true">http://localhost:4000/2015/10/23/gulp-browserify-react/</guid>
+        
+        <category>架构</category>
+        
+        <category>Browserify</category>
+        
+        <category>Reactjs</category>
+        
+        <category>LESS</category>
+        
+        <category>ES6</category>
+        
+        <category>Javascript</category>
+        
+        
+        <category>架构</category>
+        
+      </item>
+    
+      <item>
+        <title>reactjs入门</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#初识jsx&quot; id=&quot;markdown-toc-初识jsx&quot;&gt;初识jsx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;初识jsx&quot;&gt;初识jsx&lt;/h3&gt;
+
+&lt;a href=&quot;为什么要使用jsx&quot;&gt;http://reactjs.cn/react/docs/jsx-in-depth.html&lt;/a&gt;
+
+</description>
+        <pubDate>Thu, 22 Oct 2015 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2015/10/22/reactjs/</link>
+        <guid isPermaLink="true">http://localhost:4000/2015/10/22/reactjs/</guid>
+        
+        <category>Reactjs</category>
+        
+        
+        <category>Reactjs</category>
+        
+      </item>
+    
+      <item>
+        <title>Markdown格式预览</title>
+        <description>
+Markdown格式预览
+
+</description>
+        <pubDate>Wed, 30 Sep 2015 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2015/09/30/learn-markdown-html-css/</link>
+        <guid isPermaLink="true">http://localhost:4000/2015/09/30/learn-markdown-html-css/</guid>
+        
+        <category>Tool</category>
+        
+        <category>Markdown</category>
+        
+        
+        <category>Tool</category>
+        
+      </item>
+    
+      <item>
+        <title>移动web开发</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#桌面优先的网站&quot; id=&quot;markdown-toc-桌面优先的网站&quot;&gt;桌面优先的网站&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;桌面优先的网站&quot;&gt;桌面优先的网站&lt;/h3&gt;
+
+在创建纯粹的桌面网站或纯粹的移动网站之外，我们还有其他的建站方式，其中之一就是桌面优先，并在移动设备上优雅降级。
+
+</description>
+        <pubDate>Sat, 26 Sep 2015 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2015/09/26/web-mobile-html-css/</link>
+        <guid isPermaLink="true">http://localhost:4000/2015/09/26/web-mobile-html-css/</guid>
+        
+        <category>Html5</category>
+        
+        <category>移动开发</category>
+        
+        
+        <category>Html5</category>
+        
+      </item>
+    
+      <item>
+        <title>Mac下常用快捷键</title>
+        <description>
+</description>
+        <pubDate>Fri, 05 Jun 2015 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2015/06/05/mac-keys-tool/</link>
+        <guid isPermaLink="true">http://localhost:4000/2015/06/05/mac-keys-tool/</guid>
+        
+        <category>Mac</category>
+        
+        <category>Tool</category>
+        
+        
+        <category>Tool</category>
+        
+      </item>
+    
+  </channel>
+</rss>

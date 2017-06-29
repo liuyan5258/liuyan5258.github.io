@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>移动web开发</title>
+    <meta name="description" content="  桌面优先的网站桌面优先的网站在创建纯粹的桌面网站或纯粹的移动网站之外，我们还有其他的建站方式，其中之一就是桌面优先，并在移动设备上优雅降级。">
+
+    <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
+    <link rel="stylesheet" href="/css/main.css ">
+    <link rel="canonical" href="http://localhost:4000/2015/09/26/web-mobile-html-css/">
+    <link rel="alternate" type="application/rss+xml" title="LY" href="http://localhost:4000/feed.xml ">
+
+
+    <script>
+    // 百度统计代码
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?e9975f819c76e43cbda7eeb12c37ce3c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+
+    <script>
+    // google analytics
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-101771400-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+
+
+</head>
+
+
+  <body>
+
+    <header id="top">
+    <div class="wrapper">
+        <a href="/" class="brand"><img src="http://os8ri8oj4.bkt.clouddn.com/logo_site.png" alt="Front-end Dev Engineer LY"></a>
+        <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
+        <nav id="headerNav">
+            <ul>
+                <li>
+                    
+                    <a href="/">
+                    
+                        <i class="fa fa-home"></i>Home
+                    </a>
+                </li>
+
+                
+                    
+                    <li>
+                        
+                        <a href="/archive/">
+                        
+                            <i class="fa fa-archive"></i>Archives
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/category/">
+                        
+                            <i class="fa fa-th-list"></i>Categories
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/tag/">
+                        
+                            <i class="fa fa-tags"></i>Tags
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/collection/">
+                        
+                            <i class="fa fa-bookmark"></i>Collections
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/about/">
+                        
+                            <i class="fa fa-heart"></i>About
+                        </a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="page clearfix" post>
+    <div class="left">
+        <h1>移动web开发</h1>
+        <div class="label">
+
+            <div class="label-card">
+                <i class="fa fa-calendar"></i>2015-09-26
+            </div>
+
+            <div class="label-card">
+                <i class="fa fa-user"></i>LY
+                
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+            
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Html5" title="Category: Html5" rel="category">Html5</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+            </div>
+
+            <div class="label-card">
+            
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <!--a href="/tag/#Html5" title="Tag: Html5" rel="tag">Html5</a-->
+        <a href="/tag/#Html5" title="Tag: Html5" rel="tag">Html5</a>&nbsp;
+    
+        <!--a href="/tag/#%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91" title="Tag: 移动开发" rel="tag">移动开发</a-->
+        <a href="/tag/#移动开发" title="Tag: 移动开发" rel="tag">移动开发</a>
+    
+  
+
+</span>
+
+            </div>
+
+        </div>
+        <hr>
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+        <ul id="markdown-toc">
+  <li><a href="#桌面优先的网站" id="markdown-toc-桌面优先的网站">桌面优先的网站</a></li>
+  <li><a href="#移动优先网站" id="markdown-toc-移动优先网站">移动优先网站</a></li>
+  <li><a href="#一站方式" id="markdown-toc-一站方式">一站方式</a></li>
+  <li><a href="#避免文本字体大小重置" id="markdown-toc-避免文本字体大小重置">避免文本字体大小重置</a></li>
+  <li><a href="#优化浏览器视口宽度设置" id="markdown-toc-优化浏览器视口宽度设置">优化浏览器视口宽度设置</a></li>
+  <li><a href="#修复移动版safari的re-flow-scale问题" id="markdown-toc-修复移动版safari的re-flow-scale问题">修复移动版Safari的re-flow scale问题</a></li>
+  <li><a href="#在浏览器中启动手机原生应用地图电话短信等" id="markdown-toc-在浏览器中启动手机原生应用地图电话短信等">在浏览器中启动手机原生应用（地图、电话、短信等）</a></li>
+  <li><a href="#iphone下的全屏模式启动" id="markdown-toc-iphone下的全屏模式启动">iPhone下的全屏模式启动</a></li>
+  <li><a href="#防止ios在聚焦时自动缩放" id="markdown-toc-防止ios在聚焦时自动缩放">防止ios在聚焦时自动缩放</a></li>
+  <li><a href="#禁用或限制部分webkit特性" id="markdown-toc-禁用或限制部分webkit特性">禁用或限制部分webkit特性</a></li>
+  <li><a href="#移动设备的交互方式" id="markdown-toc-移动设备的交互方式">移动设备的交互方式</a>    <ul>
+      <li><a href="#利用触控来移动页面元素" id="markdown-toc-利用触控来移动页面元素">利用触控来移动页面元素</a></li>
+      <li><a href="#检测和处理横竖屏切换事件" id="markdown-toc-检测和处理横竖屏切换事件">检测和处理横竖屏切换事件</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="桌面优先的网站">桌面优先的网站</h3>
+
+<p>在创建纯粹的桌面网站或纯粹的移动网站之外，我们还有其他的建站方式，其中之一就是桌面优先，并在移动设备上优雅降级。</p>
+
+<h3 id="移动优先网站">移动优先网站</h3>
+
+<p>另一种方式是移动优先，并在桌面设备上优雅降级。</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="k">@media</span> <span class="n">only</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span><span class="m">320px</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c">/* style */</span>
+<span class="p">}</span>
+<span class="k">@media</span> <span class="n">only</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span><span class="m">640px</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c">/* style */</span>
+<span class="p">}</span>
+<span class="k">@media</span> <span class="n">only</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span><span class="m">800px</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c">/* style */</span>
+<span class="p">}</span>
+<span class="k">@media</span> <span class="n">only</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span><span class="m">1024px</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c">/* style */</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="一站方式">一站方式</h3>
+
+<p>只创建一个网站，并兼容移动和桌面设备，而不是只专注其中一个。</p>
+
+<h3 id="避免文本字体大小重置">避免文本字体大小重置</h3>
+
+<p>针对iphone手机在竖屏切换的横屏模式，该页面的字体会突然变大。显而易见，改页面的字体大小被重置了，这并不是开发者期望的结果。</p>
+
+<p>解决方式：</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">html</span> <span class="p">{</span>
+    <span class="nl">-webkit-text-size-adjust</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>但这样设置会导致非移动设备下的浏览器访问时页面缩放功能被禁用。为了防止这种易用性问题，可以把none改为100%.</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">html</span> <span class="p">{</span>
+    <span class="nl">-webkit-text-size-adjust</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+    <span class="nl">-ms-text-size-adjust</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>  <span class="err">//ms是windows</span> <span class="err">Mobile的前缀</span>
+    <span class="py">text-size-adjust</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>  <span class="err">//是为了应对未来的变化</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="优化浏览器视口宽度设置">优化浏览器视口宽度设置</h3>
+
+<p>有些移动设备，他们在横屏和竖屏下的视口宽度是不一样的，我们需要把视口宽度设置为匹配设备宽度。</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width"</span><span class="nt">&gt;</span>
+</code></pre>
+</div>
+
+<h3 id="修复移动版safari的re-flow-scale问题">修复移动版Safari的re-flow scale问题</h3>
+
+<p>问题：当你从竖屏模式切换到横屏模式的时候，浏览器上的文本字体会突然变大。<br />
+如果只有如下的代码：</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"</span><span class="nt">&gt;</span>
+</code></pre>
+</div>
+
+<p>解决方法，加一段js：</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<span class="kd">var</span> <span class="nx">metas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">'meta'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">i</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/iPhone/i</span><span class="p">))</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">metas</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">metas</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">name</span> <span class="o">==</span> <span class="s2">"viewport"</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">metas</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">content</span> <span class="o">=</span> <span class="s2">"width=device-width,minimum-scale=1.0,maximum-scale=1.0"</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"gesturestart"</span><span class="p">,</span> <span class="nx">gestureStart</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">gestureStart</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">metas</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">metas</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">name</span> <span class="o">==</span> <span class="s2">"viewport"</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">metas</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">content</span> <span class="o">=</span> <span class="s2">"width=device-width,minimum-scale=0.25,maximum-scale=1.6"</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre>
+</div>
+
+<p>这段代码解决了切换到横屏字体变大的问题，同时又可以像以前一样使用页面的缩放功能。<br />
+理解这段代码：这需要你知道设备所支持的最小缩小的比例，和最大放大的比例，不过上面的代码只支持iphone。</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="o">!</span><span class="kd">function</span><span class="p">(</span><span class="nx">doc</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">addEvent</span> <span class="o">=</span> <span class="s1">'addEventListener'</span><span class="p">,</span>
+  <span class="nx">type</span> <span class="o">=</span> <span class="s1">'gesturestart'</span><span class="p">,</span>
+  <span class="nx">qsa</span> <span class="o">=</span> <span class="s1">'querySelectorAll'</span><span class="p">,</span>
+  <span class="nx">scales</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+  <span class="nx">meta</span> <span class="o">=</span> <span class="nx">qsa</span> <span class="k">in</span> <span class="nx">doc</span> <span class="p">?</span> <span class="nx">doc</span><span class="p">[</span><span class="nx">qsa</span><span class="p">](</span><span class="s1">'meta[name=viewport]'</span><span class="p">)</span> <span class="p">:</span> <span class="p">[];</span>
+
+  <span class="kd">function</span> <span class="nx">fix</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">meta</span><span class="p">.</span><span class="nx">content</span> <span class="o">=</span> <span class="s1">'width=device-width,minimum-scale='</span> <span class="o">+</span> <span class="nx">scales</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">',maximum-scale='</span> <span class="o">+</span> <span class="nx">scales</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+    <span class="nx">doc</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">fix</span><span class="p">,</span> <span class="o">!</span><span class="mi">0</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">((</span><span class="nx">meta</span> <span class="o">=</span> <span class="nx">meta</span><span class="p">[</span><span class="nx">meta</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nx">addEvent</span> <span class="k">in</span> <span class="nx">doc</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">fix</span><span class="p">();</span>
+    <span class="nx">scales</span> <span class="o">=</span> <span class="p">[.</span><span class="mi">25</span><span class="p">,</span> <span class="mf">1.6</span><span class="p">];</span>
+    <span class="nx">doc</span><span class="p">[</span><span class="nx">addEvent</span><span class="p">](</span><span class="nx">type</span><span class="p">,</span> <span class="nx">fix</span><span class="p">,</span> <span class="o">!</span><span class="mi">0</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span> <span class="p">(</span><span class="nb">document</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>这是John-David dalton做的修改，似乎是更好的版本，<a href="https://gist.github.com/jdalton/903131">请戳</a></p>
+
+<h3 id="在浏览器中启动手机原生应用地图电话短信等">在浏览器中启动手机原生应用（地图、电话、短信等）</h3>
+
+<p>使用设备：基于浏览器的所有设备  <br />
+具体能够启动哪些应用：这取决于该移动设备上哪些原生应用是否允许从浏览器启动。</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://maps.google.com/maps?q=cupertino"</span><span class="nt">&gt;</span>directions<span class="nt">&lt;/a&gt;</span>
+</code></pre>
+</div>
+
+<p>在palm os的浏览器中访问该页面，并点击directions链接，会启动你手机上的原生的GoogleMap应用。</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://maps.google.com/maps?daddr=San+Francisco,+CA&amp;saddr=cupertino"</span><span class="nt">&gt;</span>derections<span class="nt">&lt;/a&gt;</span>
+</code></pre>
+</div>
+
+<p>并不只是打开，还可以直接定位初始位置SanFrancisco和终点位置cupertino。  <br />
+想了解更多移动版的Safari的URL scheme，<a href="http://developer.apple.com/library/safari/#featuredarticles/iPhoneURLScheme_Reference/Introduction/Introduction.html">请戳</a></p>
+
+<h3 id="iphone下的全屏模式启动">iPhone下的全屏模式启动</h3>
+
+<p>试用设备：ios设备</p>
+
+<p>为了让一个应用看起来更像一个原生应用，iphone为web应用开发者提供了很多独有的特性，你可以全屏模式下
+启动web应用，可以添加一个启动界面，或者添加一个加载进度条之类的，或者为你的web应用定义一个预加载的页面。</p>
+
+<p>如何做到全屏模式启动：</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"apple-mobile-web-app-capable"</span> <span class="na">content=</span><span class="s">"yes"</span><span class="nt">&gt;</span>
+</code></pre>
+</div>
+
+<p>这段代码的意思是当web应用从界面图标启动时，以全屏模式启动，隐藏浏览器上部的工具栏、地址栏和底部的加载状态栏。</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"apple-mobile-web-app-status-bar-style"</span> <span class="na">content=</span><span class="s">"black"</span><span class="nt">&gt;</span>
+</code></pre>
+</div>
+
+<p>这段代码的状态是在浏览器的顶部显示一个状态栏。</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"apple-touch-startup-image"</span> <span class="na">href=</span><span class="s">"img/l/splash.png"</span><span class="nt">&gt;</span>
+</code></pre>
+</div>
+
+<p>这段代码的作用是，在程序启动、加载的时候，显示一个预加载的界面，告诉用户该程序正在加载。<br />
+问题：ipad和iphone因为屏幕大小的差异，因此需要不同大小的预加载界面，因此，如果你希望你的web应用可以动态地选择对应的预加载界面，
+你可以使用如下js代码：</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">filename</span> <span class="o">=</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">platform</span> <span class="o">===</span> <span class="s1">'iPad'</span> <span class="p">?</span> <span class="s1">'h/'</span> <span class="p">:</span> <span class="s1">'l/'</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">'&lt;link rel="apple-touch-startup-image" href="/img/'</span><span class="o">+</span> <span class="nx">filename</span> <span class="o">+</span> <span class="s1">'splash.png" /&gt;'</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h3 id="防止ios在聚焦时自动缩放">防止ios在聚焦时自动缩放</h3>
+
+<p>适用设备：ios设备</p>
+
+<p>当你在ios设备的浏览器上碰触一个表单元素触发onfocus事件时，这个元素会在屏幕上自动放大。这样的自动缩放
+对做了优化的应用来说是不好的，我们可以通过修改视口meta标签的onfocus和onblur属性的值来禁用这个自动缩放的特性。</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<span class="kd">var</span> <span class="nx">$viewportMeta</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'meta[name="viewport"]'</span><span class="p">);</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'input,select,textarea'</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s1">'focus blur'</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+  <span class="nx">$viewportMeta</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'content'</span><span class="p">,</span><span class="s1">'width=device-width,initial-scale=1,maximum-scale='</span><span class="o">+</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="s1">'blur'</span><span class="p">?</span><span class="mi">10</span><span class="p">:</span><span class="mi">1</span><span class="p">));</span>
+<span class="p">});</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre>
+</div>
+
+<h3 id="禁用或限制部分webkit特性">禁用或限制部分webkit特性</h3>
+
+<p>适用设备：使用基于webkit引擎浏览器的设备（Android、ios）</p>
+
+<p>在移动设备上，经常会遇到许多与具体设备相关的问题，通过使用一些比较少用的css技巧，我们可以很容易地解决这些问题，下面就介绍到了几种。</p>
+
+<p><code class="highlighter-rouge">-webkit-touch-callout</code>属性，当你在移动设备上点击一个链接时，设备会弹出一个对话框，询问你是要在当前页面打开连接还是想要复制链接的地址。</p>
+
+<p>如果你想禁用这个特性，你可以在这个链接上或父级上添加css样式：</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">a</span> <span class="p">{</span>
+    <span class="nl">-webkit-touch-callout</span><span class="p">:</span><span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>更多的webkit css拓展<a href="http://www.css88.com/book/css/webkit/behavior/touch-callout.htm">请戳</a><br />
+为狭窄的屏幕添加省略号功能：</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.ellipsis</span> <span class="p">{</span>
+    <span class="nl">text-overflow</span><span class="p">:</span> <span class="n">ellipsis</span><span class="p">;</span>
+    <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+    <span class="nl">white-space</span><span class="p">:</span> <span class="nb">nowrap</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="移动设备的交互方式">移动设备的交互方式</h3>
+
+<h4 id="利用触控来移动页面元素">利用触控来移动页面元素</h4>
+
+<p>适用设备：跨浏览器</p>
+
+<p>具体代码看 移动web开发实战demo/demo_01<br />
+问题：移动版safari不允许event对象的touches和changedTouches属性被拷贝给其他对象，我们可以用e.originalEvent来解决。<br />
+更多关于移动版safari的移动事件处理指南，<a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/HandlingEvents/HandlingEvents.html">请戳</a></p>
+
+<h4 id="检测和处理横竖屏切换事件">检测和处理横竖屏切换事件</h4>
+
+<p>适用设备：跨浏览器<br />
+通过监听window.onorientationchange事件，当竖屏切换事件触发时，orientationchange会被触发，同时我们得到event.orientation作为参数传递该方法并输出。<br />
+也可以通过media query来控制横屏和竖屏时的样式：</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;</span><span class="nt">style</span> <span class="nt">type</span><span class="o">=</span><span class="s1">"text/css"</span><span class="o">&gt;</span>  
+<span class="k">@media</span> <span class="n">all</span> <span class="n">and</span> <span class="p">(</span><span class="n">orientation</span> <span class="p">:</span> <span class="nb">landscape</span><span class="p">)</span> <span class="p">{</span>  
+    <span class="nt">body</span> <span class="p">{</span>   
+        <span class="nl">background-color</span><span class="p">:</span> <span class="m">#ff0000</span><span class="p">;</span>   
+    <span class="p">}</span>  
+<span class="p">}</span>  
+
+<span class="k">@media</span> <span class="n">all</span> <span class="n">and</span> <span class="p">(</span><span class="n">orientation</span> <span class="p">:</span> <span class="nb">portrait</span><span class="p">){</span>  
+    <span class="nt">body</span> <span class="p">{</span>  
+        <span class="nl">background-color</span><span class="p">:</span> <span class="m">#00ff00</span><span class="p">;</span>  
+    <span class="p">}</span>  
+<span class="p">}</span>  
+<span class="o">&lt;/</span><span class="nt">style</span><span class="o">&gt;</span> 
+</code></pre>
+</div>
+
+<p>具体代码看 移动web开发实战demo/demo_02</p>
+
+        </article>
+        <hr>
+
+        
+        
+            
+            
+                
+                    
+                        
+                        <h2 id="similar_posts">Similar Posts</h2>
+                        <ul>
+                        
+                        <li class="relatedPost">
+                            <a href="/2017/03/28/history-goback/">window.history
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+        
+        
+            </ul>
+        
+
+        <div class="post-recent">
+    <div class="pre">
+        
+        <p><strong>上一篇</strong> <a href="/2015/06/05/mac-keys-tool/">Mac下常用快捷键</a></p>
+        
+    </div>
+    <div class="nex">
+
+        
+        <p><strong>下一篇</strong> <a href="/2015/09/30/learn-markdown-html-css/">Markdown格式预览</a></p>
+        
+    </div>
+</div>
+
+
+        <h2 id="comments">Comments</h2>
+        
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+
+    var disqus_config = function() {
+        this.page.url = 'http://localhost:4000/2015/09/26/web-mobile-html-css/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://localhost:4000/2015/09/26/web-mobile-html-css/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document,
+            s = d.createElement('script');
+
+        s.src = '//liuyan5258.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    <div class="right">
+        <div class="wrap">
+
+            <!-- Content -->
+            <div class="side content">
+                <div>
+                    Content
+                </div>
+                
+                <ul id="content-side" class="content-ul">
+                    
+                    <li><a href="#similar_posts">Similar Posts</a></li>
+                    
+                    <li><a href="#comments">Comments</a></li>
+                </ul>
+            </div>
+            <!-- 其他div框放到这里 -->
+            <!-- <div class="side">bbbb</div> -->
+        </div>
+    </div>
+</div>
+<script>
+/**
+ * target _blank
+ */
+(function() {
+    var aTags = document.querySelectorAll('article a:not([id])')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+}());
+</script>
+<script src="/js/pageContent.js " charset="utf-8"></script>
+
+
+    <footer class="site-footer">
+
+
+    <div class="wrapper">
+
+        <p class="description">
+             本站记录我的工作和生活 
+        </p>
+        <p class="contact">
+            Contact me at: 
+            <a href="https://github.com/liuyan5258" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>  
+            <a href="mailto:liu5258yan@163.com" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>  
+            <a href="http://weibo.com/free_styles1993" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a>  
+            <a href="https://www.zhihu.com/people/free_styles1993" title="Zhihu"><i class="iconfont icon-daoruzhihu"></i></a>      
+        </p>
+        <p>
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </p>
+        <p class="power">
+            <span>
+                Site powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">Github Pages</a>.
+            </span>
+            <span>
+                Theme designed by <a href="https://github.com/Gaohaoyang">HyG</a>.
+            </span>
+        </p>
+    </div>
+</footer>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <div class="back-to-top">
+    <a href="#top" data-scroll>
+        <img src="http://os8ri8oj4.bkt.clouddn.com/pagetop.png" alt="back to top">
+    </a>
+</div>
+
+    <script src=" /js/main.js " charset="utf-8"></script>
+    <script src=" /js/smooth-scroll.min.js " charset="utf-8"></script>
+    <script type="text/javascript">
+      smoothScroll.init({
+        speed: 500, // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeInOutCubic', // Easing pattern to use
+        offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
+      });
+    </script>
+    <!-- <script src=" /js/scroll.min.js " charset="utf-8"></script> -->
+  </body>
+
+</html>

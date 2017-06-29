@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>window.history</title>
+    <meta name="description" content="浏览器窗口有一个history对象，用来保存浏览历史。最常用的属性：lengthhistory.length;history是不可遍历的.">
+
+    <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
+    <link rel="stylesheet" href="/css/main.css ">
+    <link rel="canonical" href="http://localhost:4000/2017/03/28/history-goback/">
+    <link rel="alternate" type="application/rss+xml" title="LY" href="http://localhost:4000/feed.xml ">
+
+
+    <script>
+    // 百度统计代码
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?e9975f819c76e43cbda7eeb12c37ce3c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+
+    <script>
+    // google analytics
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-101771400-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+
+
+</head>
+
+
+  <body>
+
+    <header id="top">
+    <div class="wrapper">
+        <a href="/" class="brand"><img src="http://os8ri8oj4.bkt.clouddn.com/logo_site.png" alt="Front-end Dev Engineer LY"></a>
+        <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
+        <nav id="headerNav">
+            <ul>
+                <li>
+                    
+                    <a href="/">
+                    
+                        <i class="fa fa-home"></i>Home
+                    </a>
+                </li>
+
+                
+                    
+                    <li>
+                        
+                        <a href="/archive/">
+                        
+                            <i class="fa fa-archive"></i>Archives
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/category/">
+                        
+                            <i class="fa fa-th-list"></i>Categories
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/tag/">
+                        
+                            <i class="fa fa-tags"></i>Tags
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/collection/">
+                        
+                            <i class="fa fa-bookmark"></i>Collections
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/about/">
+                        
+                            <i class="fa fa-heart"></i>About
+                        </a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="page clearfix" post>
+    <div class="left">
+        <h1>window.history</h1>
+        <div class="label">
+
+            <div class="label-card">
+                <i class="fa fa-calendar"></i>2017-03-28
+            </div>
+
+            <div class="label-card">
+                <i class="fa fa-user"></i>LY
+                
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+            
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Javascript" title="Category: Javascript" rel="category">Javascript</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+            </div>
+
+            <div class="label-card">
+            
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <!--a href="/tag/#Html5" title="Tag: Html5" rel="tag">Html5</a-->
+        <a href="/tag/#Html5" title="Tag: Html5" rel="tag">Html5</a>&nbsp;
+    
+        <!--a href="/tag/#Javascript" title="Tag: Javascript" rel="tag">Javascript</a-->
+        <a href="/tag/#Javascript" title="Tag: Javascript" rel="tag">Javascript</a>
+    
+  
+
+</span>
+
+            </div>
+
+        </div>
+        <hr>
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+        <ul id="markdown-toc">
+  <li><a href="#最常用的方法" id="markdown-toc-最常用的方法">最常用的方法</a></li>
+  <li><a href="#historypushstate--historyreplacestate" id="markdown-toc-historypushstate--historyreplacestate">history.pushState() &amp; history.replaceState()</a></li>
+  <li><a href="#state" id="markdown-toc-state">state</a></li>
+  <li><a href="#popstate事件" id="markdown-toc-popstate事件">popstate事件</a></li>
+  <li><a href="#例子" id="markdown-toc-例子">例子</a></li>
+</ul>
+
+<p>浏览器窗口有一个history对象，用来保存浏览历史。</p>
+
+<p>最常用的属性：<code class="highlighter-rouge">length</code></p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">history</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p>history是不可遍历的.</p>
+
+<h3 id="最常用的方法">最常用的方法</h3>
+
+<ol>
+  <li>back()：移动到上一个访问页面，等同于浏览器的后退键。</li>
+  <li>forward()：移动到下一个访问页面，等同于浏览器的前进。</li>
+  <li>go()：接受整数作为参数，移动到该整数指定的页面，比如<code class="highlighter-rouge">go(1)</code>相当于 forward()，<code class="highlighter-rouge">go(-1)</code>相当于 back()，<code class="highlighter-rouge">go(0)</code>相当于刷新当前页面</li>
+</ol>
+
+<blockquote>
+  <p>不要使用history.back()来实现登陆后返回的功能</p>
+</blockquote>
+
+<h3 id="historypushstate--historyreplacestate">history.pushState() &amp; history.replaceState()</h3>
+
+<p>这两个方法都是h5为history新增的功能，用来在浏览历史中添加和修改记录。</p>
+
+<p><code class="highlighter-rouge">history.pushState()</code>方法接受三个参数，依次为：<br />
+<code class="highlighter-rouge">state</code>：一个与指定网址相关的状态对象，popstate事件触发时，该对象会传入回调函数。如果不需要这个对象，可以填null。<br />
+<code class="highlighter-rouge">title</code>：新页面的标签，但是所有浏览器目前都忽略这个值，因此这里可以填null。<br />
+<code class="highlighter-rouge">url</code>：新的网址，必须与当前页面处在同一个域，浏览器的地址栏将显示这个网址。</p>
+
+<blockquote>
+  <p>pushState()不会触发页面刷新，如果设置了一个非同域的网址，则会报错。</p>
+</blockquote>
+
+<p>history.replaceState()的参数与history.pushState()的一模一样，用于修改浏览器历史中当前页面的值。</p>
+
+<h3 id="state">state</h3>
+<p>history.state属性保存当前页面的state对象，是使用pushState()或replaceState()方法的第一个参数设置的对应页面专属的一个对象值。</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">history</span><span class="p">.</span><span class="nx">pushState</span><span class="p">({</span><span class="nx">page</span><span class="p">,</span> <span class="mi">1</span><span class="p">},</span> <span class="s1">'title 1'</span><span class="p">,</span> <span class="s1">'?page=1'</span><span class="p">)</span>
+<span class="nx">history</span><span class="p">.</span><span class="nx">state</span>
+<span class="c1">// page: 1</span>
+</code></pre>
+</div>
+<h3 id="popstate事件">popstate事件</h3>
+<p>每当同一个文件的浏览历史（即 history 对象）出现变化时，就会触发 popstate 事件。需要注意的是，仅仅调用 pushState 方法或 replaceState 方法 ，并不会触发该事件（只是设置好这个 state 属性），只有用户点击浏览器倒退按钮和前进按钮，或者使用 JavaScript 调用 back、forward、go 方法时才会触发。</p>
+
+<blockquote>
+  <p>该事件只针对同一个窗口中的历史记录，如果浏览历史的切换，导致加载不同的文档，该事件也不会触发。</p>
+</blockquote>
+
+<h3 id="例子">例子</h3>
+
+<p>当前文章页在安卓微信中，点击物理返回按钮，返回至推荐页，从推荐页进入的文章页返回按照正常的历史纪录返回。</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">historyLength</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">history</span><span class="p">.</span><span class="nx">length</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">historyLength</span> <span class="o">===</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">isAndroid</span> <span class="o">&amp;&amp;</span> <span class="nx">isWeixin</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">SEARCH</span><span class="p">.</span><span class="nx">f</span> <span class="o">!==</span> <span class="s1">'today-news'</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">history</span><span class="p">.</span><span class="nx">replaceState</span><span class="p">({</span> <span class="na">page</span><span class="p">:</span> <span class="s1">'newslist'</span> <span class="p">},</span> <span class="kc">null</span><span class="p">,</span> <span class="err">`</span><span class="c1">//${host}/nc/qa/3g/today-news.html`)</span>
+  <span class="p">}</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">history</span><span class="p">.</span><span class="nx">pushState</span><span class="p">({</span> <span class="na">page</span><span class="p">:</span> <span class="s1">'now'</span> <span class="p">},</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">url</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">onpopstate</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">history</span><span class="p">.</span><span class="nx">state</span> <span class="o">&amp;&amp;</span> <span class="nx">history</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">page</span> <span class="o">===</span> <span class="s1">'newslist'</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">reload</span><span class="p">()</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+        </article>
+        <hr>
+
+        
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                        
+                        <h2 id="similar_posts">Similar Posts</h2>
+                        <ul>
+                        
+                        <li class="relatedPost">
+                            <a href="/2016/04/14/some-tips/">在工作中遇到的一些问题
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                        
+                        <li class="relatedPost">
+                            <a href="/2015/10/26/angular-01/">最近做angualr项目的一些问题
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                        
+                        <li class="relatedPost">
+                            <a href="/2015/10/23/gulp-browserify-react/">如何用gulp搭建一个自动化的(gulp+browserify+react+less+es6)前端开发环境
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                        
+                        <li class="relatedPost">
+                            <a href="/2015/09/26/web-mobile-html-css/">移动web开发
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+        
+        
+            </ul>
+        
+
+        <div class="post-recent">
+    <div class="pre">
+        
+        <p><strong>上一篇</strong> <a href="/2016/04/14/some-tips/">在工作中遇到的一些问题</a></p>
+        
+    </div>
+    <div class="nex">
+
+        
+    </div>
+</div>
+
+
+        <h2 id="comments">Comments</h2>
+        
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+
+    var disqus_config = function() {
+        this.page.url = 'http://localhost:4000/2017/03/28/history-goback/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://localhost:4000/2017/03/28/history-goback/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document,
+            s = d.createElement('script');
+
+        s.src = '//liuyan5258.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    <div class="right">
+        <div class="wrap">
+
+            <!-- Content -->
+            <div class="side content">
+                <div>
+                    Content
+                </div>
+                
+                <ul id="content-side" class="content-ul">
+                    
+                    <li><a href="#similar_posts">Similar Posts</a></li>
+                    
+                    <li><a href="#comments">Comments</a></li>
+                </ul>
+            </div>
+            <!-- 其他div框放到这里 -->
+            <!-- <div class="side">bbbb</div> -->
+        </div>
+    </div>
+</div>
+<script>
+/**
+ * target _blank
+ */
+(function() {
+    var aTags = document.querySelectorAll('article a:not([id])')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+}());
+</script>
+<script src="/js/pageContent.js " charset="utf-8"></script>
+
+
+    <footer class="site-footer">
+
+
+    <div class="wrapper">
+
+        <p class="description">
+             本站记录我的工作和生活 
+        </p>
+        <p class="contact">
+            Contact me at: 
+            <a href="https://github.com/liuyan5258" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>  
+            <a href="mailto:liu5258yan@163.com" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>  
+            <a href="http://weibo.com/free_styles1993" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a>  
+            <a href="https://www.zhihu.com/people/free_styles1993" title="Zhihu"><i class="iconfont icon-daoruzhihu"></i></a>      
+        </p>
+        <p>
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </p>
+        <p class="power">
+            <span>
+                Site powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">Github Pages</a>.
+            </span>
+            <span>
+                Theme designed by <a href="https://github.com/Gaohaoyang">HyG</a>.
+            </span>
+        </p>
+    </div>
+</footer>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <div class="back-to-top">
+    <a href="#top" data-scroll>
+        <img src="http://os8ri8oj4.bkt.clouddn.com/pagetop.png" alt="back to top">
+    </a>
+</div>
+
+    <script src=" /js/main.js " charset="utf-8"></script>
+    <script src=" /js/smooth-scroll.min.js " charset="utf-8"></script>
+    <script type="text/javascript">
+      smoothScroll.init({
+        speed: 500, // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeInOutCubic', // Easing pattern to use
+        offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
+      });
+    </script>
+    <!-- <script src=" /js/scroll.min.js " charset="utf-8"></script> -->
+  </body>
+
+</html>

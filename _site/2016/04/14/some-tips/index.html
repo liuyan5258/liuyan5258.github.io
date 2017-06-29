@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>在工作中遇到的一些问题</title>
+    <meta name="description" content="纪录在工作中遇到的一些问题：  在ios里面长按无法识别二维码  新学了几个Linux命令  解决1px像素的问题  flex垂直居中  善用:not()选择器  给body添加line-height属性  使用负的nth-child选取元素  紧贴底部的页脚  在css中利用attr()显示html中的属性值 ...">
+
+    <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
+    <link rel="stylesheet" href="/css/main.css ">
+    <link rel="canonical" href="http://localhost:4000/2016/04/14/some-tips/">
+    <link rel="alternate" type="application/rss+xml" title="LY" href="http://localhost:4000/feed.xml ">
+
+
+    <script>
+    // 百度统计代码
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?e9975f819c76e43cbda7eeb12c37ce3c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+
+    <script>
+    // google analytics
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-101771400-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+
+
+</head>
+
+
+  <body>
+
+    <header id="top">
+    <div class="wrapper">
+        <a href="/" class="brand"><img src="http://os8ri8oj4.bkt.clouddn.com/logo_site.png" alt="Front-end Dev Engineer LY"></a>
+        <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
+        <nav id="headerNav">
+            <ul>
+                <li>
+                    
+                    <a href="/">
+                    
+                        <i class="fa fa-home"></i>Home
+                    </a>
+                </li>
+
+                
+                    
+                    <li>
+                        
+                        <a href="/archive/">
+                        
+                            <i class="fa fa-archive"></i>Archives
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/category/">
+                        
+                            <i class="fa fa-th-list"></i>Categories
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/tag/">
+                        
+                            <i class="fa fa-tags"></i>Tags
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/collection/">
+                        
+                            <i class="fa fa-bookmark"></i>Collections
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/about/">
+                        
+                            <i class="fa fa-heart"></i>About
+                        </a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="page clearfix" post>
+    <div class="left">
+        <h1>在工作中遇到的一些问题</h1>
+        <div class="label">
+
+            <div class="label-card">
+                <i class="fa fa-calendar"></i>2016-04-14
+            </div>
+
+            <div class="label-card">
+                <i class="fa fa-user"></i>LY
+                
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+            
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Javascript" title="Category: Javascript" rel="category">Javascript</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+            </div>
+
+            <div class="label-card">
+            
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <!--a href="/tag/#tips" title="Tag: tips" rel="tag">tips</a-->
+        <a href="/tag/#tips" title="Tag: tips" rel="tag">tips</a>&nbsp;
+    
+        <!--a href="/tag/#Javascript" title="Tag: Javascript" rel="tag">Javascript</a-->
+        <a href="/tag/#Javascript" title="Tag: Javascript" rel="tag">Javascript</a>&nbsp;
+    
+        <!--a href="/tag/#qrcode" title="Tag: qrcode" rel="tag">qrcode</a-->
+        <a href="/tag/#qrcode" title="Tag: qrcode" rel="tag">qrcode</a>&nbsp;
+    
+        <!--a href="/tag/#CSS3" title="Tag: CSS3" rel="tag">CSS3</a-->
+        <a href="/tag/#CSS3" title="Tag: CSS3" rel="tag">CSS3</a>&nbsp;
+    
+        <!--a href="/tag/#Linux" title="Tag: Linux" rel="tag">Linux</a-->
+        <a href="/tag/#Linux" title="Tag: Linux" rel="tag">Linux</a>
+    
+  
+
+</span>
+
+            </div>
+
+        </div>
+        <hr>
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+        <ul id="markdown-toc">
+  <li><a href="#在ios里面长按无法识别二维码" id="markdown-toc-在ios里面长按无法识别二维码">在ios里面长按无法识别二维码</a></li>
+  <li><a href="#新学了几个linux命令" id="markdown-toc-新学了几个linux命令">新学了几个Linux命令</a></li>
+  <li><a href="#解决1px像素的问题" id="markdown-toc-解决1px像素的问题">解决1px像素的问题</a></li>
+  <li><a href="#flex垂直居中" id="markdown-toc-flex垂直居中">flex垂直居中</a></li>
+  <li><a href="#使用not去除最后一个li的的右边框" id="markdown-toc-使用not去除最后一个li的的右边框">使用:not()去除最后一个li的的右边框</a></li>
+  <li><a href="#给body添加line-height属性" id="markdown-toc-给body添加line-height属性">给body添加line-height属性</a></li>
+  <li><a href="#使用负的nth-child选取元素" id="markdown-toc-使用负的nth-child选取元素">使用负的nth-child选取元素</a></li>
+  <li><a href="#紧贴底部的页脚" id="markdown-toc-紧贴底部的页脚">紧贴底部的页脚</a></li>
+  <li><a href="#在css中利用attr显示html中的属性值" id="markdown-toc-在css中利用attr显示html中的属性值">在css中利用attr()显示html中的属性值</a></li>
+  <li><a href="#使用content在列表中自动添加序号" id="markdown-toc-使用content在列表中自动添加序号">使用content在列表中自动添加序号</a></li>
+  <li><a href="#innerhtmlinnertexttextcontenthtml区分" id="markdown-toc-innerhtmlinnertexttextcontenthtml区分">innerHtml、innerText、textContent、html区分</a></li>
+  <li><a href="#data00340f0r和data00340f0r" id="markdown-toc-data00340f0r和data00340f0r">data[“00340F0R”]和data.00340F0R</a></li>
+</ul>
+
+<p>纪录在工作中遇到的一些问题：</p>
+
+<ol>
+  <li>在ios里面长按无法识别二维码</li>
+  <li>新学了几个Linux命令</li>
+  <li>解决1px像素的问题</li>
+  <li>flex垂直居中</li>
+  <li>善用:not()选择器</li>
+  <li>给body添加line-height属性</li>
+  <li>使用负的nth-child选取元素</li>
+  <li>紧贴底部的页脚</li>
+  <li>在css中利用attr()显示html中的属性值</li>
+  <li>使用content在列表中自动添加序号</li>
+  <li>innerHtml、innerText、textContent、html区分</li>
+  <li>data[“00340F0R”]和data.00340F0R</li>
+</ol>
+
+<h3 id="在ios里面长按无法识别二维码">在ios里面长按无法识别二维码</h3>
+
+<p><a href="https://davidshimjs.github.io/qrcodejs/">用到的二维码插件</a></p>
+
+<p>问题：</p>
+
+<p>在ios里面长按无法识别二维码</p>
+
+<p>解决方法：</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"</span><span class="nt">&gt;</span>
+</code></pre>
+</div>
+
+<h3 id="新学了几个linux命令">新学了几个Linux命令</h3>
+
+<p>把images文件夹下的文件压缩成iamges.zip:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>zip -r images.zip images
+</code></pre>
+</div>
+
+<p>解压images.zip文件包</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>unzip images.zip
+</code></pre>
+</div>
+
+<p>不想解压images.zip，只想看看里面的文件</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>unzip -v images.zip
+</code></pre>
+</div>
+
+<h3 id="解决1px像素的问题">解决1px像素的问题</h3>
+
+<p>在_px2rem.scss里面添加了：</p>
+
+<div class="language-scss highlighter-rouge"><pre class="highlight"><code><span class="c1">// 解决1px像素的问题
+</span><span class="k">@mixin</span> <span class="nf">border</span><span class="p">(</span><span class="nv">$bdv</span><span class="o">,</span><span class="nv">$w</span><span class="o">,</span><span class="nv">$s</span><span class="o">,</span><span class="nv">$c</span><span class="p">){</span>
+  <span class="si">#{</span><span class="nv">$bdv</span><span class="si">}</span><span class="nd">:</span> <span class="err">$</span><span class="nt">w</span> <span class="err">$</span><span class="nt">s</span> <span class="err">$</span><span class="nt">c</span><span class="p">;</span>
+  <span class="k">@at-root</span> <span class="o">[</span><span class="nt">data-dpr</span><span class="o">=</span><span class="s2">"2"</span><span class="o">]</span> <span class="k">&amp;</span><span class="p">{</span>
+    <span class="si">#{</span><span class="nv">$bdv</span><span class="si">}</span><span class="nd">:</span> <span class="err">$</span><span class="nt">w</span><span class="o">/</span><span class="nt">2</span> <span class="err">$</span><span class="nt">s</span> <span class="err">$</span><span class="nt">c</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">@at-root</span> <span class="o">[</span><span class="nt">data-dpr</span><span class="o">=</span><span class="s2">"3"</span><span class="o">]</span> <span class="k">&amp;</span><span class="p">{</span>
+    <span class="si">#{</span><span class="nv">$bdv</span><span class="si">}</span><span class="nd">:</span> <span class="err">$</span><span class="nt">w</span><span class="o">/</span><span class="nt">2</span><span class="nc">.8</span> <span class="err">$</span><span class="nt">s</span> <span class="err">$</span><span class="nt">c</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>在article_back_new.scss里面调用：</p>
+
+<div class="language-scss highlighter-rouge"><pre class="highlight"><code><span class="nc">.ui-title</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">border</span> <span class="p">(</span><span class="n">border-bottom</span><span class="o">,</span><span class="m">1px</span><span class="o">,</span><span class="nb">solid</span><span class="o">,</span><span class="nf">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="mi">.1</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>正常情况下：</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.ui-title</span> <span class="p">{</span>
+  <span class="nl">border-bottom</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0.1</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>3屏下显示的效果：</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="o">[</span><span class="nt">data-dpr</span><span class="o">=</span><span class="s1">"3"</span><span class="o">]</span> <span class="nc">.ui-title</span> <span class="p">{</span>
+  <span class="nl">border-bottom</span><span class="p">:</span> <span class="m">0.3571428571px</span> <span class="nb">solid</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0.1</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>2屏下显示的效果：</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="o">[</span><span class="nt">data-dpr</span><span class="o">=</span><span class="s1">"2"</span><span class="o">]</span> <span class="nc">.ui-title</span> <span class="p">{</span>
+  <span class="nl">border-bottom</span><span class="p">:</span> <span class="m">0.5px</span> <span class="nb">solid</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0.1</span><span class="p">);</span>
+<span class="p">}</span> 
+</code></pre>
+</div>
+
+<h3 id="flex垂直居中">flex垂直居中</h3>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.vertical-container</span> <span class="p">{</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">-webkit-flex</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">-webkit-align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">-webkit-justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="使用not去除最后一个li的的右边框">使用:not()去除最后一个li的的右边框</h3>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.nav</span> <span class="nt">li</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:last-child</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nl">border-right</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="m">#666</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="给body添加line-height属性">给body添加line-height属性</h3>
+
+<p>文本元素是很容易从body那里继承到的。所以不需要每个文本元素去设置line-height:1。</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">body</span> <span class="p">{</span> 
+  <span class="nl">line-height</span><span class="p">:</span><span class="m">1</span><span class="p">;</span> 
+<span class="p">}</span>  
+</code></pre>
+</div>
+
+<h3 id="使用负的nth-child选取元素">使用负的nth-child选取元素</h3>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">li</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>  
+
+<span class="c">/* 选择第1到3个元素并显示它们 */</span>
+<span class="nt">li</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">-n</span><span class="o">+</span><span class="nt">3</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+<span class="p">}</span>	
+</code></pre>
+</div>
+
+<h3 id="紧贴底部的页脚">紧贴底部的页脚</h3>
+
+<p>背景：有一个具有块级样式的页脚（比如它设置了背景或阴影），当页面内容足够长时，这个页脚一切正常；而当页面较短时（比如错误信息页面）就会出现问题。此时的问题在于，页脚不能像我们所期望的那样 “紧贴” 在视口的最底部，而是紧跟在内容的下方。 ——来自<a href="https://github.com/cssmagic">css魔法师</a>翻译的《css-secrets》学习笔记。</p>
+
+<iframe height="317" scrolling="no" src="//codepen.io/liu_yan/pen/vZpvaK/?height=317&amp;theme-id=dark&amp;default-tab=result&amp;embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/liu_yan/pen/vZpvaK">Fisher–Yates shuffle</a> by Chuan shi (<a href="http://codepen.io/liu_yan">@liu_yan</a>) on <a href="http://codepen.io">CodePen</a>.
+</iframe>
+
+<h3 id="在css中利用attr显示html中的属性值">在css中利用attr()显示html中的属性值</h3>
+
+<p>![Formal syntax: attr( attribute-name <type-or-unit>? [, <fallback> ]? )](https://developer.mozilla.org/en-US/docs/Web/CSS/attr)</fallback></type-or-unit></p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">h3</span><span class="nd">:before</span> <span class="p">{</span>
+  <span class="nl">content</span><span class="p">:</span> <span class="n">attr</span><span class="p">(</span><span class="n">data-prefix</span><span class="p">)</span> <span class="s1">" "</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;h3</span> <span class="na">data-prefix=</span><span class="s">"Custom prefix"</span><span class="nt">&gt;</span>This is a heading<span class="nt">&lt;/h3&gt;</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//result:Custom prefix This is a heading
+</code></pre>
+</div>
+
+<h3 id="使用content在列表中自动添加序号">使用content在列表中自动添加序号</h3>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;section&gt;</span>description one<span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;section&gt;</span>description two<span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;section&gt;</span>description three<span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;section&gt;</span>description four<span class="nt">&lt;/section&gt;</span>
+</code></pre>
+</div>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">body</span> <span class="p">{</span>
+	<span class="nl">counter-reset</span><span class="p">:</span> <span class="n">my-awesome-counter</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">section</span> <span class="p">{</span>
+	<span class="nl">counter-increment</span><span class="p">:</span> <span class="n">my-awesome-counter</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">section</span><span class="nd">:before</span> <span class="p">{</span>
+	<span class="nl">content</span><span class="p">:</span> <span class="n">counter</span><span class="p">(</span><span class="n">my-awesome-counter</span><span class="p">)</span> <span class="s1">". "</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>result:</p>
+<pre><code class="language-result">1. description one
+2. description two
+3. description three
+4. description four
+</code></pre>
+
+<iframe height="317" scrolling="no" src="//codepen.io/liu_yan/pen/Ogzrrj/?height=317&amp;theme-id=dark&amp;default-tab=result&amp;embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/liu_yan/pen/Ogzrrj">Fisher–Yates shuffle</a> by Chuan shi (<a href="http://codepen.io/liu_yan">@liu_yan</a>) on <a href="http://codepen.io">CodePen</a>.
+</iframe>
+
+<h3 id="innerhtmlinnertexttextcontenthtml区分">innerHtml、innerText、textContent、html区分</h3>
+
+<blockquote>
+  <p>innerText和textContent推荐使用textContent 
+textContent会获取所有元素的内容，包括 script 和 style元素，然而IE里面的innerText不会<br />
+innerText会受样式的影响，他不返回隐藏元素，而textContent返回<br />
+由于innerText会受样式的影响，所以它会触发重排（reflow）,但textContent不会</p>
+</blockquote>
+
+<blockquote>
+  <p>当需要往一个元素里面写文本的时候，innerHtml和textContent推荐使用textContent 
+因为textContent文本不会解析html，所以他很可能在性能上表现更好，同时还能避免XSS攻击<br />
+当需要往一个元素里面写html内容的时候，innerHtml和html推荐使用html</p>
+</blockquote>
+
+<h3 id="data00340f0r和data00340f0r">data[“00340F0R”]和data.00340F0R</h3>
+
+<p>data[“00340F0R”]和data.00340F0R前者更好些</p>
+
+<p><strong>html5 element.dataset API</strong><br />
+这是html5的新功能，用来取代jquery中的$.data()<br />
+如果你的页面只需要简单的操作data-*自定义属性,可以用它</p>
+
+<p><strong>使用方法</strong></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"myDiv"</span> <span class="na">data-name=</span><span class="s">"myDiv"</span> <span class="na">data-id=</span><span class="s">"myId"</span> <span class="na">data-my-custom-key=</span><span class="s">"This is the value"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">//获取数据</span>
+<span class="c1">// Get the element</span>
+<span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"myDiv"</span><span class="p">);</span>
+
+<span class="c1">// Get the id</span>
+<span class="kd">var</span> <span class="nx">id</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+
+<span class="c1">// Retrieves "data-my-custom-key"</span>
+<span class="kd">var</span> <span class="nx">customKey</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">myCustomKey</span><span class="p">;</span>
+
+<span class="c1">// 可以赋值</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">myCustomKey</span> <span class="o">=</span> <span class="s2">"Some other value"</span><span class="p">;</span>
+
+<span class="c1">//给不存在的data-属性赋值，会自动创建</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">mootoolsFtw</span> <span class="o">=</span> <span class="s2">"true"</span><span class="p">;</span>
+</code></pre>
+</div>
+
+
+        </article>
+        <hr>
+
+        
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                        
+                        <h2 id="similar_posts">Similar Posts</h2>
+                        <ul>
+                        
+                        <li class="relatedPost">
+                            <a href="/2017/03/28/history-goback/">window.history
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        
+                        <li class="relatedPost">
+                            <a href="/2016/01/18/css3-ripple/">css实现ripple点击效果
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                        
+                        <li class="relatedPost">
+                            <a href="/2015/10/26/angular-01/">最近做angualr项目的一些问题
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                        
+                        <li class="relatedPost">
+                            <a href="/2015/10/23/gulp-browserify-react/">如何用gulp搭建一个自动化的(gulp+browserify+react+less+es6)前端开发环境
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+        
+            </ul>
+        
+
+        <div class="post-recent">
+    <div class="pre">
+        
+        <p><strong>上一篇</strong> <a href="/2016/01/18/css3-ripple/">css实现ripple点击效果</a></p>
+        
+    </div>
+    <div class="nex">
+
+        
+        <p><strong>下一篇</strong> <a href="/2017/03/28/history-goback/">window.history</a></p>
+        
+    </div>
+</div>
+
+
+        <h2 id="comments">Comments</h2>
+        
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+
+    var disqus_config = function() {
+        this.page.url = 'http://localhost:4000/2016/04/14/some-tips/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://localhost:4000/2016/04/14/some-tips/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document,
+            s = d.createElement('script');
+
+        s.src = '//liuyan5258.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    <div class="right">
+        <div class="wrap">
+
+            <!-- Content -->
+            <div class="side content">
+                <div>
+                    Content
+                </div>
+                
+                <ul id="content-side" class="content-ul">
+                    
+                    <li><a href="#similar_posts">Similar Posts</a></li>
+                    
+                    <li><a href="#comments">Comments</a></li>
+                </ul>
+            </div>
+            <!-- 其他div框放到这里 -->
+            <!-- <div class="side">bbbb</div> -->
+        </div>
+    </div>
+</div>
+<script>
+/**
+ * target _blank
+ */
+(function() {
+    var aTags = document.querySelectorAll('article a:not([id])')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+}());
+</script>
+<script src="/js/pageContent.js " charset="utf-8"></script>
+
+
+    <footer class="site-footer">
+
+
+    <div class="wrapper">
+
+        <p class="description">
+             本站记录我的工作和生活 
+        </p>
+        <p class="contact">
+            Contact me at: 
+            <a href="https://github.com/liuyan5258" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>  
+            <a href="mailto:liu5258yan@163.com" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>  
+            <a href="http://weibo.com/free_styles1993" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a>  
+            <a href="https://www.zhihu.com/people/free_styles1993" title="Zhihu"><i class="iconfont icon-daoruzhihu"></i></a>      
+        </p>
+        <p>
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </p>
+        <p class="power">
+            <span>
+                Site powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">Github Pages</a>.
+            </span>
+            <span>
+                Theme designed by <a href="https://github.com/Gaohaoyang">HyG</a>.
+            </span>
+        </p>
+    </div>
+</footer>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <div class="back-to-top">
+    <a href="#top" data-scroll>
+        <img src="http://os8ri8oj4.bkt.clouddn.com/pagetop.png" alt="back to top">
+    </a>
+</div>
+
+    <script src=" /js/main.js " charset="utf-8"></script>
+    <script src=" /js/smooth-scroll.min.js " charset="utf-8"></script>
+    <script type="text/javascript">
+      smoothScroll.init({
+        speed: 500, // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeInOutCubic', // Easing pattern to use
+        offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
+      });
+    </script>
+    <!-- <script src=" /js/scroll.min.js " charset="utf-8"></script> -->
+  </body>
+
+</html>
