@@ -27,11 +27,11 @@ history是不可遍历的.
 
 1. back()：移动到上一个访问页面，等同于浏览器的后退键。
 2. forward()：移动到下一个访问页面，等同于浏览器的前进。
-3. go()：接受整数作为参数，移动到该整数指定的页面，比如`go(1)`相当于 forward()，`go(-1)`相当于 back()，`go(0)`相当于刷新当前页面
+3. go()：接受整数作为参数，移动到该整数指定页面，比如go(1)相当于forward()，go(-1)相当于 back()，go(0)相当于刷新当前页面
 
 > 不要使用history.back()来实现登陆后返回的功能
 
-### history.pushState() & history.replaceState()
+### history.pushState() history.replaceState()
 
 这两个方法都是h5为history新增的功能，用来在浏览历史中添加和修改记录。
 

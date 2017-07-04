@@ -189,7 +189,7 @@
         <article itemscope itemtype="http://schema.org/BlogPosting">
         <ul id="markdown-toc">
   <li><a href="#最常用的方法" id="markdown-toc-最常用的方法">最常用的方法</a></li>
-  <li><a href="#historypushstate--historyreplacestate" id="markdown-toc-historypushstate--historyreplacestate">history.pushState() &amp; history.replaceState()</a></li>
+  <li><a href="#historypushstate-historyreplacestate" id="markdown-toc-historypushstate-historyreplacestate">history.pushState() history.replaceState()</a></li>
   <li><a href="#state" id="markdown-toc-state">state</a></li>
   <li><a href="#popstate事件" id="markdown-toc-popstate事件">popstate事件</a></li>
   <li><a href="#例子" id="markdown-toc-例子">例子</a></li>
@@ -210,14 +210,14 @@
 <ol>
   <li>back()：移动到上一个访问页面，等同于浏览器的后退键。</li>
   <li>forward()：移动到下一个访问页面，等同于浏览器的前进。</li>
-  <li>go()：接受整数作为参数，移动到该整数指定的页面，比如<code class="highlighter-rouge">go(1)</code>相当于 forward()，<code class="highlighter-rouge">go(-1)</code>相当于 back()，<code class="highlighter-rouge">go(0)</code>相当于刷新当前页面</li>
+  <li>go()：接受整数作为参数，移动到该整数指定页面，比如go(1)相当于forward()，go(-1)相当于 back()，go(0)相当于刷新当前页面</li>
 </ol>
 
 <blockquote>
   <p>不要使用history.back()来实现登陆后返回的功能</p>
 </blockquote>
 
-<h3 id="historypushstate--historyreplacestate">history.pushState() &amp; history.replaceState()</h3>
+<h3 id="historypushstate-historyreplacestate">history.pushState() history.replaceState()</h3>
 
 <p>这两个方法都是h5为history新增的功能，用来在浏览历史中添加和修改记录。</p>
 
