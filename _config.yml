@@ -39,7 +39,7 @@ baidu_tongji_id: e9975f819c76e43cbda7eeb12c37ce3c
 google_analytics_id: UA-101771400-1 # google 分析追踪id
 
 # Build settings
-highlighter: rouge
+# highlighter: rouge
 markdown: kramdown
 
 kramdown:

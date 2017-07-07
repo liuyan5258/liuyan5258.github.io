@@ -5,9 +5,59 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 02 Jul 2017 09:58:58 +0800</pubDate>
-    <lastBuildDate>Sun, 02 Jul 2017 09:58:58 +0800</lastBuildDate>
+    <pubDate>Fri, 07 Jul 2017 11:44:09 +0800</pubDate>
+    <lastBuildDate>Fri, 07 Jul 2017 11:44:09 +0800</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
+    
+      <item>
+        <title>自定制一个简易的audio音频播放器</title>
+        <description>
+如何自定制audio音频播放器的风格。
+
+&lt;img src=&quot;http://os8ri8oj4.bkt.clouddn.com/audio-demo.png&quot; alt=&quot;音频播放器&quot; /&gt;
+
+</description>
+        <pubDate>Thu, 06 Jul 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/07/06/html5-audio/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/07/06/html5-audio/</guid>
+        
+        <category>Javascript</category>
+        
+        <category>Html5</category>
+        
+        <category>audio</category>
+        
+        
+        <category>Html5</category>
+        
+      </item>
+    
+      <item>
+        <title>如何开发一个textarea文本域emoji插件</title>
+        <description>
+做前端的人在面临页面需要某种效果或插件的时候，都会想，是从网上找呢，还是自己造轮子开发。
+
+如果在需求比较紧张的时候我们可能会选择从网上找相关的插件，然后学习它的用法。但是从网上找的通常功能太大太全，而且存在一个学习成本，还有可能不完全符合我们项目的需求，这样改起来也并不轻松。
+
+所以在需求不是很紧张的时候，我们还是自己慢慢造轮子吧，这样也知根知底，容易修改。
+
+</description>
+        <pubDate>Wed, 05 Jul 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/07/05/emoji/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/07/05/emoji/</guid>
+        
+        <category>jquery</category>
+        
+        <category>Javascript</category>
+        
+        <category>emoji</category>
+        
+        <category>textarea</category>
+        
+        
+        <category>Javascript</category>
+        
+      </item>
     
       <item>
         <title>window.history</title>
@@ -237,23 +287,6 @@ Markdown格式预览
         
         
         <category>Html5</category>
-        
-      </item>
-    
-      <item>
-        <title>Mac下常用快捷键</title>
-        <description>
-</description>
-        <pubDate>Fri, 05 Jun 2015 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/06/05/mac-keys-tool/</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/06/05/mac-keys-tool/</guid>
-        
-        <category>Mac</category>
-        
-        <category>Tool</category>
-        
-        
-        <category>Tool</category>
         
       </item>
     

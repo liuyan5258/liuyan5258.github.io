@@ -5,8 +5,10 @@
     left: 0;
 
     text-align: center;
-    background: url(http://os8ri8oj4.bkt.clouddn.com/bg_globalfooter_01.png) center top repeat-x #fff;
-    color: #e60d84;
+    // margin-top: 50px;
+    background-color: #2b2b3c;
+    box-shadow: 0 -2px 4px 1px rgba(0,0,0,0.5);
+    color: #bbb;
     .wrapper {
         width: 1140px;
         margin: 0 auto;
@@ -20,8 +22,11 @@
         .contact {
             display: inline-block;
             a {
-                color: #e60d84;
+                color: #ccc;
                 transition: 0.3s ease;
+                &:hover {
+                    color: #fff;
+                }
                 i {
                     margin: 0 5px;
                     font-size: 20px;
@@ -33,10 +38,10 @@
         }
         .power {
             a {
-                color: #f9a1c7;
+                color: #8F90C5;
                 transition: 0.3s ease;
                 &:hover {
-                    color: #e60d84;
+                    color: #fff;
                 }
             }
         }

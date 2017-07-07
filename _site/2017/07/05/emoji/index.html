@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>如何开发一个textarea文本域emoji插件</title>
+    <meta name="description" content="做前端的人在面临页面需要某种效果或插件的时候，都会想，是从网上找呢，还是自己造轮子开发。如果在需求比较紧张的时候我们可能会选择从网上找相关的插件，然后学习它的用法。但是从网上找的通常功能太大太全，而且存在一个学习成本，还有可能不完全符合我们项目的需求，这样改起来也并不轻松。所以在需求不是很紧张的时候，我们还是自己...">
+
+    <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
+    <link rel="stylesheet" href="/css/main.css ">
+    <link rel="canonical" href="http://localhost:4000/2017/07/05/emoji/">
+    <link rel="alternate" type="application/rss+xml" title="LY" href="http://localhost:4000/feed.xml ">
+
+
+    <script>
+    // 百度统计代码
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?e9975f819c76e43cbda7eeb12c37ce3c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+
+    <script>
+    // google analytics
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-101771400-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+
+
+</head>
+
+
+  <body>
+
+    <header id="top">
+    <div class="wrapper">
+        <a href="/" class="brand">LY</a>
+        <small>Front-end Dev Engineer</small>
+        <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
+        <nav id="headerNav">
+            <ul>
+                <li>
+                    
+                    <a href="/">
+                    
+                        <i class="fa fa-home"></i>Home
+                    </a>
+                </li>
+
+                
+                    
+                    <li>
+                        
+                        <a href="/archive/">
+                        
+                            <i class="fa fa-archive"></i>Archives
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/category/">
+                        
+                            <i class="fa fa-th-list"></i>Categories
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/tag/">
+                        
+                            <i class="fa fa-tags"></i>Tags
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/collection/">
+                        
+                            <i class="fa fa-bookmark"></i>Collections
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/about/">
+                        
+                            <i class="fa fa-heart"></i>About
+                        </a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="page clearfix" post>
+    <div class="left">
+        <h1>如何开发一个textarea文本域emoji插件</h1>
+        <div class="label">
+
+            <div class="label-card">
+                <i class="fa fa-calendar"></i>2017-07-05
+            </div>
+
+            <div class="label-card">
+                <i class="fa fa-user"></i>LY
+                
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+            
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Javascript" title="Category: Javascript" rel="category">Javascript</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+            </div>
+
+            <div class="label-card">
+            
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <!--a href="/tag/#jquery" title="Tag: jquery" rel="tag">jquery</a-->
+        <a href="/tag/#jquery" title="Tag: jquery" rel="tag">jquery</a>&nbsp;
+    
+        <!--a href="/tag/#Javascript" title="Tag: Javascript" rel="tag">Javascript</a-->
+        <a href="/tag/#Javascript" title="Tag: Javascript" rel="tag">Javascript</a>&nbsp;
+    
+        <!--a href="/tag/#emoji" title="Tag: emoji" rel="tag">emoji</a-->
+        <a href="/tag/#emoji" title="Tag: emoji" rel="tag">emoji</a>&nbsp;
+    
+        <!--a href="/tag/#textarea" title="Tag: textarea" rel="tag">textarea</a-->
+        <a href="/tag/#textarea" title="Tag: textarea" rel="tag">textarea</a>
+    
+  
+
+</span>
+
+            </div>
+
+        </div>
+        <hr>
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+        <ul id="markdown-toc">
+  <li><a href="#如何开发一个轻量级比较适用的插件" id="markdown-toc-如何开发一个轻量级比较适用的插件">如何开发一个轻量级比较适用的插件</a></li>
+  <li><a href="#确定需求" id="markdown-toc-确定需求">确定需求</a></li>
+  <li><a href="#默认设置和选项" id="markdown-toc-默认设置和选项">默认设置和选项</a></li>
+  <li><a href="#插件原理和可用性" id="markdown-toc-插件原理和可用性">插件原理和可用性</a></li>
+</ul>
+
+<p>做前端的人在面临页面需要某种效果或插件的时候，都会想，是从网上找呢，还是自己造轮子开发。</p>
+
+<p>如果在需求比较紧张的时候我们可能会选择从网上找相关的插件，然后学习它的用法。但是从网上找的通常功能太大太全，而且存在一个学习成本，还有可能不完全符合我们项目的需求，这样改起来也并不轻松。</p>
+
+<p>所以在需求不是很紧张的时候，我们还是自己慢慢造轮子吧，这样也知根知底，容易修改。</p>
+
+<h3 id="如何开发一个轻量级比较适用的插件">如何开发一个轻量级比较适用的插件</h3>
+
+<ol>
+  <li>减少对UI的限制</li>
+  <li>提供api，易于扩展</li>
+</ol>
+
+<p>例如，我们要做一个textarea输入文本域支持输入emoji的插件。</p>
+
+<h3 id="确定需求">确定需求</h3>
+
+<ol>
+  <li>点击表情选择按钮，输入框支持展示emoji表情</li>
+  <li>复制粘贴文本自动清除格式</li>
+</ol>
+
+<h3 id="默认设置和选项">默认设置和选项</h3>
+
+<p>根据需求，我们需要一个图片的路径path参数，需要一个emoji文件名数组icons参数，还需要一个触发emoji的dom节点button, 代码如下：</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nb">window</span><span class="p">,</span> <span class="nb">document</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">emoji</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">({},</span> <span class="p">{</span>
+      <span class="na">path</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+      <span class="na">icons</span><span class="p">:</span> <span class="p">{},</span>
+      <span class="na">button</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">},</span> <span class="nx">options</span><span class="p">)</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="c1">// emoji plugin code here</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+
+<h3 id="插件原理和可用性">插件原理和可用性</h3>
+
+<p>emoji插件的原理：大家都知道textarea是不支持html的，而我们展示emoji是通过转换成<img />html格式来实现的。那么，怎么才能既支持文本输入又支持html呢。html5来拯救世界了！</p>
+
+<p>contenteditable 属性是 HTML5 中的新属性。</p>
+
+<p>语法：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;element contenteditable="true|false"&gt;
+</code></pre>
+</div>
+
+<p>经验告诉我们，在使用新属性的时候不要盲目，不要像发现新大陆一样兴奋地立即使用，稳妥些我得看下它的兼容性，<a href="https://caniuse.com/#search=contenteditable">can i use contenteditable ?</a></p>
+
+<p><img src="http://os8ri8oj4.bkt.clouddn.com/contenteditable.png" alt="contenteditable" /></p>
+
+<p>主流的浏览器大部分还是支持的，ie11以下就不支持了，为了向下兼容，我们得判断一下，采取两种机制，保证在不支持的情况下不出问题。</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nb">window</span><span class="p">,</span> <span class="nb">document</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">emoji</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">({},</span> <span class="p">{</span>
+      <span class="na">path</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+      <span class="na">icons</span><span class="p">:</span> <span class="p">{},</span>
+      <span class="na">button</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">},</span> <span class="nx">options</span><span class="p">)</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">$textarea</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+      <span class="k">if</span> <span class="p">(</span><span class="s1">'contentEditable'</span> <span class="k">in</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">new</span> <span class="nx">Emoji_Content</span><span class="p">(</span><span class="nx">$textarea</span><span class="p">,</span> <span class="nx">settings</span><span class="p">);</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">new</span> <span class="nx">EmojiArea_Textarea</span><span class="p">(</span><span class="nx">$textarea</span><span class="p">,</span> <span class="nx">settings</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+
+<p>虽然现在解决了编辑问题，但是编辑的过程中会有很多操作，比如光标的定位，复制文本区域等各种问题，这里需要乃们对<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/getSelection">window.getSelection</a>有一定的了解。这篇文章对他的属性和方法有详细的解释<a href="http://www.cnblogs.com/rainman/archive/2011/02/27/1966482.html">javascript标准selection操作</a></p>
+
+<p>插入一个表情符：</p>
+
+<ol>
+  <li>获取当前的range对象</li>
+  <li>将range添加到selection对象中</li>
+  <li>从当前的selection对象中获得某个range对象，删除range区域的文本内容，创建并插入img节点，设置img节点在range范围的开始点</li>
+</ol>
+
+<p>未完～</p>
+
+
+        </article>
+        <hr>
+
+        
+        
+            
+            
+                
+                    
+                
+                    
+                        
+                        <h2 id="similar_posts">Similar Posts</h2>
+                        <ul>
+                        
+                        <li class="relatedPost">
+                            <a href="/2017/07/06/html5-audio/">自定制一个简易的audio音频播放器
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                        
+                        <li class="relatedPost">
+                            <a href="/2017/03/28/history-goback/">window.history
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                        
+                        <li class="relatedPost">
+                            <a href="/2016/04/14/some-tips/">在工作中遇到的一些问题
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                        
+                        <li class="relatedPost">
+                            <a href="/2015/10/26/angular-01/">最近做angualr项目的一些问题
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                        
+                        <li class="relatedPost">
+                            <a href="/2015/10/23/gulp-browserify-react/">如何用gulp搭建一个自动化的(gulp+browserify+react+less+es6)前端开发环境
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+        
+            </ul>
+        
+
+        <div class="post-recent">
+    <div class="pre">
+        
+        <p><strong>上一篇</strong> <a href="/2017/03/28/history-goback/">window.history</a></p>
+        
+    </div>
+    <div class="nex">
+
+        
+        <p><strong>下一篇</strong> <a href="/2017/07/06/html5-audio/">自定制一个简易的audio音频播放器</a></p>
+        
+    </div>
+</div>
+
+
+        <h2 id="comments">Comments</h2>
+        
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+
+    var disqus_config = function() {
+        this.page.url = 'http://localhost:4000/2017/07/05/emoji/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://localhost:4000/2017/07/05/emoji/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document,
+            s = d.createElement('script');
+
+        s.src = '//liuyan5258.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    <div class="right">
+        <div class="wrap">
+
+            <!-- Content -->
+            <div class="side content">
+                <div>
+                    Content
+                </div>
+                
+                <ul id="content-side" class="content-ul">
+                    
+                    <li><a href="#similar_posts">Similar Posts</a></li>
+                    
+                    <li><a href="#comments">Comments</a></li>
+                </ul>
+            </div>
+            <!-- 其他div框放到这里 -->
+            <!-- <div class="side">bbbb</div> -->
+        </div>
+    </div>
+</div>
+<script>
+/**
+ * target _blank
+ */
+(function() {
+    var aTags = document.querySelectorAll('article a:not([id])')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+}());
+</script>
+<script src="/js/pageContent.js " charset="utf-8"></script>
+
+
+    <footer class="site-footer">
+
+
+    <div class="wrapper">
+
+        <p class="description">
+             本站记录我的工作和生活 
+        </p>
+        <p class="contact">
+            Contact me at: 
+            <a href="https://github.com/liuyan5258" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>  
+            <a href="mailto:liu5258yan@163.com" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>  
+            <a href="http://weibo.com/free_styles1993" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a>  
+            <a href="https://www.zhihu.com/people/free_styles1993" title="Zhihu"><i class="iconfont icon-daoruzhihu"></i></a>      
+        </p>
+        <p>
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </p>
+        <p class="power">
+            <span>
+                Site powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">Github Pages</a>.
+            </span>
+            <span>
+                Theme designed by <a href="https://github.com/Gaohaoyang">HyG</a>.
+            </span>
+        </p>
+    </div>
+</footer>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <div class="back-to-top">
+    <a href="#top" data-scroll>
+        <img src="http://os8ri8oj4.bkt.clouddn.com/pagetop.png" alt="back to top">
+    </a>
+</div>
+
+    <script src=" /js/main.js " charset="utf-8"></script>
+    <script src=" /js/smooth-scroll.min.js " charset="utf-8"></script>
+    <script type="text/javascript">
+      smoothScroll.init({
+        speed: 500, // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeInOutCubic', // Easing pattern to use
+        offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
+      });
+    </script>
+    <!-- <script src=" /js/scroll.min.js " charset="utf-8"></script> -->
+  </body>
+
+</html>
