@@ -108,13 +108,21 @@
                     
                     <li>
                         
+                        <a href="/demo/">
+                        
+                            <i class="fa fa-play"></i>Demo
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
                         <a href="/about/">
                         
                             <i class="fa fa-heart"></i>About
                         </a>
                     </li>
-                    
-                
                     
                 
                     
@@ -134,6 +142,86 @@
         <div class="page clearfix" index>
     <div class="left">
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2015/10/26/angular-01/">最近做angualr项目的一些问题</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2015-10-26
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>LY
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Angular" title="Category: Angular" rel="category">Angular</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#Angular" title="Tag: Angular" rel="tag">Angular</a>&nbsp;
+    
+        <a href="/tag/#Javascript" title="Tag: Javascript" rel="tag">Javascript</a>&nbsp;
+    
+        <a href="/tag/#fiddler" title="Tag: fiddler" rel="tag">fiddler</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#angularjs-and-scopeapply" id="markdown-toc-angularjs-and-scopeapply">AngularJS and scope.$apply</a></li>
+</ul>
+
+<h3 id="angularjs-and-scopeapply">AngularJS and scope.$apply</h3>
+
+<p><code class="highlighter-rouge">$apply</code>决定什么事件进入angular content。</p>
+
+<p>当你点击带有<code class="highlighter-rouge">ng-click</code>的元素时，事件就会被封装到一个<code class="highlighter-rouge">$apply</code>调用。如果你有一个<code class="highlighter-rouge">ng-model="foo"</code>的输入框，然后敲一个f，事件就会被调用<code class="highlighter-rouge">$apply("foo='f';")</code>。</p>
+
+<p>angular什么时候不会自动$apply？</p>
+
+<blockquote>
+  <p>用jquery写的代码，应用双向绑定的时候数据并没有自动更新。 <br />
+原因：jquery没有调用$apply,事件没有进入angular content，而angular content没有变化，$digest循环永远不会执行。</p>
+</blockquote>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2015/10/26/angular-01/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -509,9 +597,11 @@
                 </div>
                 <ul class="content-ul" recent>
                     
-                        <li><a href="/2017/07/06/html5-audio/">自定制一个简易的audio音频播放器</a></li>
+                        <li><a href="/2017/07/10/reactjs-audio/">reactjs 获取真实的dom节点</a></li>
                     
-                        <li><a href="/2017/07/05/emoji/">如何开发一个textarea文本域emoji插件</a></li>
+                        <li><a href="/2017/07/10/emoji/">如何开发一个textarea文本域emoji插件</a></li>
+                    
+                        <li><a href="/2017/07/06/html5-audio/">自定制一个简易的audio音频播放器</a></li>
                     
                         <li><a href="/2017/03/28/history-goback/">window.history</a></li>
                     
@@ -526,8 +616,6 @@
                         <li><a href="/2015/10/22/reactjs/">reactjs入门</a></li>
                     
                         <li><a href="/2015/09/30/learn-markdown-html-css/">Markdown格式预览</a></li>
-                    
-                        <li><a href="/2015/09/26/web-mobile-html-css/">移动web开发</a></li>
                     
                 </ul>
             </div>
@@ -563,7 +651,7 @@
                             <span class="name">
                                 Reactjs
                             </span>
-                            <span class="badge">1</span>
+                            <span class="badge">2</span>
                         </a>
                     </li>
                     
@@ -632,14 +720,14 @@
                       
                       
                       
-                      <a href="/tag/#Tool" style="font-size: 11pt; color: #777;">Tool</a>
+                      <a href="/tag/#Tool" style="font-size: 10.5pt; color: #777;">Tool</a>
                     
                       
                       
                       
                       
                       
-                      <a href="/tag/#Html5" style="font-size: 12.5pt; color: #555;">Html5</a>
+                      <a href="/tag/#Html5" style="font-size: 12pt; color: #666;">Html5</a>
                     
                       
                       
@@ -660,7 +748,7 @@
                       
                       
                       
-                      <a href="/tag/#Reactjs" style="font-size: 11pt; color: #777;">Reactjs</a>
+                      <a href="/tag/#Reactjs" style="font-size: 12pt; color: #666;">Reactjs</a>
                     
                       
                       
@@ -716,7 +804,7 @@
                       
                       
                       
-                      <a href="/tag/#CSS3" style="font-size: 11pt; color: #777;">CSS3</a>
+                      <a href="/tag/#CSS3" style="font-size: 10.5pt; color: #777;">CSS3</a>
                     
                       
                       
@@ -751,6 +839,13 @@
                       
                       
                       
+                      <a href="/tag/#audio" style="font-size: 9pt; color: #999;">audio</a>
+                    
+                      
+                      
+                      
+                      
+                      
                       <a href="/tag/#jquery" style="font-size: 9pt; color: #999;">jquery</a>
                     
                       
@@ -766,13 +861,6 @@
                       
                       
                       <a href="/tag/#textarea" style="font-size: 9pt; color: #999;">textarea</a>
-                    
-                      
-                      
-                      
-                      
-                      
-                      <a href="/tag/#audio" style="font-size: 9pt; color: #999;">audio</a>
                     
                 </div>
             </div>
@@ -805,7 +893,7 @@
             Contact me at: 
             <a href="https://github.com/liuyan5258" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>  
             <a href="mailto:liu5258yan@163.com" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>  
-            <a href="http://weibo.com/free_styles1993" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a>  
+            <a href="http://weibo.com/family5258" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a>  
             <a href="https://www.zhihu.com/people/free_styles1993" title="Zhihu"><i class="iconfont icon-daoruzhihu"></i></a>      
         </p>
         <p>
@@ -825,10 +913,9 @@
 
     <div class="back-to-top">
     <a href="#top" data-scroll>
-        <img src="http://os8ri8oj4.bkt.clouddn.com/pagetop.png" alt="back to top">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
     </a>
 </div>
-
     <script src=" /js/main.js " charset="utf-8"></script>
     <script src=" /js/smooth-scroll.min.js " charset="utf-8"></script>
     <script type="text/javascript">

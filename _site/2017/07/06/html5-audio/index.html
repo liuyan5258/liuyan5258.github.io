@@ -108,13 +108,21 @@
                     
                     <li>
                         
+                        <a href="/demo/">
+                        
+                            <i class="fa fa-play"></i>Demo
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
                         <a href="/about/">
                         
                             <i class="fa fa-heart"></i>About
                         </a>
                     </li>
-                    
-                
                     
                 
                     
@@ -321,6 +329,7 @@
   <li>pause(): 暂停当前播放的音频</li>
   <li>canPlayType(): 检测浏览器是否支持当前播放的音频</li>
   <li>addTextTrack(): 向音频添加新的文本轨道</li>
+  <li>ended(): 播放列表是否已经结束</li>
 </ol>
 
 <p>js控制音频的播放：</p>
@@ -329,15 +338,13 @@
   <span class="kd">var</span> <span class="nx">audio</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'audio'</span><span class="p">)</span>
   <span class="kd">var</span> <span class="nx">audioAnimate</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'.audio-animate'</span><span class="p">)</span>
   <span class="kd">var</span> <span class="nx">len</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'.audio-len'</span><span class="p">).</span><span class="nx">textContent</span>
-  <span class="kd">var</span> <span class="nx">timer</span> <span class="o">=</span> <span class="kc">null</span>
   <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'.audio-wrap'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">timer</span><span class="p">)</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">audio</span><span class="p">.</span><span class="nx">paused</span><span class="p">)</span> <span class="p">{</span>
       <span class="nx">audio</span><span class="p">.</span><span class="nx">play</span><span class="p">()</span>
       <span class="nx">audioAnimate</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">'play'</span><span class="p">)</span>
-      <span class="nx">timer</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">audio</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'ended'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
         <span class="nx">audioAnimate</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">'play'</span><span class="p">)</span>
-      <span class="p">},</span> <span class="nx">len</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
+      <span class="p">})</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
       <span class="nx">audio</span><span class="p">.</span><span class="nx">pause</span><span class="p">()</span>
       <span class="nx">audioAnimate</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">'play'</span><span class="p">)</span>
@@ -375,7 +382,35 @@
                         <ul>
                         
                         <li class="relatedPost">
-                            <a href="/2017/07/05/emoji/">如何开发一个textarea文本域emoji插件
+                            <a href="/2017/07/10/reactjs-audio/">reactjs 获取真实的dom节点
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                        
+                        <li class="relatedPost">
+                            <a href="/2017/07/10/emoji/">如何开发一个textarea文本域emoji插件
                             
                             </a>
                         </li>
@@ -636,34 +671,6 @@
                     
                 
                     
-                        
-                        <li class="relatedPost">
-                            <a href="/2015/09/26/web-mobile-html-css/">移动web开发
-                            
-                            </a>
-                        </li>
-                        
-                        
-                    
-                
-                    
-                
-            
-                
-                    
-                
-                    
-                
-                    
-                
-            
-        
-            
-            
-                
-                    
-                
-                    
                 
                     
                 
@@ -684,11 +691,13 @@
         <div class="post-recent">
     <div class="pre">
         
-        <p><strong>上一篇</strong> <a href="/2017/07/05/emoji/">如何开发一个textarea文本域emoji插件</a></p>
+        <p><strong>上一篇</strong> <a href="/2017/03/28/history-goback/">window.history</a></p>
         
     </div>
     <div class="nex">
 
+        
+        <p><strong>下一篇</strong> <a href="/2017/07/10/emoji/">如何开发一个textarea文本域emoji插件</a></p>
         
     </div>
 </div>
@@ -774,7 +783,7 @@
             Contact me at: 
             <a href="https://github.com/liuyan5258" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>  
             <a href="mailto:liu5258yan@163.com" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>  
-            <a href="http://weibo.com/free_styles1993" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a>  
+            <a href="http://weibo.com/family5258" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a>  
             <a href="https://www.zhihu.com/people/free_styles1993" title="Zhihu"><i class="iconfont icon-daoruzhihu"></i></a>      
         </p>
         <p>
@@ -794,10 +803,9 @@
 
     <div class="back-to-top">
     <a href="#top" data-scroll>
-        <img src="http://os8ri8oj4.bkt.clouddn.com/pagetop.png" alt="back to top">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
     </a>
 </div>
-
     <script src=" /js/main.js " charset="utf-8"></script>
     <script src=" /js/smooth-scroll.min.js " charset="utf-8"></script>
     <script type="text/javascript">

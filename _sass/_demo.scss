@@ -18,8 +18,9 @@
                 clear: both;
             }
             .grid-item {
+                position: relative;
                 width: 250px;
-                background-color: #fff;
+                // background-color: #fff;
                 margin-bottom: 20px;
                 padding-bottom: 10px;
                 float: left;
@@ -27,14 +28,16 @@
                 -webkit-transition: 0.5s ease;
                 -moz-transition: 0.5s ease;
                 -o-transition: 0.5s ease;
-                -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-                -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-                &:hover {
-                    -webkit-box-shadow: 0 2px 30px -1px rgba(0, 0, 0, 0.6), inset 0 0 87px 0 rgba(184, 184, 184, 0.13);
-                    -moz-box-shadow: 0 2px 30px -1px rgba(0, 0, 0, 0.6), inset 0 0 87px 0 rgba(184, 184, 184, 0.13);
-                    box-shadow: 0 2px 30px -1px rgba(0, 0, 0, 0.6), inset 0 0 87px 0 rgba(184, 184, 184, 0.13);
-
+                background: url(http://os8ri8oj4.bkt.clouddn.com/icon_bg.png) 5px 39px no-repeat;
+                z-index: 1;
+                strong {
+                  position: absolute;
+                  top: 15px;
+                  left: 5px;
+                  z-index: 10;
+                  width: 136px;
+                  height: 27px;
+                  background: url(http://os8ri8oj4.bkt.clouddn.com/b1.png) no-repeat;
                 }
                 .a-img {
                     color: #fff;
