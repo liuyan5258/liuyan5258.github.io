@@ -5,9 +5,124 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 10 Jul 2017 18:02:54 +0800</pubDate>
-    <lastBuildDate>Mon, 10 Jul 2017 18:02:54 +0800</lastBuildDate>
-    <generator>Jekyll v3.5.0</generator>
+    <pubDate>Wed, 26 Jul 2017 19:52:01 +0800</pubDate>
+    <lastBuildDate>Wed, 26 Jul 2017 19:52:01 +0800</lastBuildDate>
+    <generator>Jekyll v3.5.1</generator>
+    
+      <item>
+        <title>icoMoon 免费开源字体</title>
+        <description>
+icoMoon是一个免费的字体开源网站，兼容性好、适用性广、图标丰富。
+
+</description>
+        <pubDate>Wed, 26 Jul 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/07/26/web-font-optimization/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/07/26/web-font-optimization/</guid>
+        
+        <category>font</category>
+        
+        
+        <category>Tool</category>
+        
+      </item>
+    
+      <item>
+        <title>常用的javascript方法</title>
+        <description>
+整理工作中常用的一些javascript方法：
+
+&lt;ol&gt;
+  &lt;li&gt;jsonp&lt;/li&gt;
+  &lt;li&gt;localParam&lt;/li&gt;
+  &lt;li&gt;round&lt;/li&gt;
+  &lt;li&gt;requestAnimFrame&lt;/li&gt;
+  &lt;li&gt;object.assign polyfill&lt;/li&gt;
+  &lt;li&gt;closest&lt;/li&gt;
+  &lt;li&gt;getCookie&lt;/li&gt;
+  &lt;li&gt;importJs&lt;/li&gt;
+  &lt;li&gt;ajax&lt;/li&gt;
+  &lt;li&gt;formatTime&lt;/li&gt;
+  &lt;li&gt;isOwnEmpty&lt;/li&gt;
+  &lt;li&gt;isWifi&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Wed, 26 Jul 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/07/26/javascript-method/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/07/26/javascript-method/</guid>
+        
+        <category>Javascript</category>
+        
+        
+        <category>Javascript</category>
+        
+      </item>
+    
+      <item>
+        <title>工作中的一些思路技巧</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#工作记录&quot; id=&quot;markdown-toc-工作记录&quot;&gt;工作记录：&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;工作记录&quot;&gt;工作记录：&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;javascript利用事件委托，减少页面事件的绑定，提高页面性能&lt;/li&gt;
+  &lt;li&gt;DOM数组结构如何像原生数组一样使用forEach&lt;/li&gt;
+  &lt;li&gt;命名规范&lt;/li&gt;
+  &lt;li&gt;es6相关&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Tue, 25 Jul 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/07/25/javascript-skill/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/07/25/javascript-skill/</guid>
+        
+        <category>tips</category>
+        
+        <category>Javascript</category>
+        
+        
+        <category>Javascript</category>
+        
+      </item>
+    
+      <item>
+        <title>windows下如何安装jekyll</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#jekyll介绍&quot; id=&quot;markdown-toc-jekyll介绍&quot;&gt;jekyll介绍&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#安装ruby&quot; id=&quot;markdown-toc-安装ruby&quot;&gt;安装ruby&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;jekyll介绍&quot;&gt;jekyll介绍&lt;/h3&gt;
+
+jekyll是一个静态站点生成器，有jekyll生成的站点，可以直接发布到github上，这样我们就有了一个属于自己的免费网站。
+
+&lt;h3 id=&quot;安装ruby&quot;&gt;安装ruby&lt;/h3&gt;
+
+win7 64位系统下安装:
+
+&lt;a href=&quot;http://rubyinstaller.org/downloads/&quot;&gt;下载ruby&lt;/a&gt;
+
+安装完后设置环境变量：在用户变量path中加入C:\Ruby22\bin。
+
+命令行输入&lt;code class=&quot;highlighter-rouge&quot;&gt;ruby -v&lt;/code&gt;测试一下，看能不能输入版本号，能输出就安装配置成功了。
+
+</description>
+        <pubDate>Tue, 25 Jul 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/07/25/install-jekyll/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/07/25/install-jekyll/</guid>
+        
+        <category>windows</category>
+        
+        <category>Tool</category>
+        
+        <category>jekyll</category>
+        
+        
+        <category>Tool</category>
+        
+      </item>
     
       <item>
         <title>reactjs 获取真实的dom节点</title>
@@ -87,6 +202,29 @@ reactjs的设计，是采用DOM Diff的算法，所有的dom改变，都现在�
       </item>
     
       <item>
+        <title>图片懒加载</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#直接贴代码&quot; id=&quot;markdown-toc-直接贴代码&quot;&gt;直接贴代码&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;直接贴代码&quot;&gt;直接贴代码&lt;/h3&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;figure&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;img js-img u-img-placeholder&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-echo=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;${imgsrc}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/figure&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Mon, 15 May 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/05/15/image-lazy-load/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/15/image-lazy-load/</guid>
+        
+        <category>Javascript</category>
+        
+        
+        <category>Javascript</category>
+        
+      </item>
+    
+      <item>
         <title>window.history</title>
         <description>
 浏览器窗口有一个history对象，用来保存浏览历史。
@@ -150,146 +288,6 @@ history是不可遍历的.
         
         
         <category>Javascript</category>
-        
-      </item>
-    
-      <item>
-        <title>css实现ripple点击效果</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#利用transitionbeforeafter实现ripple的效果&quot; id=&quot;markdown-toc-利用transitionbeforeafter实现ripple的效果&quot;&gt;利用transition、before、after实现ripple的效果&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;利用transitionbeforeafter实现ripple的效果&quot;&gt;利用transition、before、after实现ripple的效果&lt;/h3&gt;
-
-&lt;img src=&quot;http://os8ri8oj4.bkt.clouddn.com/ripple.png&quot; alt=&quot;原理&quot; /&gt;
-
-</description>
-        <pubDate>Mon, 18 Jan 2016 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2016/01/18/css3-ripple/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/01/18/css3-ripple/</guid>
-        
-        <category>CSS3</category>
-        
-        <category>demo</category>
-        
-        
-        <category>css3</category>
-        
-      </item>
-    
-      <item>
-        <title>最近做angualr项目的一些问题</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#angularjs-and-scopeapply&quot; id=&quot;markdown-toc-angularjs-and-scopeapply&quot;&gt;AngularJS and scope.$apply&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;angularjs-and-scopeapply&quot;&gt;AngularJS and scope.$apply&lt;/h3&gt;
-
-&lt;code class=&quot;highlighter-rouge&quot;&gt;$apply&lt;/code&gt;决定什么事件进入angular content。
-
-当你点击带有&lt;code class=&quot;highlighter-rouge&quot;&gt;ng-click&lt;/code&gt;的元素时，事件就会被封装到一个&lt;code class=&quot;highlighter-rouge&quot;&gt;$apply&lt;/code&gt;调用。如果你有一个&lt;code class=&quot;highlighter-rouge&quot;&gt;ng-model=&quot;foo&quot;&lt;/code&gt;的输入框，然后敲一个f，事件就会被调用&lt;code class=&quot;highlighter-rouge&quot;&gt;$apply(&quot;foo='f';&quot;)&lt;/code&gt;。
-
-angular什么时候不会自动$apply？
-
-&lt;blockquote&gt;
-  用jquery写的代码，应用双向绑定的时候数据并没有自动更新。 &lt;br /&gt;
-原因：jquery没有调用$apply,事件没有进入angular content，而angular content没有变化，$digest循环永远不会执行。
-&lt;/blockquote&gt;
-
-</description>
-        <pubDate>Mon, 26 Oct 2015 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/10/26/angular-01/</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/10/26/angular-01/</guid>
-        
-        <category>Angular</category>
-        
-        <category>Javascript</category>
-        
-        <category>fiddler</category>
-        
-        
-        <category>Angular</category>
-        
-      </item>
-    
-      <item>
-        <title>如何用gulp搭建一个自动化的(gulp+browserify+react+less+es6)前端开发环境</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#一些前期准备&quot; id=&quot;markdown-toc-一些前期准备&quot;&gt;一些前期准备&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;一些前期准备&quot;&gt;一些前期准备&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;node&lt;/li&gt;
-  &lt;li&gt;browserify VS webpack&lt;/li&gt;
-  &lt;li&gt;npm VS bower&lt;/li&gt;
-  &lt;li&gt;npm的package.json配置文件&lt;/li&gt;
-  &lt;li&gt;webpack的配置文件webpack.config.js&lt;/li&gt;
-  &lt;li&gt;ES6 (babel-loader组件，有了babel工具就可以用ES6编写react组件了)&lt;/li&gt;
-  &lt;li&gt;grunt vs gulp&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-        <pubDate>Fri, 23 Oct 2015 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/10/23/gulp-browserify-react/</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/10/23/gulp-browserify-react/</guid>
-        
-        <category>架构</category>
-        
-        <category>Browserify</category>
-        
-        <category>Reactjs</category>
-        
-        <category>LESS</category>
-        
-        <category>ES6</category>
-        
-        <category>Javascript</category>
-        
-        
-        <category>架构</category>
-        
-      </item>
-    
-      <item>
-        <title>reactjs入门</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#初识jsx&quot; id=&quot;markdown-toc-初识jsx&quot;&gt;初识jsx&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;初识jsx&quot;&gt;初识jsx&lt;/h3&gt;
-
-&lt;a href=&quot;为什么要使用jsx&quot;&gt;http://reactjs.cn/react/docs/jsx-in-depth.html&lt;/a&gt;
-
-</description>
-        <pubDate>Thu, 22 Oct 2015 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/10/22/reactjs/</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/10/22/reactjs/</guid>
-        
-        <category>Reactjs</category>
-        
-        
-        <category>Reactjs</category>
-        
-      </item>
-    
-      <item>
-        <title>Markdown格式预览</title>
-        <description>
-Markdown格式预览
-
-</description>
-        <pubDate>Wed, 30 Sep 2015 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/09/30/learn-markdown-html-css/</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/09/30/learn-markdown-html-css/</guid>
-        
-        <category>Tool</category>
-        
-        <category>Markdown</category>
-        
-        
-        <category>Tool</category>
         
       </item>
     
