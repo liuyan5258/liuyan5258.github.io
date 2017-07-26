@@ -23,8 +23,7 @@ author: LY
 9. ajax
 10. formatTime
 11. isOwnEmpty
-12. isWifi
-
+12. isWifi  
 
 
 
