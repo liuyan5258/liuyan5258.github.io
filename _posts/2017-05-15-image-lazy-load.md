@@ -9,9 +9,14 @@ author: LY
 * content
 {:toc}  
 
+### 直接贴代码
 ```html
 <figure class="img js-img u-img-placeholder" data-echo="${imgsrc}"></figure>
 ```
+
+
+
+
 
 
 

@@ -9,12 +9,16 @@ author: LY
 * content
 {:toc}  
 
-工作记录：
+### 工作记录：
 
 1. javascript利用事件委托，减少页面事件的绑定，提高页面性能
 2. DOM数组结构如何像原生数组一样使用forEach
 3. 命名规范
 4. es6相关
+
+
+
+
 
 
 

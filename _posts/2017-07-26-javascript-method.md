@@ -28,6 +28,12 @@ author: LY
 
 
 
+
+
+
+
+
+
 ### jsonp
 ```js
 function jsonp(a, b, c) {
