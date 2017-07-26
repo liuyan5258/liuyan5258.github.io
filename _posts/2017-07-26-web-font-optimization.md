@@ -1,17 +1,17 @@
 ---
 layout: post
-title: icoMoon 免费开源字体
-categories: Tool
-tags: font 
+title: 移动web开发
+categories: Html5
+tags: Html5 移动开发
 author: LY
 ---
 
 * content
-{:toc}  
+{:toc}
 
 ### 桌面优先的网站  
 
-icoMoon是一个免费的字体开源网站，兼容性好、适用性广、图标丰富。
+在创建纯粹的桌面网站或纯粹的移动网站之外，我们还有其他的建站方式，其中之一就是桌面优先，并在移动设备上优雅降级。
 
 
 
@@ -19,9 +19,4 @@ icoMoon是一个免费的字体开源网站，兼容性好、适用性广、图�
 
 
 
-
-### 使用教程  
-
-
-
-
+### 移动优先网站
