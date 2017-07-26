@@ -1,15 +1,14 @@
 .page[index] {
     a {
-        color: #e60d84;
+        color: #4d6dad;
         transition: 0.5s ease;
         &:hover {
-            color: #f6aa11;
+            color: #223253;
         }
     }
     .left {
         >ul {
             padding: 0;
-            margin-top: 0;
             >li {
                 list-style: none;
             }
@@ -17,7 +16,7 @@
                 color: #333;
                 h2 {
                     border: none;
-                    font-size: 24px;
+                    font-size: 27px;
                     margin: 0;
                 }
                 .label {
@@ -38,23 +37,23 @@
                 }
                 .excerpt {
                     h2 {
-                        font-size: 20px;
+                        font-size: 24px;
                     }
                     h3 {
-                        font-size: 18px;
+                        font-size: 22px;
                     }
                     h4 {
-                        font-size: 16px;
+                        font-size: 20px;
                     }
                 }
                 .read-all {
                     text-align: right;
                     font-size: 14px;
                     a {
-                        color: #f9a1c7;
+                        color: #778ab0;
                         transition: 0.2s ease;
                         &:hover {
-                            color: #e60d84;
+                            color: #5872a7;
                         }
                         i {
                             padding-right: 3px;
@@ -97,12 +96,11 @@
                             display: block;
                             width: 100%;
                             padding: 2px 0;
-                            border-bottom: 1px solid #fadce9;
+                            border-bottom: 1px solid #eee;
                             &:hover {
-                                background-color: #fadce9;
+                                background-color: #dbdfee;
                                 .badge {
-                                    color: #fff;
-                                    background-color: #f9a1c7;
+                                    background-color: #dbdfee;
                                     transform: scale(1.2) rotate(360deg);
                                 }
                             }
@@ -119,8 +117,8 @@
                                 margin-top: 3px;
                                 padding: 0 10px;
                                 font-size: 12px;
-                                color: #e60d84;
-                                background-color: #fadce9;
+                                color: #fff;
+                                background-color: #bbb;
                                 border-radius: 50%;
                                 transition: 0.5s ease-in-out;
                             }
@@ -133,7 +131,7 @@
                 .content-ul[recent]{
                     padding-bottom: 16px;
                     li{
-                        color:#e60d84;
+                        color:#aaa;
                         font-size: 14px;
                     }
                 }
@@ -143,7 +141,7 @@
                         padding: 0 3px;
                         border-radius: 5px;
                         &:hover {
-                            background-color: #fadce9;
+                            background-color: #f0e7ce;
                         }
                     }
                 }
@@ -162,7 +160,6 @@
                     font-size: 20px;
                 }
                 h3 {
-                    margin: 20px 0 10px;
                     font-size: 18px;
                 }
                 h4 {

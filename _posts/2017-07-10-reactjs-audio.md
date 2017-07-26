@@ -17,7 +17,10 @@ reactjs的设计，是采用DOM Diff的算法，所有的dom改变，都现在�
 
 比如我之前写的那个例子，[自定制一个简易的audio音频播放器](http://liuyan5258.github.io/2017/07/06/html5-audio/)。
 
-我需要在点击ui组件的时候获取audio的播放和停止事件。我们并不能像javascript那样直接从document上去寻找，这个时候就需要用到ref属性了。
+我需要在点击ui组件的时候获取audio的播放和停止事件。我们并不能像javascript那样直接从document上去寻找，这个时候就需要用到ref属性了。  
+
+
+
 
 
 

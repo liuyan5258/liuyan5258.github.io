@@ -22,15 +22,14 @@ h4,
 h5,
 h6 {
     font-weight: 400;
-    color: #e60d84;
 }
 html {
     height: 100%;
 }
 body {
-    // font-family: 'Helvetica Neue',Helvetica,Arial,'Microsoft YaHei',sans-serif;
-    font-family: Georgia, serif;
-    color: #000;
+    font-family: 'Helvetica Neue',Helvetica,Arial,'Microsoft YaHei',sans-serif;
+    color: #333;
+    background-image: url(https://ooo.0o0.ooo/2016/06/20/5768c606cf9cb.jpg);
     position: relative;
     min-height: 100%;
     padding-bottom: 190px;
@@ -44,24 +43,25 @@ button {
 }
 hr {
     border: 0;
-    border-top: 1px solid #f9a1c7;
+    border-top: 1px solid #eee;
     margin: 20px 0;
 }
 
 ///////////
 h1 {
-    font-size: 26px;
+    font-size: 30px;
 }
 h2 {
-    font-size: 22px;
+    font-size: 26px;
+    border-bottom: 1px solid #eee;
     margin: 50px 0 25px;
 }
 h3 {
-    font-size: 20px;
+    font-size: 23px;
     margin: 50px 0 20px;
 }
 h4 {
-    font-size: 18px;
+    font-size: 19px;
     margin: 30px 0 10px;
 }
 h5 {
@@ -74,9 +74,9 @@ h6 {
 }
 blockquote {
     color: #444;
-    border-left: 5px solid #e60d84;
+    border-left: 5px solid #D6DBDF;
     padding-left: 15px;
-    background: rgba(230, 13, 132, 0.1);
+    background: rgba(112,138,153,.1);
     padding: 10px 20px;
     margin: 0 0 20px;
     p:last-of-type{
@@ -113,7 +113,6 @@ table {
 }
 p {
     margin: 0 0 10px;
-    text-align: initial;
 }
 img {
     max-width: 100%;

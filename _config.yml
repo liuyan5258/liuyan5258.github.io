@@ -18,7 +18,7 @@ twitter_username:
 facebook_username: 
 github_username:  liuyan5258
 email: liu5258yan@163.com
-weibo_username: free_styles1993
+weibo_username: family5258
 zhihu_username: free_styles1993
 linkedIn_username: 
 dribbble_username:
@@ -39,7 +39,7 @@ baidu_tongji_id: e9975f819c76e43cbda7eeb12c37ce3c
 google_analytics_id: UA-101771400-1 # google 分析追踪id
 
 # Build settings
-highlighter: rouge
+# highlighter: rouge
 markdown: kramdown
 
 kramdown:
