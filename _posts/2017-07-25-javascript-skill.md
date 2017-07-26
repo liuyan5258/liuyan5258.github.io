@@ -25,6 +25,9 @@ author: LY
 
 
 
+
+
+
 ### javascript利用事件委托，减少页面事件的绑定，提高页面性能
 
 ```html

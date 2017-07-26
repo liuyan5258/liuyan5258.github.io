@@ -9,7 +9,6 @@ author: LY
 * content
 {:toc}  
 
-
 整理工作中常用的一些javascript方法：
 
 1. jsonp
@@ -24,6 +23,10 @@ author: LY
 10. formatTime
 11. isOwnEmpty
 12. isWifi  
+
+
+
+
 
 
 
