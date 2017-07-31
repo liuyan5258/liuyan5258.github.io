@@ -44,6 +44,21 @@
 
 
 
+<script>
+  (function(){
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  })();
+</script>
 </head>
 
 
@@ -123,6 +138,8 @@
                             <i class="fa fa-heart"></i>About
                         </a>
                     </li>
+                    
+                
                     
                 
                     
@@ -521,8 +538,36 @@ run：执行任务</p>
                     
                 
             
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
         
             
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
             
                 
                     
@@ -539,6 +584,89 @@ run：执行任务</p>
                         
                         <h2 id="similar_posts">Similar Posts</h2>
                         <ul>
+                        
+                        <li class="relatedPost">
+                            <a href="/2017/07/31/service-worker/">为gitPage静态网站添加service worker离线访问功能
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        
+                        <li class="relatedPost">
+                            <a href="/2017/07/27/every-day-reg/">正则表达式
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
                         
                         <li class="relatedPost">
                             <a href="/2017/07/26/javascript-method/">常用的javascript方法
@@ -745,145 +873,6 @@ run：执行任务</p>
             
         
             
-            
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                        
-                        <li class="relatedPost">
-                            <a href="/2017/07/06/html5-audio/">自定制一个简易的audio音频播放器
-                            
-                            </a>
-                        </li>
-                        
-                        
-                    
-                
-            
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            
-        
-            
-            
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                        
-                        <li class="relatedPost">
-                            <a href="/2017/05/15/image-lazy-load/">图片懒加载
-                            
-                            </a>
-                        </li>
-                        
-                        
-                    
-                
-            
-        
-            
-            
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            
-        
-            
-            
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
             
                 
                     

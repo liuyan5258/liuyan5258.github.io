@@ -44,6 +44,21 @@
 
 
 
+<script>
+  (function(){
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  })();
+</script>
 </head>
 
 
@@ -135,6 +150,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -153,6 +170,144 @@
 
             
               <h2 id="y2017">2017</h2>
+            
+
+            <li>
+                <time>
+                2017-07-31 Mon.
+                </time>
+                <a class="title" href="/2017/07/31/why-use-https/">为什么要使用https代替http</a>
+
+                
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#安全性" title="Category: 安全性" rel="category">安全性</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#Https" title="Tag: Https" rel="tag">Https</a>&nbsp;
+    
+        <a href="/tag/#安全性" title="Tag: 安全性" rel="tag">安全性</a>
+    
+  
+
+</span>
+
+            </li>
+
+          
+
+            
+              
+              
+              
+            
+
+            <li>
+                <time>
+                2017-07-31 Mon.
+                </time>
+                <a class="title" href="/2017/07/31/service-worker/">为gitPage静态网站添加service worker离线访问功能</a>
+
+                
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Html5" title="Category: Html5" rel="category">Html5</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#Html5" title="Tag: Html5" rel="tag">Html5</a>&nbsp;
+    
+        <a href="/tag/#Javascript" title="Tag: Javascript" rel="tag">Javascript</a>
+    
+  
+
+</span>
+
+            </li>
+
+          
+
+            
+              
+              
+              
+            
+
+            <li>
+                <time>
+                2017-07-27 Thu.
+                </time>
+                <a class="title" href="/2017/07/27/every-day-reg/">正则表达式</a>
+
+                
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Javascript" title="Category: Javascript" rel="category">Javascript</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#Javascript" title="Tag: Javascript" rel="tag">Javascript</a>&nbsp;
+    
+        <a href="/tag/#regularExpr" title="Tag: regularExpr" rel="tag">regularExpr</a>
+    
+  
+
+</span>
+
+            </li>
+
+          
+
+            
+              
+              
+              
             
 
             <li>
@@ -1008,7 +1163,22 @@
                           
                           
                           
-                            <li><a data-scroll href="#y2017">2017 (9)</a></li>
+                        
+                          
+                          
+                          
+                          
+                        
+                          
+                          
+                          
+                          
+                        
+                          
+                          
+                          
+                          
+                            <li><a data-scroll href="#y2017">2017 (12)</a></li>
                             
                           
                         

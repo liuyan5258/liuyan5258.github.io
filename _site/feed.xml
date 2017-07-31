@@ -5,9 +5,88 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 27 Jul 2017 10:16:43 +0800</pubDate>
-    <lastBuildDate>Thu, 27 Jul 2017 10:16:43 +0800</lastBuildDate>
+    <pubDate>Mon, 31 Jul 2017 17:10:11 +0800</pubDate>
+    <lastBuildDate>Mon, 31 Jul 2017 17:10:11 +0800</lastBuildDate>
     <generator>Jekyll v3.5.1</generator>
+    
+      <item>
+        <title>为什么要使用https代替http</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#什么是https&quot; id=&quot;markdown-toc-什么是https&quot;&gt;什么是https&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;什么是https&quot;&gt;什么是https&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  简单地讲， HTTPS 是加过密的 HTTP。这样，由于网路上传输的数据是加密的，在浏览网页时，除了你自己可以看到你在看什么网页，第三方是无法得知你在干什么的。
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Mon, 31 Jul 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/07/31/why-use-https/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/07/31/why-use-https/</guid>
+        
+        <category>Https</category>
+        
+        <category>安全性</category>
+        
+        
+        <category>安全性</category>
+        
+      </item>
+    
+      <item>
+        <title>为gitPage静态网站添加service worker离线访问功能</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#先决条件&quot; id=&quot;markdown-toc-先决条件&quot;&gt;先决条件：&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;先决条件&quot;&gt;先决条件：&lt;/h3&gt;
+
+1.浏览器支持
+
+&lt;a href=&quot;https://jakearchibald.github.io/isserviceworkerready/&quot;&gt;支持的浏览器&lt;/a&gt;
+
+2.https协议
+
+在开发过程中，可以通过 localhost 使用服务工作线程，但如果要在网站上部署服务工作线程，需要在服务器上设置 HTTPS。注意，本地修改hosts，自定义域名映射到localhost的不生效。
+
+</description>
+        <pubDate>Mon, 31 Jul 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/07/31/service-worker/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/07/31/service-worker/</guid>
+        
+        <category>Html5</category>
+        
+        <category>Javascript</category>
+        
+        
+        <category>Html5</category>
+        
+      </item>
+    
+      <item>
+        <title>正则表达式</title>
+        <description>
+正则表达式笔记：
+
+&lt;ol&gt;
+  &lt;li&gt;将中划线和下划线分隔的命名转换成大写驼峰命名&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Thu, 27 Jul 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/07/27/every-day-reg/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/07/27/every-day-reg/</guid>
+        
+        <category>Javascript</category>
+        
+        <category>regularExpr</category>
+        
+        
+        <category>Javascript</category>
+        
+      </item>
     
       <item>
         <title>icoMoon 免费开源字体</title>
@@ -198,96 +277,6 @@ reactjs的设计，是采用DOM Diff的算法，所有的dom改变，都现在�
         
         
         <category>Html5</category>
-        
-      </item>
-    
-      <item>
-        <title>图片懒加载</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#直接贴代码&quot; id=&quot;markdown-toc-直接贴代码&quot;&gt;直接贴代码&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;直接贴代码&quot;&gt;直接贴代码&lt;/h3&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;figure&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;img js-img u-img-placeholder&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-echo=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;${imgsrc}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/figure&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-</description>
-        <pubDate>Mon, 15 May 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/05/15/image-lazy-load/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/05/15/image-lazy-load/</guid>
-        
-        <category>Javascript</category>
-        
-        
-        <category>Javascript</category>
-        
-      </item>
-    
-      <item>
-        <title>window.history</title>
-        <description>
-浏览器窗口有一个history对象，用来保存浏览历史。
-
-最常用的属性：&lt;code class=&quot;highlighter-rouge&quot;&gt;length&lt;/code&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;history&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-history是不可遍历的.
-
-</description>
-        <pubDate>Tue, 28 Mar 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/03/28/history-goback/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/03/28/history-goback/</guid>
-        
-        <category>Html5</category>
-        
-        <category>Javascript</category>
-        
-        
-        <category>Javascript</category>
-        
-      </item>
-    
-      <item>
-        <title>在工作中遇到的一些问题</title>
-        <description>
-纪录在工作中遇到的一些问题：
-
-&lt;ol&gt;
-  &lt;li&gt;在ios里面长按无法识别二维码&lt;/li&gt;
-  &lt;li&gt;新学了几个Linux命令&lt;/li&gt;
-  &lt;li&gt;解决1px像素的问题&lt;/li&gt;
-  &lt;li&gt;flex垂直居中&lt;/li&gt;
-  &lt;li&gt;善用:not()选择器&lt;/li&gt;
-  &lt;li&gt;给body添加line-height属性&lt;/li&gt;
-  &lt;li&gt;使用负的nth-child选取元素&lt;/li&gt;
-  &lt;li&gt;紧贴底部的页脚&lt;/li&gt;
-  &lt;li&gt;在css中利用attr()显示html中的属性值&lt;/li&gt;
-  &lt;li&gt;使用content在列表中自动添加序号&lt;/li&gt;
-  &lt;li&gt;innerHtml、innerText、textContent、html区分&lt;/li&gt;
-  &lt;li&gt;data[“00340F0R”]和data.00340F0R&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-        <pubDate>Thu, 14 Apr 2016 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2016/04/14/some-tips/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/04/14/some-tips/</guid>
-        
-        <category>tips</category>
-        
-        <category>Javascript</category>
-        
-        <category>qrcode</category>
-        
-        <category>CSS3</category>
-        
-        <category>Linux</category>
-        
-        
-        <category>Javascript</category>
         
       </item>
     

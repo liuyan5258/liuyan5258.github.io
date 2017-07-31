@@ -44,6 +44,21 @@
 
 
 
+<script>
+  (function(){
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  })();
+</script>
 </head>
 
 
@@ -123,6 +138,8 @@
                             <i class="fa fa-heart"></i>About
                         </a>
                     </li>
+                    
+                
                     
                 
                     
@@ -274,9 +291,6 @@
                     
                 
             
-        
-            
-            
                 
                     
                 
@@ -313,68 +327,8 @@
                     
                 
             
-                
-                    
-                
-                    
-                
-            
         
             
-            
-                
-                    
-                
-                    
-                
-            
-                
-                    
-                
-                    
-                
-            
-        
-            
-            
-                
-                    
-                
-                    
-                
-            
-                
-                    
-                
-                    
-                
-            
-                
-                    
-                
-                    
-                
-            
-                
-                    
-                
-                    
-                
-            
-        
-            
-            
-                
-                    
-                
-                    
-                
-            
-                
-                    
-                
-                    
-                
             
                 
                     
@@ -427,19 +381,10 @@
                     
                 
             
+        
+            
+            
                 
-                    
-                        
-                        <h2 id="similar_posts">Similar Posts</h2>
-                        <ul>
-                        
-                        <li class="relatedPost">
-                            <a href="/2016/04/14/some-tips/">在工作中遇到的一些问题
-                            
-                            </a>
-                        </li>
-                        
-                        
                     
                 
                     
@@ -452,8 +397,54 @@
                 
             
         
+            
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
         
-            </ul>
+            
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+        
         
 
         <div class="post-recent">
@@ -514,8 +505,6 @@
                 </div>
                 
                 <ul id="content-side" class="content-ul">
-                    
-                    <li><a href="#similar_posts">Similar Posts</a></li>
                     
                     <li><a href="#comments">Comments</a></li>
                 </ul>

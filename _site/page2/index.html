@@ -44,6 +44,21 @@
 
 
 
+<script>
+  (function(){
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  })();
+</script>
 </head>
 
 
@@ -135,6 +150,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -144,6 +161,232 @@
         <div class="page clearfix" index>
     <div class="left">
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2017/07/25/install-jekyll/">windows下如何安装jekyll</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2017-07-25
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>LY
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Tool" title="Category: Tool" rel="category">Tool</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#windows" title="Tag: windows" rel="tag">windows</a>&nbsp;
+    
+        <a href="/tag/#Tool" title="Tag: Tool" rel="tag">Tool</a>&nbsp;
+    
+        <a href="/tag/#jekyll" title="Tag: jekyll" rel="tag">jekyll</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#jekyll介绍" id="markdown-toc-jekyll介绍">jekyll介绍</a></li>
+  <li><a href="#安装ruby" id="markdown-toc-安装ruby">安装ruby</a></li>
+</ul>
+
+<h3 id="jekyll介绍">jekyll介绍</h3>
+
+<p>jekyll是一个静态站点生成器，有jekyll生成的站点，可以直接发布到github上，这样我们就有了一个属于自己的免费网站。</p>
+
+<h3 id="安装ruby">安装ruby</h3>
+
+<p>win7 64位系统下安装:</p>
+
+<p><a href="http://rubyinstaller.org/downloads/">下载ruby</a></p>
+
+<p>安装完后设置环境变量：在用户变量path中加入C:\Ruby22\bin。</p>
+
+<p>命令行输入<code class="highlighter-rouge">ruby -v</code>测试一下，看能不能输入版本号，能输出就安装配置成功了。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2017/07/25/install-jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2017/07/10/reactjs-audio/">reactjs 获取真实的dom节点</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2017-07-10
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>LY
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Reactjs" title="Category: Reactjs" rel="category">Reactjs</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#Reactjs" title="Tag: Reactjs" rel="tag">Reactjs</a>&nbsp;
+    
+        <a href="/tag/#Javascript" title="Tag: Javascript" rel="tag">Javascript</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    
+<p>用reactjs 如何获取真实的dom节点。</p>
+
+<p>reactjs的设计，是采用DOM Diff的算法，所有的dom改变，都现在虚拟dom上发生，然后再将实际发生变动的部分，反映在真实的dom上。</p>
+
+<p>但是有时候需要从组件获取真实的dom怎么办？</p>
+
+<p>比如我之前写的那个例子，<a href="http://liuyan5258.github.io/2017/07/06/html5-audio/">自定制一个简易的audio音频播放器</a>。</p>
+
+<p>我需要在点击ui组件的时候获取audio的播放和停止事件。我们并不能像javascript那样直接从document上去寻找，这个时候就需要用到ref属性了。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2017/07/10/reactjs-audio/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2017/07/10/emoji/">如何开发一个textarea文本域emoji插件</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2017-07-10
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>LY
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Javascript" title="Category: Javascript" rel="category">Javascript</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#jquery" title="Tag: jquery" rel="tag">jquery</a>&nbsp;
+    
+        <a href="/tag/#Javascript" title="Tag: Javascript" rel="tag">Javascript</a>&nbsp;
+    
+        <a href="/tag/#emoji" title="Tag: emoji" rel="tag">emoji</a>&nbsp;
+    
+        <a href="/tag/#textarea" title="Tag: textarea" rel="tag">textarea</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    
+<p>做前端的人在面临页面需要某种效果或插件的时候，都会想，是从网上找呢，还是自己造轮子开发。</p>
+
+<p>如果在需求比较紧张的时候我们可能会选择从网上找相关的插件，然后学习它的用法。但是从网上找的通常功能太大太全，而且存在一个学习成本，还有可能不完全符合我们项目的需求，这样改起来也并不轻松。</p>
+
+<p>所以在需求不是很紧张的时候，我们还是自己慢慢造轮子吧，这样也知根知底，容易修改。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2017/07/10/emoji/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -353,240 +596,6 @@
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/04/14/some-tips/">在工作中遇到的一些问题</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-04-14
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>LY
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#Javascript" title="Category: Javascript" rel="category">Javascript</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#tips" title="Tag: tips" rel="tag">tips</a>&nbsp;
-    
-        <a href="/tag/#Javascript" title="Tag: Javascript" rel="tag">Javascript</a>&nbsp;
-    
-        <a href="/tag/#qrcode" title="Tag: qrcode" rel="tag">qrcode</a>&nbsp;
-    
-        <a href="/tag/#CSS3" title="Tag: CSS3" rel="tag">CSS3</a>&nbsp;
-    
-        <a href="/tag/#Linux" title="Tag: Linux" rel="tag">Linux</a>
-    
-  
-
-</span>
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    
-<p>纪录在工作中遇到的一些问题：</p>
-
-<ol>
-  <li>在ios里面长按无法识别二维码</li>
-  <li>新学了几个Linux命令</li>
-  <li>解决1px像素的问题</li>
-  <li>flex垂直居中</li>
-  <li>善用:not()选择器</li>
-  <li>给body添加line-height属性</li>
-  <li>使用负的nth-child选取元素</li>
-  <li>紧贴底部的页脚</li>
-  <li>在css中利用attr()显示html中的属性值</li>
-  <li>使用content在列表中自动添加序号</li>
-  <li>innerHtml、innerText、textContent、html区分</li>
-  <li>data[“00340F0R”]和data.00340F0R</li>
-</ol>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/04/14/some-tips/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/01/18/css3-ripple/">css实现ripple点击效果</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-01-18
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>LY
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#css3" title="Category: css3" rel="category">css3</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#CSS3" title="Tag: CSS3" rel="tag">CSS3</a>&nbsp;
-    
-        <a href="/tag/#demo" title="Tag: demo" rel="tag">demo</a>
-    
-  
-
-</span>
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <ul id="markdown-toc">
-  <li><a href="#利用transitionbeforeafter实现ripple的效果" id="markdown-toc-利用transitionbeforeafter实现ripple的效果">利用transition、before、after实现ripple的效果</a></li>
-</ul>
-
-<h3 id="利用transitionbeforeafter实现ripple的效果">利用transition、before、after实现ripple的效果</h3>
-
-<p><img src="http://os8ri8oj4.bkt.clouddn.com/ripple.png" alt="原理" /></p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/01/18/css3-ripple/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2015/10/26/angular-01/">最近做angualr项目的一些问题</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2015-10-26
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>LY
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#Angular" title="Category: Angular" rel="category">Angular</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#Angular" title="Tag: Angular" rel="tag">Angular</a>&nbsp;
-    
-        <a href="/tag/#Javascript" title="Tag: Javascript" rel="tag">Javascript</a>&nbsp;
-    
-        <a href="/tag/#fiddler" title="Tag: fiddler" rel="tag">fiddler</a>
-    
-  
-
-</span>
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <ul id="markdown-toc">
-  <li><a href="#angularjs-and-scopeapply" id="markdown-toc-angularjs-and-scopeapply">AngularJS and scope.$apply</a></li>
-</ul>
-
-<h3 id="angularjs-and-scopeapply">AngularJS and scope.$apply</h3>
-
-<p><code class="highlighter-rouge">$apply</code>决定什么事件进入angular content。</p>
-
-<p>当你点击带有<code class="highlighter-rouge">ng-click</code>的元素时，事件就会被封装到一个<code class="highlighter-rouge">$apply</code>调用。如果你有一个<code class="highlighter-rouge">ng-model="foo"</code>的输入框，然后敲一个f，事件就会被调用<code class="highlighter-rouge">$apply("foo='f';")</code>。</p>
-
-<p>angular什么时候不会自动$apply？</p>
-
-<blockquote>
-  <p>用jquery写的代码，应用双向绑定的时候数据并没有自动更新。 <br />
-原因：jquery没有调用$apply,事件没有进入angular content，而angular content没有变化，$digest循环永远不会执行。</p>
-</blockquote>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2015/10/26/angular-01/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -597,10 +606,10 @@
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">2/3</span>
+          <span class="page_number ">2/4</span>
           
             <a href="/page3" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page3" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page4" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -613,6 +622,12 @@
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2017/07/31/why-use-https/">为什么要使用https代替http</a></li>
+                    
+                        <li><a href="/2017/07/31/service-worker/">为gitPage静态网站添加service worker离线访问功能</a></li>
+                    
+                        <li><a href="/2017/07/27/every-day-reg/">正则表达式</a></li>
                     
                         <li><a href="/2017/07/26/web-font-optimization/">icoMoon 免费开源字体</a></li>
                     
@@ -627,12 +642,6 @@
                         <li><a href="/2017/07/10/emoji/">如何开发一个textarea文本域emoji插件</a></li>
                     
                         <li><a href="/2017/07/06/html5-audio/">自定制一个简易的audio音频播放器</a></li>
-                    
-                        <li><a href="/2017/05/15/image-lazy-load/">图片懒加载</a></li>
-                    
-                        <li><a href="/2017/03/28/history-goback/">window.history</a></li>
-                    
-                        <li><a href="/2016/04/14/some-tips/">在工作中遇到的一些问题</a></li>
                     
                 </ul>
             </div>
@@ -659,7 +668,7 @@
                             <span class="name">
                                 Html5
                             </span>
-                            <span class="badge">2</span>
+                            <span class="badge">3</span>
                         </a>
                     </li>
                     
@@ -704,7 +713,16 @@
                             <span class="name">
                                 Javascript
                             </span>
-                            <span class="badge">6</span>
+                            <span class="badge">7</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#安全性" class="categories-list-item" cate="安全性">
+                            <span class="name">
+                                安全性
+                            </span>
+                            <span class="badge">1</span>
                         </a>
                     </li>
                     
@@ -737,14 +755,14 @@
                       
                       
                       
-                      <a href="/tag/#Tool" style="font-size: 11pt; color: #777;">Tool</a>
+                      <a href="/tag/#Tool" style="font-size: 10.5pt; color: #777;">Tool</a>
                     
                       
                       
                       
                       
                       
-                      <a href="/tag/#Html5" style="font-size: 11pt; color: #777;">Html5</a>
+                      <a href="/tag/#Html5" style="font-size: 11.5pt; color: #777;">Html5</a>
                     
                       
                       
@@ -765,7 +783,7 @@
                       
                       
                       
-                      <a href="/tag/#Reactjs" style="font-size: 11pt; color: #777;">Reactjs</a>
+                      <a href="/tag/#Reactjs" style="font-size: 10.5pt; color: #777;">Reactjs</a>
                     
                       
                       
@@ -899,6 +917,27 @@
                       
                       
                       <a href="/tag/#font" style="font-size: 9pt; color: #999;">font</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#regularExpr" style="font-size: 9pt; color: #999;">regularExpr</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#Https" style="font-size: 9pt; color: #999;">Https</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#安全性" style="font-size: 9pt; color: #999;">安全性</a>
                     
                 </div>
             </div>
