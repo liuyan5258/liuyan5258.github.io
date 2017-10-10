@@ -5,9 +5,156 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 31 Jul 2017 17:10:11 +0800</pubDate>
-    <lastBuildDate>Mon, 31 Jul 2017 17:10:11 +0800</lastBuildDate>
-    <generator>Jekyll v3.5.1</generator>
+    <pubDate>Tue, 10 Oct 2017 10:30:25 +0800</pubDate>
+    <lastBuildDate>Tue, 10 Oct 2017 10:30:25 +0800</lastBuildDate>
+    <generator>Jekyll v3.5.0</generator>
+    
+      <item>
+        <title>http中有趣的referer</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#什么是referer头&quot; id=&quot;markdown-toc-什么是referer头&quot;&gt;什么是referer头&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;什么是referer头&quot;&gt;什么是referer头&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  referer请求头让服务器能够拿到请求资源的来源。比如我在www.weibo.com里面点击一个www.baidu.com的链接，那么在www.baidu.com的页面的header信息里就会有Referer=www.weibo.com。&lt;br /&gt;
+  referer可以用于分析用户的兴趣爱好、收集日志、优化缓存等等。也可以让服务器发现过时的和错误的链接并及时维护。
+&lt;/blockquote&gt;
+
+referer有很多合法的用例，例如找到你网站上的死链、追踪错误或找到用户是通过哪些搜索条件找到你的网站的。
+
+可以用来提高网站的安全性，检查referer头是一个阻止跨站请求伪造的办法。
+
+</description>
+        <pubDate>Tue, 15 Aug 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/08/15/http-referrer/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/08/15/http-referrer/</guid>
+        
+        <category>Http</category>
+        
+        <category>前端安全性</category>
+        
+        
+        <category>Http</category>
+        
+      </item>
+    
+      <item>
+        <title>前端工程师面试题解答一</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#说一说你了解的css盒模型&quot; id=&quot;markdown-toc-说一说你了解的css盒模型&quot;&gt;说一说你了解的css盒模型&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+面试的时候主要看简历发挥，所以简历不能写得太浮夸，要不然面试官问到你都答不上来。
+
+&lt;h3 id=&quot;说一说你了解的css盒模型&quot;&gt;说一说你了解的css盒模型&lt;/h3&gt;
+
+&lt;img src=&quot;http://os8ri8oj4.bkt.clouddn.com/css-border-02.png&quot; alt=&quot;css盒模型&quot; /&gt;
+
+</description>
+        <pubDate>Mon, 14 Aug 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/08/14/base/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/08/14/base/</guid>
+        
+        <category>面试</category>
+        
+        
+        <category>面试</category>
+        
+      </item>
+    
+      <item>
+        <title>前端工程师面试题解答二</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#在制作一个网页应用或网站的过程中你是如何考虑其-ui安全性高性能seo可维护性以及技术因素的&quot; id=&quot;markdown-toc-在制作一个网页应用或网站的过程中你是如何考虑其-ui安全性高性能seo可维护性以及技术因素的&quot;&gt;在制作一个网页应用或网站的过程中，你是如何考虑其 UI、安全性、高性能、SEO、可维护性以及技术因素的&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;在制作一个网页应用或网站的过程中你是如何考虑其-ui安全性高性能seo可维护性以及技术因素的&quot;&gt;在制作一个网页应用或网站的过程中，你是如何考虑其 UI、安全性、高性能、SEO、可维护性以及技术因素的&lt;/h3&gt;
+
+UI:
+
+ui的话，那要看是什么类型的页面了，比如说移动端的活动页，要炫酷、要有个性，当然也要符合它的主题。像普通的文章浏览页面，要美观、整洁。那像后台管理系统这种，就需要简单大方了。当然，不管是移动端还是pc端，我觉得最重要的还是用户体验了，对ui的选择和放置的位置要符合大部分用户的使用习惯。你不能因为你自己是左撇子，就把登录框的登陆按钮放左边吧，那不合适啊。
+
+</description>
+        <pubDate>Mon, 14 Aug 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/08/14/base-2/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/08/14/base-2/</guid>
+        
+        <category>面试</category>
+        
+        
+        <category>面试</category>
+        
+      </item>
+    
+      <item>
+        <title>浏览器v8引擎</title>
+        <description>
+V8是一个全新的javascript引擎，它在设计之初就以高效的执行javascript大型应用为目的。在一些性能测试中，它比IE的JScript、firefox的SpiderMonkey以及Safari的JavascriptCore要快上数倍。
+
+如果你的web程序的瓶颈在于javascript的运行效率，那么用v8代替你现在的javascript引擎很可能提升你的程序的运行效率。
+
+v8带来的性能提升主要表现在三个部分：
+
+&lt;blockquote&gt;
+  快速属性访问&lt;br /&gt;
+  动态机器码生成&lt;br /&gt;
+  高效的垃圾收集
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Fri, 11 Aug 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/08/11/v8/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/08/11/v8/</guid>
+        
+        <category>V8</category>
+        
+        
+        <category>V8</category>
+        
+      </item>
+    
+      <item>
+        <title>前端工程化思想</title>
+        <description>
+&lt;blockquote&gt;
+  前端工程化是一个高程次的思想，可以理解为模块化和组件化是工程化的表现形式。
+&lt;/blockquote&gt;
+
+另一种解释，更详细的工程化前端系统：
+
+&lt;blockquote&gt;
+  技术业务相关：&lt;br /&gt;
+    1. 开发规范&lt;br /&gt;
+    2. 模块化开发&lt;br /&gt;
+    3. 组件化开发&lt;br /&gt;
+  技术沉淀及共享需求：&lt;br /&gt;
+    4. 组件仓库&lt;br /&gt;
+  工程优化需求：&lt;br /&gt;
+    5. 性能优化&lt;br /&gt;
+    6. 项目部署&lt;br /&gt;
+    7. 开发流程&lt;br /&gt;
+    8. 开发工具
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  大部分我们谈“工程化”，其实只是“工具化”
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Thu, 03 Aug 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/08/03/project-think/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/08/03/project-think/</guid>
+        
+        <category>概念</category>
+        
+        <category>面试</category>
+        
+        
+        <category>抽象</category>
+        
+      </item>
     
       <item>
         <title>为什么要使用https代替http</title>
@@ -134,149 +281,6 @@ icoMoon是一个免费的字体开源网站，兼容性好、适用性广、图�
         
         
         <category>Javascript</category>
-        
-      </item>
-    
-      <item>
-        <title>工作中的一些思路技巧</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#工作记录&quot; id=&quot;markdown-toc-工作记录&quot;&gt;工作记录：&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;工作记录&quot;&gt;工作记录：&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;javascript利用事件委托，减少页面事件的绑定，提高页面性能&lt;/li&gt;
-  &lt;li&gt;DOM数组结构如何像原生数组一样使用forEach&lt;/li&gt;
-  &lt;li&gt;命名规范&lt;/li&gt;
-  &lt;li&gt;es6相关&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-        <pubDate>Tue, 25 Jul 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/07/25/javascript-skill/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/07/25/javascript-skill/</guid>
-        
-        <category>tips</category>
-        
-        <category>Javascript</category>
-        
-        
-        <category>Javascript</category>
-        
-      </item>
-    
-      <item>
-        <title>windows下如何安装jekyll</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#jekyll介绍&quot; id=&quot;markdown-toc-jekyll介绍&quot;&gt;jekyll介绍&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#安装ruby&quot; id=&quot;markdown-toc-安装ruby&quot;&gt;安装ruby&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;jekyll介绍&quot;&gt;jekyll介绍&lt;/h3&gt;
-
-jekyll是一个静态站点生成器，有jekyll生成的站点，可以直接发布到github上，这样我们就有了一个属于自己的免费网站。
-
-&lt;h3 id=&quot;安装ruby&quot;&gt;安装ruby&lt;/h3&gt;
-
-win7 64位系统下安装:
-
-&lt;a href=&quot;http://rubyinstaller.org/downloads/&quot;&gt;下载ruby&lt;/a&gt;
-
-安装完后设置环境变量：在用户变量path中加入C:\Ruby22\bin。
-
-命令行输入&lt;code class=&quot;highlighter-rouge&quot;&gt;ruby -v&lt;/code&gt;测试一下，看能不能输入版本号，能输出就安装配置成功了。
-
-</description>
-        <pubDate>Tue, 25 Jul 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/07/25/install-jekyll/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/07/25/install-jekyll/</guid>
-        
-        <category>windows</category>
-        
-        <category>Tool</category>
-        
-        <category>jekyll</category>
-        
-        
-        <category>Tool</category>
-        
-      </item>
-    
-      <item>
-        <title>reactjs 获取真实的dom节点</title>
-        <description>
-用reactjs 如何获取真实的dom节点。
-
-reactjs的设计，是采用DOM Diff的算法，所有的dom改变，都现在虚拟dom上发生，然后再将实际发生变动的部分，反映在真实的dom上。
-
-但是有时候需要从组件获取真实的dom怎么办？
-
-比如我之前写的那个例子，&lt;a href=&quot;http://liuyan5258.github.io/2017/07/06/html5-audio/&quot;&gt;自定制一个简易的audio音频播放器&lt;/a&gt;。
-
-我需要在点击ui组件的时候获取audio的播放和停止事件。我们并不能像javascript那样直接从document上去寻找，这个时候就需要用到ref属性了。
-
-</description>
-        <pubDate>Mon, 10 Jul 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/07/10/reactjs-audio/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/07/10/reactjs-audio/</guid>
-        
-        <category>Reactjs</category>
-        
-        <category>Javascript</category>
-        
-        
-        <category>Reactjs</category>
-        
-      </item>
-    
-      <item>
-        <title>如何开发一个textarea文本域emoji插件</title>
-        <description>
-做前端的人在面临页面需要某种效果或插件的时候，都会想，是从网上找呢，还是自己造轮子开发。
-
-如果在需求比较紧张的时候我们可能会选择从网上找相关的插件，然后学习它的用法。但是从网上找的通常功能太大太全，而且存在一个学习成本，还有可能不完全符合我们项目的需求，这样改起来也并不轻松。
-
-所以在需求不是很紧张的时候，我们还是自己慢慢造轮子吧，这样也知根知底，容易修改。
-
-</description>
-        <pubDate>Mon, 10 Jul 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/07/10/emoji/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/07/10/emoji/</guid>
-        
-        <category>jquery</category>
-        
-        <category>Javascript</category>
-        
-        <category>emoji</category>
-        
-        <category>textarea</category>
-        
-        
-        <category>Javascript</category>
-        
-      </item>
-    
-      <item>
-        <title>自定制一个简易的audio音频播放器</title>
-        <description>
-如何自定制audio音频播放器的风格。
-
-&lt;img src=&quot;http://os8ri8oj4.bkt.clouddn.com/audio-demo.png&quot; alt=&quot;音频播放器&quot; /&gt;
-
-</description>
-        <pubDate>Thu, 06 Jul 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/07/06/html5-audio/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/07/06/html5-audio/</guid>
-        
-        <category>Javascript</category>
-        
-        <category>Html5</category>
-        
-        <category>audio</category>
-        
-        
-        <category>Html5</category>
         
       </item>
     
