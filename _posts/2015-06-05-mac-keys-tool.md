@@ -11,6 +11,6 @@ author: LY
 
 
 
-![keys for mac](http://www.cxyclub.cn/Upload/Images/2013101917/646CB2BA545040AA.jpg)  
+![keys for mac](//www.cxyclub.cn/Upload/Images/2013101917/646CB2BA545040AA.jpg)  
 
-感谢[lixiaopeng23](http://blog.csdn.net/lixiaopeng23/article/details/12869109)提供的资料。  
+感谢[lixiaopeng23](//blog.csdn.net/lixiaopeng23/article/details/12869109)提供的资料。  

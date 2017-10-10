@@ -120,7 +120,7 @@ document.addEventListener('change', updateData)
 
 可以利用发布订阅的设计模式思想，当访问器属性中的stter监听到数据变化时，就通过发布者将新的数据发布出去，而DOM作为订阅者，就可以直接作出相应的改变。
 
-[js设计模式－发布订阅](http://movii.github.io/blog/2016/06/25/JavaScript-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%8E%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5-%E7%AC%AC%E5%85%AB%E7%AB%A0-%E5%8F%91%E5%B8%83-%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/)
+[js设计模式－发布订阅](//movii.github.io/blog/2016/06/25/JavaScript-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%8E%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5-%E7%AC%AC%E5%85%AB%E7%AB%A0-%E5%8F%91%E5%B8%83-%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/)
 
 [文章](https://juejin.im/entry/5923973da22b9d005893805a)
 [文章](https://zhuanlan.zhihu.com/p/25464162)

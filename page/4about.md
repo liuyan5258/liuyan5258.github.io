@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 icon: heart
 type: page
-cover: http://os8ri8oj4.bkt.clouddn.com/default-cover.jpg
+cover: //os8ri8oj4.bkt.clouddn.com/default-cover.jpg
 ---
 
 * content

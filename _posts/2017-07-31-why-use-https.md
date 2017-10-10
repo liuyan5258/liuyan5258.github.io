@@ -52,6 +52,6 @@ author: LY
 
 ### 如何升级https
 
-  [HTTPS 升级指南](http://www.ruanyifeng.com/blog/2016/08/migrate-from-http-to-https.html)
+  [HTTPS 升级指南](//www.ruanyifeng.com/blog/2016/08/migrate-from-http-to-https.html)
 
   另外，http的下一个版本http/2已经可以自带加密，只是这个协议本身推广还需要一段时间，于是网页传输加密还是以https为主。

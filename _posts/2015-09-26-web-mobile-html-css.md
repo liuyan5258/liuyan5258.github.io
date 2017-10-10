@@ -136,17 +136,17 @@ function gestureStart() {
 具体能够启动哪些应用：这取决于该移动设备上哪些原生应用是否允许从浏览器启动。  
 
 ```html
-<a href="http://maps.google.com/maps?q=cupertino">directions</a>
+<a href="//maps.google.com/maps?q=cupertino">directions</a>
 ```
 
 在palm os的浏览器中访问该页面，并点击directions链接，会启动你手机上的原生的GoogleMap应用。  
 
 ```html
-<a href="http://maps.google.com/maps?daddr=San+Francisco,+CA&saddr=cupertino">derections</a>
+<a href="//maps.google.com/maps?daddr=San+Francisco,+CA&saddr=cupertino">derections</a>
 ```
 
 并不只是打开，还可以直接定位初始位置SanFrancisco和终点位置cupertino。    
-想了解更多移动版的Safari的URL scheme，[请戳](http://developer.apple.com/library/safari/#featuredarticles/iPhoneURLScheme_Reference/Introduction/Introduction.html)  
+想了解更多移动版的Safari的URL scheme，[请戳](//developer.apple.com/library/safari/#featuredarticles/iPhoneURLScheme_Reference/Introduction/Introduction.html)  
 
 ### iPhone下的全屏模式启动  
 
@@ -214,7 +214,7 @@ a {
 }
 ```
 
-更多的webkit css拓展[请戳](http://www.css88.com/book/css/webkit/behavior/touch-callout.htm)  
+更多的webkit css拓展[请戳](//www.css88.com/book/css/webkit/behavior/touch-callout.htm)  
 为狭窄的屏幕添加省略号功能：  
 
 ```css

@@ -16,7 +16,7 @@
     {
       img_link: 'https://ooo.0o0.ooo/2016/11/24/5836d81f48cd2.png',
       title: '超级超级好吃的菜',
-      qrcode_img: 'http://os8ri8oj4.bkt.clouddn.com/qrcode_img.jpg'
+      qrcode_img: '//os8ri8oj4.bkt.clouddn.com/qrcode_img.jpg'
     }
   ];
 

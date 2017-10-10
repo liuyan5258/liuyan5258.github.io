@@ -11,7 +11,7 @@ type: page
 
 ### 工具
 
-* [智图](http://zhitu.isux.us/)
+* [智图](//zhitu.isux.us/)
 
     图片优化工具
 
@@ -19,7 +19,7 @@ type: page
 
     图片压缩优化工具，特别好用。
 
-* [jsbin](http://jsbin.com/?html,output)
+* [jsbin](//jsbin.com/?html,output)
 
     在线代码编辑器
 
@@ -27,7 +27,7 @@ type: page
 
     在线代码编辑器，常用
 
-* [在线正则表达式测试](http://tool.oschina.net/regex#)
+* [在线正则表达式测试](//tool.oschina.net/regex#)
 
     正则测试
 
@@ -43,11 +43,11 @@ type: page
 
     谷歌浏览器应用插件，产品爱用
 
-* [查看一些浏览器的hack技巧](http://browserhacks.com/)
+* [查看一些浏览器的hack技巧](//browserhacks.com/)
 
     用一些css或js不常规技巧解决浏览器的兼容性问题
 
-* [Charles 从入门到精通](http://blog.devtang.com/2015/11/14/charles-introduction/)
+* [Charles 从入门到精通](//blog.devtang.com/2015/11/14/charles-introduction/)
 
     Mac下常用网络封包截取工具
 
@@ -61,13 +61,13 @@ type: page
 
 * [新浪微博图床 Chrome扩展](https://github.com/Suxiaogang/WeiboPicBed)
 
-* [Unix 时间戳 Unix timestamp](http://tool.chinaz.com/Tools/unixtime.aspx)
+* [Unix 时间戳 Unix timestamp](//tool.chinaz.com/Tools/unixtime.aspx)
 
 - [在线正则表达式匹配](https://regex101.com/)
     - 这个功能更强大一点，能清楚的区分出贪婪和懒惰正则。
-- [http://regexr.com/](http://regexr.com/)
+- [//regexr.com/](//regexr.com/)
 
-* [css动画参考工具](http://isux.tencent.com/css3/tools.html)
+* [css动画参考工具](//isux.tencent.com/css3/tools.html)
 
 * [css专用在线编辑器](https://www.sassmeister.com/)
 
@@ -77,9 +77,9 @@ type: page
 
 ### JavaScript
 
-* [JavaScript 标准参考教程（alpha） -阮一峰](http://javascript.ruanyifeng.com/)
+* [JavaScript 标准参考教程（alpha） -阮一峰](//javascript.ruanyifeng.com/)
 
-* [JavaScript Promise迷你书 -azu](http://liubin.org/promises-book/)
+* [JavaScript Promise迷你书 -azu](//liubin.org/promises-book/)
 
 * [You Don't Know JS (book series)](https://github.com/getify/You-Dont-Know-JS)
 
@@ -87,26 +87,26 @@ type: page
 
     前端发展很快，现代浏览器原生 API 已经足够好用。我们并不需要为了操作 DOM、Event 等再学习一下 jQuery 的 API。同时由于 React、Angular、Vue 等框架的流行，直接操作 DOM 不再是好的模式，jQuery 使用场景大大减少。本项目总结了大部分 jQuery API 替代的方法，暂时只支持 IE10+ 以上浏览器。
 
-- [YOU MIGHT NOT NEED JQUERY PLUGINS](http://youmightnotneedjqueryplugins.com/)
+- [YOU MIGHT NOT NEED JQUERY PLUGINS](//youmightnotneedjqueryplugins.com/)
 
-* [JavaScript 秘密花园](http://bonsaiden.github.io/JavaScript-Garden/zh/)
+* [JavaScript 秘密花园](//bonsaiden.github.io/JavaScript-Garden/zh/)
 
-* [JavaScript 设计模式 系列 AlloyTeam](http://www.alloyteam.com/2012/10/common-javascript-design-patterns/)
+* [JavaScript 设计模式 系列 AlloyTeam](//www.alloyteam.com/2012/10/common-javascript-design-patterns/)
 
 ### ES2015
 
 - [https://tc39.github.io/ecma262/](https://tc39.github.io/ecma262/)
-* [http://www.ecma-international.org/ecma-262/6.0/](http://www.ecma-international.org/ecma-262/6.0/)
+* [//www.ecma-international.org/ecma-262/6.0/](//www.ecma-international.org/ecma-262/6.0/)
 
     ES2015规范
 
-- [http://es6katas.org/](http://es6katas.org/)
+- [//es6katas.org/](//es6katas.org/)
 
     Learn ES6 by doing it. Fix failing tests. Keep all learnings.
 
-* [30分钟掌握ES6/ES2015核心内容（上）](http://segmentfault.com/a/1190000004365693)
+* [30分钟掌握ES6/ES2015核心内容（上）](//segmentfault.com/a/1190000004365693)
 
-* [30分钟掌握ES6/ES2015核心内容（下）](http://segmentfault.com/a/1190000004368132)
+* [30分钟掌握ES6/ES2015核心内容（下）](//segmentfault.com/a/1190000004368132)
 
 * [《ECMAScript 6入门》 -阮一峰](https://github.com/ruanyf/es6tutorial)
 
@@ -122,15 +122,15 @@ type: page
 
 * [Webpack 中文指南 -赵达](https://www.gitbook.com/book/zhaoda/webpack/details)
 
-* [Webpack傻瓜式指南（一） -前端外刊评论 知乎专栏](http://zhuanlan.zhihu.com/FrontendMagazine/20367175)
+* [Webpack傻瓜式指南（一） -前端外刊评论 知乎专栏](//zhuanlan.zhihu.com/FrontendMagazine/20367175)
 
-* [Webpack傻瓜指南（二）开发和部署技巧 -前端外刊评论 知乎专栏](http://zhuanlan.zhihu.com/FrontendMagazine/20397902)
+* [Webpack傻瓜指南（二）开发和部署技巧 -前端外刊评论 知乎专栏](//zhuanlan.zhihu.com/FrontendMagazine/20397902)
 
-* [Webpack傻瓜指南（三）和React配合开发 -前端外刊评论 知乎专栏](http://zhuanlan.zhihu.com/FrontendMagazine/20522487)
+* [Webpack傻瓜指南（三）和React配合开发 -前端外刊评论 知乎专栏](//zhuanlan.zhihu.com/FrontendMagazine/20522487)
 
     上述傻瓜指南的原始出处 [https://github.com/vikingmute/webpack-for-fools](https://github.com/vikingmute/webpack-for-fools) Webpack傻瓜式指南
 
-* [Webpack，101入门体验 -Yika](http://www.html-js.com/article/3009)
+* [Webpack，101入门体验 -Yika](//www.html-js.com/article/3009)
 
 * [Webpack 入门指迷 -题叶](https://segmentfault.com/a/1190000002551952)
 
@@ -140,17 +140,17 @@ type: page
 ### Vue
 
 * [awesome-vue](https://github.com/vuejs/awesome-vue)
-* [Vue.js 和 Webpack（一） -Randy Lu](http://djyde.github.io/2015/08/29/vuejs-and-webpack-1/)
-* [Vue.js 和 Webpack（二） -Randy Lu](http://djyde.github.io/2015/08/30/vuejs-and-webpack-2/)
-* [Vue.js 和 Webpack（三） -Randy Lu](http://djyde.github.io/2015/08/31/vuejs-and-webpack-3/)
+* [Vue.js 和 Webpack（一） -Randy Lu](//djyde.github.io/2015/08/29/vuejs-and-webpack-1/)
+* [Vue.js 和 Webpack（二） -Randy Lu](//djyde.github.io/2015/08/30/vuejs-and-webpack-2/)
+* [Vue.js 和 Webpack（三） -Randy Lu](//djyde.github.io/2015/08/31/vuejs-and-webpack-3/)
 * [Vuejs 1.0 中文系列视频教程 -Laravist](https://laravist.com/series/vue-js-1-0-in-action-series)
 * [Vuejs-QQ群 相关资料](https://github.com/jsfront/src/blob/master/vuejs.md) 来自豪情
 
 
 ### React
 
-* [深入理解 React -Thinking in React 中文版](http://reactjs.cn/react/docs/thinking-in-react.html)
-* [Thinking in React](http://facebook.github.io/react/docs/thinking-in-react.html)
+* [深入理解 React -Thinking in React 中文版](//reactjs.cn/react/docs/thinking-in-react.html)
+* [Thinking in React](//facebook.github.io/react/docs/thinking-in-react.html)
 
 ### AngularJS
 
@@ -162,25 +162,25 @@ type: page
 
 * [AngularJS入门教程——AngularJS中文社区提供](https://github.com/zensh/AngularjsTutorial_cn)
 
-* [AngularJS 教程 \| 菜鸟教程](http://www.runoob.com/angularjs/angularjs-tutorial.html)
+* [AngularJS 教程 \| 菜鸟教程](//www.runoob.com/angularjs/angularjs-tutorial.html)
 
     类似 w3school 的入门 AngularJS 教程。
 
 ### 测试
 
-* [测试框架 Mocha 实例教程 阮一峰](http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html)
+* [测试框架 Mocha 实例教程 阮一峰](//www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html)
 
 ## 类库与插件
 
-* [Masonry](http://masonry.desandro.com/)
+* [Masonry](//masonry.desandro.com/)
 
     瀑布流布局库。
 
-* [jssor](http://www.jssor.com/)
+* [jssor](//www.jssor.com/)
 
     图片轮播图其 GitHub 地址 [jssor/slider](https://github.com/jssor/slider)
 
-* [cssslider](http://cssslider.com/)
+* [cssslider](//cssslider.com/)
 
     纯 CSS 的图片轮播图。
 
@@ -194,15 +194,15 @@ type: page
 
 ## 模块化
 
-* [后端程序员的 JavaScript 之旅 - 模块化（一）](http://lishaopeng.com/2016/02/05/js-module/)
-* [后端程序员的 JavaScript 之旅 - 模块化（二）](http://lishaopeng.com/2016/02/11/js-module2/)
-* [后端程序员的 JavaScript 之旅 - 模块化（三）](http://lishaopeng.com/2016/02/19/js-module3/)
+* [后端程序员的 JavaScript 之旅 - 模块化（一）](//lishaopeng.com/2016/02/05/js-module/)
+* [后端程序员的 JavaScript 之旅 - 模块化（二）](//lishaopeng.com/2016/02/11/js-module2/)
+* [后端程序员的 JavaScript 之旅 - 模块化（三）](//lishaopeng.com/2016/02/19/js-module3/)
 
-* [CommonJS 规范 -来自 阮一峰 JavaScript 标准参考教程(alpha)](http://javascript.ruanyifeng.com/nodejs/module.html)
+* [CommonJS 规范 -来自 阮一峰 JavaScript 标准参考教程(alpha)](//javascript.ruanyifeng.com/nodejs/module.html)
 
 ## other articles
 
-- [<head> Cheat Sheet](http://gethead.info/)
+- [<head> Cheat Sheet](//gethead.info/)
 * [将footer固定在页面底部的实现方法](https://segmentfault.com/a/1190000004453249)
 - [HTML5 视频 By Pete LePage](https://www.html5rocks.com/zh/tutorials/video/basics/)
 
@@ -243,19 +243,19 @@ Syntax Theme: Atom Dark or One Dark
 
 ## GitBook 及其插件
 
-* [Gitbook 的使用和常用插件 -赵达](http://zhaoda.net/2015/11/09/gitbook-plugins/)
+* [Gitbook 的使用和常用插件 -赵达](//zhaoda.net/2015/11/09/gitbook-plugins/)
 * [gitbook-plugin-expandable-chapters](https://plugins.gitbook.com/plugin/expandable-chapters)
 
     折叠左侧目录章节。
 
-    <!-- ![](http://ww4.sinaimg.cn/large/7011d6cfjw1f08kmplbj1j20gn05l0tk.jpg) -->
+    <!-- ![](//ww4.sinaimg.cn/large/7011d6cfjw1f08kmplbj1j20gn05l0tk.jpg) -->
 
 ## Chrome 插件
 - [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
 
     - Code tree for GitHub and GitLab
 
-* [Chrome扩展及应用开发 -图灵电子书](http://www.ituring.com.cn/minibook/950)
+* [Chrome扩展及应用开发 -图灵电子书](//www.ituring.com.cn/minibook/950)
 
 * [有哪些鲜为人知却非常有意思、好用的 Chrome 扩展？ -知乎](https://www.zhihu.com/question/23228162#answer-28057391)
 * [Dribbble New Tab](https://chrome.google.com/webstore/detail/dribbble-new-tab/hmhjbefkpednjogghoibpejdmemkinbn)
@@ -264,9 +264,9 @@ Syntax Theme: Atom Dark or One Dark
 
 ## Other blogs
 
-- [COLORFUL xiaoa](http://www.xiaoa.name/)
+- [COLORFUL xiaoa](//www.xiaoa.name/)
 
-* [进击的马斯特 http://pinkyjie.com/](http://pinkyjie.com/)
+* [进击的马斯特 //pinkyjie.com/](//pinkyjie.com/)
 
     马斯特，87年生人，爱溜冰的码农。技术： Javascript、Python、Mac、iOS
 
@@ -278,27 +278,27 @@ Syntax Theme: Atom Dark or One Dark
 
     我是马壮，码而生，码而立。就职sogou。
 
-* [小胡子哥 http://www.barretlee.com/](http://www.barretlee.com/)
+* [小胡子哥 //www.barretlee.com/](//www.barretlee.com/)
 
     李靖，阿里巴巴。
 
-* [Xcat Liu http://blog.xcatliu.com/](http://blog.xcatliu.com/)
+* [Xcat Liu //blog.xcatliu.com/](//blog.xcatliu.com/)
 
     Microsoft Software Engineer II, Meituan Senior Front-End Engineer
 
-* [极限前端 http://ouvens.github.io/](http://ouvens.github.io/)
+* [极限前端 //ouvens.github.io/](//ouvens.github.io/)
 
     Ouvenzhang, 前端工程师，对前端领域的技术知识具有较高的职业能力和探究精神。对响应式页面设计、工程构建组件化、mv*设计实现、前端优化、ES6开发体系等有深入的研究与项目实践。来自腾讯科技。
 
-* [凳子_Joinery 邓智容  http://www.dengzhr.com/](http://www.dengzhr.com/)
+* [凳子_Joinery 邓智容  //www.dengzhr.com/](//www.dengzhr.com/)
 
-* [赵达的个人网站 腾讯高级前端开发工程师](http://zhaoda.net/)
+* [赵达的个人网站 腾讯高级前端开发工程师](//zhaoda.net/)
 
-* [Randy](http://djyde.github.io/)
+* [Randy](//djyde.github.io/)
 
     95年出生的全栈。卢涛南，英文名 Randy，用 djyde 这个ID混迹于网络。
 
-* [JS前端开发群月报 -豪情等人维护](http://www.kancloud.cn/jsfront/month/82796)
+* [JS前端开发群月报 -豪情等人维护](//www.kancloud.cn/jsfront/month/82796)
 
 ## 交互设计相关
 
@@ -310,7 +310,7 @@ Syntax Theme: Atom Dark or One Dark
 
     App Prototyping Tools for Designers
 
-- [Principle](http://principleformac.com/)
+- [Principle](//principleformac.com/)
 
     Animate Your Ideas, Design Better Apps
 

@@ -38,7 +38,7 @@ console.log(document.referrer)
 html5添加了一堆有用的新值在rel属性上，其中有一个值是`noreferrer`，这个属性在主流浏览器中基本上支持。
 
 ```html
-<a href="http://baidu.com" target="_blank" rel="noreferrer">跳转</a>
+<a href="//baidu.com" target="_blank" rel="noreferrer">跳转</a>
 ```
 
 对于一些旧的浏览器可以用一些小技巧来降级处理，具体做法是用 JavaScript 打开一个新的标签页，然后在其中输出一个 refresh 标签来加载实际你想要在这个标签页中加载的 url
@@ -67,7 +67,7 @@ html规范引入了一个新的规范：
 ### 相关文章
 
 [关于控制 Referer 你想要知道的一切（和更多的）](https://75team.com/post/everything-you-could-ever-want-to-know-and-more-about-controlling-the-referer-header-fastmail-blog.html)  
-[javascript操作referer](http://www.cnblogs.com/rubylouvre/p/3541411.html)
+[javascript操作referer](//www.cnblogs.com/rubylouvre/p/3541411.html)
 
 
 

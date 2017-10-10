@@ -15,7 +15,7 @@ tags:  ES2015
 
 ![bloggbild_david_JS.jpg](https://ooo.0o0.ooo/2016/06/15/576125e78370d.jpg)
 
-本文主要以 [ECMAScript 6 入门 -阮一峰](http://es6.ruanyifeng.com/) 作为参考资料。
+本文主要以 [ECMAScript 6 入门 -阮一峰](//es6.ruanyifeng.com/) 作为参考资料。
 
 ## `let` 和 `const`
 

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="//www.w3.org/2005/Atom">
   <channel>
     <title>LY</title>
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 10 Oct 2017 10:30:25 +0800</pubDate>
-    <lastBuildDate>Tue, 10 Oct 2017 10:30:25 +0800</lastBuildDate>
+    <pubDate>Tue, 10 Oct 2017 10:36:41 +0800</pubDate>
+    <lastBuildDate>Tue, 10 Oct 2017 10:36:41 +0800</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -50,7 +50,7 @@ referer有很多合法的用例，例如找到你网站上的死链、追踪错�
 
 &lt;h3 id=&quot;说一说你了解的css盒模型&quot;&gt;说一说你了解的css盒模型&lt;/h3&gt;
 
-&lt;img src=&quot;http://os8ri8oj4.bkt.clouddn.com/css-border-02.png&quot; alt=&quot;css盒模型&quot; /&gt;
+&lt;img src=&quot;//os8ri8oj4.bkt.clouddn.com/css-border-02.png&quot; alt=&quot;css盒模型&quot; /&gt;
 
 </description>
         <pubDate>Mon, 14 Aug 2017 00:00:00 +0800</pubDate>
