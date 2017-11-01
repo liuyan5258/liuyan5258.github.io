@@ -5,9 +5,24 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 10 Oct 2017 10:36:41 +0800</pubDate>
-    <lastBuildDate>Tue, 10 Oct 2017 10:36:41 +0800</lastBuildDate>
-    <generator>Jekyll v3.5.0</generator>
+    <pubDate>Wed, 01 Nov 2017 17:10:41 +0800</pubDate>
+    <lastBuildDate>Wed, 01 Nov 2017 17:10:41 +0800</lastBuildDate>
+    <generator>Jekyll v3.5.1</generator>
+    
+      <item>
+        <title>记录安装软件或使用linux命令行中遇到的问题</title>
+        <description>
+</description>
+        <pubDate>Wed, 01 Nov 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/11/01/linux-line/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/11/01/linux-line/</guid>
+        
+        <category>tools</category>
+        
+        
+        <category>tools</category>
+        
+      </item>
     
       <item>
         <title>http中有趣的referer</title>
@@ -249,38 +264,6 @@ icoMoon是一个免费的字体开源网站，兼容性好、适用性广、图�
         
         
         <category>Tool</category>
-        
-      </item>
-    
-      <item>
-        <title>常用的javascript方法</title>
-        <description>
-整理工作中常用的一些javascript方法：
-
-&lt;ol&gt;
-  &lt;li&gt;jsonp&lt;/li&gt;
-  &lt;li&gt;localParam&lt;/li&gt;
-  &lt;li&gt;round&lt;/li&gt;
-  &lt;li&gt;requestAnimFrame&lt;/li&gt;
-  &lt;li&gt;object.assign polyfill&lt;/li&gt;
-  &lt;li&gt;closest&lt;/li&gt;
-  &lt;li&gt;getCookie&lt;/li&gt;
-  &lt;li&gt;importJs&lt;/li&gt;
-  &lt;li&gt;ajax&lt;/li&gt;
-  &lt;li&gt;formatTime&lt;/li&gt;
-  &lt;li&gt;isOwnEmpty&lt;/li&gt;
-  &lt;li&gt;isWifi&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-        <pubDate>Wed, 26 Jul 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/07/26/javascript-method/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/07/26/javascript-method/</guid>
-        
-        <category>Javascript</category>
-        
-        
-        <category>Javascript</category>
         
       </item>
     
