@@ -5,13 +5,64 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 01 Nov 2017 17:10:41 +0800</pubDate>
-    <lastBuildDate>Wed, 01 Nov 2017 17:10:41 +0800</lastBuildDate>
-    <generator>Jekyll v3.5.1</generator>
+    <pubDate>Thu, 30 Nov 2017 18:13:17 +0800</pubDate>
+    <lastBuildDate>Thu, 30 Nov 2017 18:13:17 +0800</lastBuildDate>
+    <generator>Jekyll v3.5.0</generator>
     
       <item>
-        <title>记录安装软件或使用linux命令行中遇到的问题</title>
-        <description>
+        <title>远程服务器使用mongodb3.4遇到的一些问题</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#ubuntu下运行mongodb34&quot; id=&quot;markdown-toc-ubuntu下运行mongodb34&quot;&gt;Ubuntu下运行mongodb3.4&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#win7下配置mongodb的服务&quot; id=&quot;markdown-toc-win7下配置mongodb的服务&quot;&gt;win7下配置mongodb的服务&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ubuntu下运行mongodb34&quot;&gt;Ubuntu下运行mongodb3.4&lt;/h3&gt;
+
+远程服务器的环境是Ubuntu的，要在生产环境下运行mongodb。
+
+首先，按照官方文档安装mongodb，安装完之后来配置。
+
+&lt;blockquote&gt;
+  sudo vi /etc/mongod.conf
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# where to write logging data.&lt;/span&gt;
+systemLog:
+  destination: file
+  logAppend: &lt;span class=&quot;nb&quot;&gt;true
+  &lt;/span&gt;path: /var/log/mongodb/mongod.log
+
+&lt;span class=&quot;c&quot;&gt;# network interfaces&lt;/span&gt;
+net:
+  port: 27017
+  bindIp: 127.0.0.1
+security:
+  authorization: enabled
+
+配置完之后，当我们执行  
+
+&lt;span class=&quot;sb&quot;&gt;```&lt;/span&gt;shell
+sudo mongod 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+启动失败，说&lt;code class=&quot;highlighter-rouge&quot;&gt;/data/db&lt;/code&gt;不存在，没有就创建一个好了。
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo mkdir -p /data/db
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+然后再执行，就成功了。
+
+&lt;h3 id=&quot;win7下配置mongodb的服务&quot;&gt;win7下配置mongodb的服务&lt;/h3&gt;
+```
+
+&lt;blockquote&gt;
+  “E:\job_tools\MongoDB\bin\mongod.exe” –logpath “E:\job_tools\MongoDB\log\mongod.log” –dbpath “E:\job_tools\MongoDB\data” –install –journal
+&lt;/blockquote&gt;
+
+&lt;a href=&quot;https://laike9m.com/blog/ubuntu-yun-xing-mongodb-de-zheng-que-zi-shi,64/&quot;&gt;连接&lt;/a&gt;
+
 </description>
         <pubDate>Wed, 01 Nov 2017 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2017/11/01/linux-line/</link>

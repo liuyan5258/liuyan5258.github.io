@@ -158,7 +158,7 @@
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2017/11/01/linux-line/">记录安装软件或使用linux命令行中遇到的问题</a>
+                  <a class="post-link" href="/2017/11/01/linux-line/">远程服务器使用mongodb3.4遇到的一些问题</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
@@ -207,7 +207,58 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    
+                    <ul id="markdown-toc">
+  <li><a href="#ubuntu下运行mongodb34" id="markdown-toc-ubuntu下运行mongodb34">Ubuntu下运行mongodb3.4</a></li>
+  <li><a href="#win7下配置mongodb的服务" id="markdown-toc-win7下配置mongodb的服务">win7下配置mongodb的服务</a></li>
+</ul>
+
+<h3 id="ubuntu下运行mongodb34">Ubuntu下运行mongodb3.4</h3>
+
+<p>远程服务器的环境是Ubuntu的，要在生产环境下运行mongodb。</p>
+
+<p>首先，按照官方文档安装mongodb，安装完之后来配置。</p>
+
+<blockquote>
+  <p>sudo vi /etc/mongod.conf</p>
+</blockquote>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="c"># where to write logging data.</span>
+systemLog:
+  destination: file
+  logAppend: <span class="nb">true
+  </span>path: /var/log/mongodb/mongod.log
+
+<span class="c"># network interfaces</span>
+net:
+  port: 27017
+  bindIp: 127.0.0.1
+security:
+  authorization: enabled
+
+配置完之后，当我们执行  
+
+<span class="sb">```</span>shell
+sudo mongod 
+</code></pre>
+</div>
+
+<p>启动失败，说<code class="highlighter-rouge">/data/db</code>不存在，没有就创建一个好了。</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>sudo mkdir -p /data/db
+</code></pre>
+</div>
+
+<p>然后再执行，就成功了。</p>
+
+<h3 id="win7下配置mongodb的服务">win7下配置mongodb的服务</h3>
+<p>```</p>
+
+<blockquote>
+  <p>“E:\job_tools\MongoDB\bin\mongod.exe” –logpath “E:\job_tools\MongoDB\log\mongod.log” –dbpath “E:\job_tools\MongoDB\data” –install –journal</p>
+</blockquote>
+
+<p><a href="https://laike9m.com/blog/ubuntu-yun-xing-mongodb-de-zheng-que-zi-shi,64/">连接</a></p>
+
 
                 </div>
                 <div class="read-all">
@@ -615,7 +666,7 @@
                 </div>
                 <ul class="content-ul" recent>
                     
-                        <li><a href="/2017/11/01/linux-line/">记录安装软件或使用linux命令行中遇到的问题</a></li>
+                        <li><a href="/2017/11/01/linux-line/">远程服务器使用mongodb3.4遇到的一些问题</a></li>
                     
                         <li><a href="/2017/08/15/http-referrer/">http中有趣的referer</a></li>
                     
