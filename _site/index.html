@@ -158,6 +158,72 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2017/12/15/git/">git的使用——修改commit历史纪录</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2017-12-15
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>LY
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tools" title="Category: tools" rel="category">tools</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#git" title="Tag: git" rel="tag">git</a>&nbsp;
+    
+        <a href="/tag/#tools" title="Tag: tools" rel="tag">tools</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    
+<blockquote>
+  <p>主要针对项目版本控制器Git的使用中遇到的有关提交历史纪录的问题，进行实践总结。在项目开发中经常会需要修改提交commit信息，合并多个提交commit，甚至放弃当前修改回退至某一历史提交的需求，那我们到底该如何操作呢？</p>
+</blockquote>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2017/12/15/git/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2017/11/01/linux-line/">远程服务器使用mongodb3.4遇到的一些问题</a>
                 </h2>
                 <div class="label">
@@ -250,6 +316,9 @@ sudo mongod
 
 <p>然后再执行，就成功了。</p>
 
+<p>sudo chown -R <code class="highlighter-rouge">id -u</code> /data/db
+mongod –port 27017</p>
+
 <h3 id="win7下配置mongodb的服务">win7下配置mongodb的服务</h3>
 <p>```</p>
 
@@ -259,6 +328,67 @@ sudo mongod
 
 <p><a href="https://laike9m.com/blog/ubuntu-yun-xing-mongodb-de-zheng-que-zi-shi,64/">连接</a></p>
 
+<p>db、collections、tables
+http://www.runoob.com/mongodb/mongodb-databases-documents-collections.html</p>
+
+<p>db.createCollection(“blog”)
+db.blog.insert({“name” : “liuyan”})</p>
+
+<p>db.createUser({user:”liuyan”, pwd:”liuyan1993%”,roles:[{role:”dbAdmin”,db:”movies”}]})</p>
+
+<p>mongo -u liuyan -p liuyan1993% –authenticationDatabase movies –host 127.0.0.1</p>
+
+<p>{ “_id” : ObjectId(“58fcb193ba823d06b2c78ffe”), name: ‘liuyan’, password: ‘liuyan1993%’, “meta” : { “updateAt” : ISODate(“2017-04-23T13:52:19.949Z”), “createAt” : ISODate(“2017-04-23T13:52:19.949Z”) }, “role” : 0, “__v” : 0 }</p>
+
+<p>{username: ‘liuyan’, password: ‘liuyan1993%’}</p>
+
+<p>/usr/local/etc/mongod.conf
+/etc/mongodb.conf</p>
+
+<p>systemLog:
+  destination: file
+  path: /usr/local/var/log/mongodb/mongo.log
+  logAppend: true
+storage:
+  dbPath: /usr/local/var/mongodb
+  journal:
+   enabled: true
+net:
+  port: 27017
+  bindIp: 0.0.0.0
+security:
+  authorization: enabled</p>
+
+<p>mongod.conf 指定了 dbpath，但是实际上这个配置文件没有起作用！（启动时没指定配置文件）而 mongodb 本身认为 /data/db 才是默认路径。这是我搜到的解释。</p>
+
+<ol>
+  <li>mongodb config未生效</li>
+</ol>
+
+<p>npm install cnpm -g –registry=https://registry.npm.taobao.org</p>
+
+<p>events.js:182
+      throw er; // Unhandled ‘error’ event
+      ^</p>
+
+<p>Error: listen EADDRINUSE 127.0.0.1:27017
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at Server.setupListenHandle [as _listen2] (net.js:1305:14)
+    at listenInCluster (net.js:1353:12)
+    at doListen (net.js:1479:7)
+    at _combinedTickCallback (internal/process/next_tick.js:105:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</p>
+
+<p>➜  server lsof -i:27017
+COMMAND     PID   USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+Robo\x203 27536 liuyan   18u  IPv4 0x2c0eef59ad303a31      0t0  TCP localhost:63016-&gt;localhost:27017 (CLOSED)
+Robo\x203 27536 liuyan   19u  IPv4 0x2c0eef59adf12709      0t0  TCP localhost:63049-&gt;localhost:27017 (CLOSED)
+Robo\x203 27536 liuyan   20u  IPv4 0x2c0eef59ade22e11      0t0  TCP localhost:59905-&gt;localhost:27017 (CLOSE_WAIT)
+Robo\x203 27536 liuyan   21u  IPv4 0x2c0eef59adebe709      0t0  TCP localhost:59972-&gt;localhost:27017 (CLOSE_WAIT)
+➜  server kill -9 27536</p>
+
+<p>sudo node –inspect-brk run.js</p>
 
                 </div>
                 <div class="read-all">
@@ -553,92 +683,6 @@ sudo mongod
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2017/08/03/project-think/">前端工程化思想</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2017-08-03
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>LY
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#抽象" title="Category: 抽象" rel="category">抽象</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#概念" title="Tag: 概念" rel="tag">概念</a>&nbsp;
-    
-        <a href="/tag/#面试" title="Tag: 面试" rel="tag">面试</a>
-    
-  
-
-</span>
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    
-<blockquote>
-  <p>前端工程化是一个高程次的思想，可以理解为模块化和组件化是工程化的表现形式。</p>
-</blockquote>
-
-<p>另一种解释，更详细的工程化前端系统：</p>
-
-<blockquote>
-  <p>技术业务相关：<br />
-    1. 开发规范<br />
-    2. 模块化开发<br />
-    3. 组件化开发<br />
-  技术沉淀及共享需求：<br />
-    4. 组件仓库<br />
-  工程优化需求：<br />
-    5. 性能优化<br />
-    6. 项目部署<br />
-    7. 开发流程<br />
-    8. 开发工具</p>
-</blockquote>
-
-<blockquote>
-  <p>大部分我们谈“工程化”，其实只是“工具化”</p>
-</blockquote>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2017/08/03/project-think/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -666,6 +710,8 @@ sudo mongod
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2017/12/15/git/">git的使用——修改commit历史纪录</a></li>
+                    
                         <li><a href="/2017/11/01/linux-line/">远程服务器使用mongodb3.4遇到的一些问题</a></li>
                     
                         <li><a href="/2017/08/15/http-referrer/">http中有趣的referer</a></li>
@@ -683,8 +729,6 @@ sudo mongod
                         <li><a href="/2017/07/31/service-worker/">为gitPage静态网站添加service worker离线访问功能</a></li>
                     
                         <li><a href="/2017/07/27/every-day-reg/">正则表达式</a></li>
-                    
-                        <li><a href="/2017/07/26/web-font-optimization/">icoMoon 免费开源字体</a></li>
                     
                 </ul>
             </div>
@@ -846,7 +890,7 @@ sudo mongod
                             <span class="name">
                                 tools
                             </span>
-                            <span class="badge">1</span>
+                            <span class="badge">2</span>
                         </a>
                     </li>
                     
@@ -1138,7 +1182,14 @@ sudo mongod
                       
                       
                       
-                      <a href="/tag/#tools" style="font-size: 9pt; color: #999;">tools</a>
+                      <a href="/tag/#tools" style="font-size: 10pt; color: #888;">tools</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#git" style="font-size: 9pt; color: #999;">git</a>
                     
                 </div>
             </div>
