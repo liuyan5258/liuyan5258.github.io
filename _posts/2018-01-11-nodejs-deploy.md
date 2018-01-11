@@ -110,7 +110,7 @@ ssh liuyan@10.173.32.13
 
 ### 配置本地无密码ssh登录  
 
-![原理](http://os8ri8oj4.bkt.clouddn.com/QQ20180111-0@2x.png)  
+![原理](//os8ri8oj4.bkt.clouddn.com/QQ20180111-0@2x.png)  
 
 如果你之前用过git仓库的话，那你本地应该是配了公钥和私钥的，就不需要再重新配置一遍了。  
 
@@ -157,7 +157,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDbYOMamMUDKhClAiEhDT6wknP65cpEHt3sStItIuhO
 ➜  .ssh ssh-add ~/.ssh/id_rsa 
 ```
 
-[可以对照这个步骤](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)  
+[可以对照这个步骤](//help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)  
 
 登录到远程服务器进行授权：  
 
