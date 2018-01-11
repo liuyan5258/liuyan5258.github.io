@@ -14,7 +14,8 @@ const ignoreFetch = [
   /https?:\/\/www.google-analytics.com\//,
   /https?:\/\/hm.baidu..com\//,
   /https?:\/\/dn-lbstatics.qbox.me\//,
-  /https?:\/\/at.alicdn.com\//
+  /https?:\/\/at.alicdn.com\//,
+  /https?:\/\/os8ri8oj4.bkt.clouddn.com\//
 ];
 
 
