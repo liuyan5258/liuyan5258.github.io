@@ -9,19 +9,9 @@ author: LY
 * content
 {:toc}  
 
-
-
-
-
-
-
-
-
-
-### Ubuntu下运行mongodb3.4  
+### 在Ubuntu环境下配置mongodb的服务 
 
 远程服务器的环境是Ubuntu的，要在生产环境下运行mongodb。
-
 首先，按照官方文档安装mongodb，安装完之后来配置。  
 
 > sudo vi /etc/mongod.conf
@@ -39,6 +29,17 @@ net:
   bindIp: 127.0.0.1
 security:
   authorization: enabled
+```  
+
+
+
+
+
+
+
+
+
+
 
 配置完之后，当我们执行  
 
@@ -54,12 +55,14 @@ sudo mkdir -p /data/db
 
 然后再执行，就成功了。
 
+```shell
 sudo chown -R `id -u` /data/db
 mongod --port 27017
-
-### win7下配置mongodb的服务
 ```
 
+### win7下配置mongodb的服务  
+
+```shell
 > "E:\job_tools\MongoDB\bin\mongod.exe" --logpath "E:\job_tools\MongoDB\log\mongod.log" --dbpath "E:\job_tools\MongoDB\data" --install --journal
 
 [连接](https://laike9m.com/blog/ubuntu-yun-xing-mongodb-de-zheng-que-zi-shi,64/)
@@ -94,27 +97,16 @@ net:
   bindIp: 0.0.0.0
 security:
   authorization: enabled
+```   
 
 
 mongod.conf 指定了 dbpath，但是实际上这个配置文件没有起作用！（启动时没指定配置文件）而 mongodb 本身认为 /data/db 才是默认路径。这是我搜到的解释。
 
 1. mongodb config未生效
 
+```shell
+
 npm install cnpm -g --registry=https://registry.npm.taobao.org
-
-
-events.js:182
-      throw er; // Unhandled 'error' event
-      ^
-
-Error: listen EADDRINUSE 127.0.0.1:27017
-    at Object.exports._errnoException (util.js:1026:11)
-    at exports._exceptionWithHostPort (util.js:1049:20)
-    at Server.setupListenHandle [as _listen2] (net.js:1305:14)
-    at listenInCluster (net.js:1353:12)
-    at doListen (net.js:1479:7)
-    at _combinedTickCallback (internal/process/next_tick.js:105:11)
-    at process._tickCallback (internal/process/next_tick.js:161:9)
     
 ➜  server lsof -i:27017
 COMMAND     PID   USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
@@ -124,5 +116,7 @@ Robo\x203 27536 liuyan   20u  IPv4 0x2c0eef59ade22e11      0t0  TCP localhost:59
 Robo\x203 27536 liuyan   21u  IPv4 0x2c0eef59adebe709      0t0  TCP localhost:59972->localhost:27017 (CLOSE_WAIT)
 ➜  server kill -9 27536
 
-
 sudo node --inspect-brk run.js
+
+sudo pm2 start run.js
+```
