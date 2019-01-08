@@ -519,13 +519,75 @@ security:
                 <div class="excerpt">
                     <ul id="markdown-toc">
   <li><a href="#说一说你了解的css盒模型" id="markdown-toc-说一说你了解的css盒模型">说一说你了解的css盒模型</a></li>
+  <li><a href="#box-sizing的应用场景" id="markdown-toc-box-sizing的应用场景">box-sizing的应用场景</a></li>
+  <li><a href="#flex弹性布局" id="markdown-toc-flex弹性布局">flex弹性布局</a></li>
+  <li><a href="#未知宽高元素如何上下左右垂直居中" id="markdown-toc-未知宽高元素如何上下左右垂直居中">未知宽高元素如何上下左右垂直居中</a></li>
+  <li><a href="#css预处理器" id="markdown-toc-css预处理器">css预处理器</a></li>
 </ul>
 
 <p>面试的时候主要看简历发挥，所以简历不能写得太浮夸，要不然面试官问到你都答不上来。</p>
 
 <h3 id="说一说你了解的css盒模型">说一说你了解的css盒模型</h3>
 
-<p><img src="//os8ri8oj4.bkt.clouddn.com/css-border-02.png" alt="css盒模型" /></p>
+<p>我了解的css的盒模型有两种：标准浏览器的盒模型和IE的怪异盒模型</p>
+
+<p>大多数浏览器采用的是W3C标准模型，而IE中采用的是Microsoft自己的标准。</p>
+
+<p>怪异模式是“部分浏览器在支持W3C标准的同时还保留了原来的解析模式”，怪异模式的内核主要表现在IE内核的浏览器中。</p>
+
+<blockquote>
+  <p>对HTML文件来说，浏览器使用文件开头的 DOCTYPE 来决定用怪异模式处理或标准模式处理。为了确保你的页面使用标准模式，请确认你的页面如同本范例一样拥有 DOCTYPE：<code class="highlighter-rouge"><span class="cp">&lt;!DOCTYPE html&gt;</span></code></p>
+</blockquote>
+
+<p>当不对doctype进行定义时，会触发怪异模式。</p>
+
+<p>在标准模式下，一个块的总宽度 = width + margin(左右) + padding(左右) + border(左右)</p>
+
+<p>在怪异模式下，一个块的总宽度 = width + margin(左右)（即width已经包含了padding和border值）</p>
+
+<blockquote>
+  <p>可以通过css3的box-sizing属性控制两种盒模型的变换。</p>
+</blockquote>
+
+<p>当设置box-sizing: border-box时，将采用怪异模式解析计算。</p>
+
+<p>所以在reset初始化样式中，建议使用<code class="highlighter-rouge">box-sizing: border-box</code>。</p>
+
+<p>这样，如果我们想要一个宽度为200px的盒子，那么我们直接设置宽度为200px，这样看起来就清晰多了。当我们再设置它的左右边框和左右填充后，它的内容会自动调整。这样就更直接和一目了然了不是吗。</p>
+
+<hr />
+
+<h3 id="box-sizing的应用场景">box-sizing的应用场景</h3>
+
+<ol>
+  <li>特殊场景的布局</li>
+</ol>
+
+<p>假设我们有这样的一个场景，设置子类元素的margin或者border时，可能会撑破父层元素的尺寸，这时我就需要使用box-sizing: border-box来将border包含进元素的尺寸中，这样就不会存在撑破父层元素的情况了。</p>
+
+<ol>
+  <li>统一风格的表单元素</li>
+</ol>
+
+<p>表单中有一些input元素其实还是展现的是传统IE盒模型，带有一些默认的样式，而且在不同平台或者浏览器下的表现不一，造成了表单展现的差异。此时我们可以通过box-sizing属性来构建一个风格统一的表单元素。</p>
+
+<hr />
+
+<h3 id="flex弹性布局">flex弹性布局</h3>
+
+<h3 id="未知宽高元素如何上下左右垂直居中">未知宽高元素如何上下左右垂直居中</h3>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">vertical</span><span class="o">-</span><span class="nx">container</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nx">flex</span><span class="p">;</span>
+  <span class="nx">align</span><span class="o">-</span><span class="nx">items</span><span class="err">:</span> <span class="nx">center</span><span class="p">;</span>
+  <span class="nx">justify</span><span class="o">-</span><span class="nx">content</span><span class="err">:</span> <span class="nx">center</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<hr />
+
+<h3 id="css预处理器">css预处理器</h3>
 
 
                 </div>
@@ -1168,7 +1230,7 @@ security:
         </p>
     </div>
 </footer>
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     <div class="back-to-top">
     <a href="#top" data-scroll>

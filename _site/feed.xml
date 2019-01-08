@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 11 Jan 2018 16:57:06 +0800</pubDate>
-    <lastBuildDate>Thu, 11 Jan 2018 16:57:06 +0800</lastBuildDate>
+    <pubDate>Tue, 08 Jan 2019 16:11:13 +0800</pubDate>
+    <lastBuildDate>Tue, 08 Jan 2019 16:11:13 +0800</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -143,13 +143,75 @@ referer有很多合法的用例，例如找到你网站上的死链、追踪错�
         <title>前端工程师面试题解答一</title>
         <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#说一说你了解的css盒模型&quot; id=&quot;markdown-toc-说一说你了解的css盒模型&quot;&gt;说一说你了解的css盒模型&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#box-sizing的应用场景&quot; id=&quot;markdown-toc-box-sizing的应用场景&quot;&gt;box-sizing的应用场景&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#flex弹性布局&quot; id=&quot;markdown-toc-flex弹性布局&quot;&gt;flex弹性布局&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#未知宽高元素如何上下左右垂直居中&quot; id=&quot;markdown-toc-未知宽高元素如何上下左右垂直居中&quot;&gt;未知宽高元素如何上下左右垂直居中&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#css预处理器&quot; id=&quot;markdown-toc-css预处理器&quot;&gt;css预处理器&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 面试的时候主要看简历发挥，所以简历不能写得太浮夸，要不然面试官问到你都答不上来。
 
 &lt;h3 id=&quot;说一说你了解的css盒模型&quot;&gt;说一说你了解的css盒模型&lt;/h3&gt;
 
-&lt;img src=&quot;//os8ri8oj4.bkt.clouddn.com/css-border-02.png&quot; alt=&quot;css盒模型&quot; /&gt;
+我了解的css的盒模型有两种：标准浏览器的盒模型和IE的怪异盒模型
+
+大多数浏览器采用的是W3C标准模型，而IE中采用的是Microsoft自己的标准。
+
+怪异模式是“部分浏览器在支持W3C标准的同时还保留了原来的解析模式”，怪异模式的内核主要表现在IE内核的浏览器中。
+
+&lt;blockquote&gt;
+  对HTML文件来说，浏览器使用文件开头的 DOCTYPE 来决定用怪异模式处理或标准模式处理。为了确保你的页面使用标准模式，请确认你的页面如同本范例一样拥有 DOCTYPE：&lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;&lt;/code&gt;
+&lt;/blockquote&gt;
+
+当不对doctype进行定义时，会触发怪异模式。
+
+在标准模式下，一个块的总宽度 = width + margin(左右) + padding(左右) + border(左右)
+
+在怪异模式下，一个块的总宽度 = width + margin(左右)（即width已经包含了padding和border值）
+
+&lt;blockquote&gt;
+  可以通过css3的box-sizing属性控制两种盒模型的变换。
+&lt;/blockquote&gt;
+
+当设置box-sizing: border-box时，将采用怪异模式解析计算。
+
+所以在reset初始化样式中，建议使用&lt;code class=&quot;highlighter-rouge&quot;&gt;box-sizing: border-box&lt;/code&gt;。
+
+这样，如果我们想要一个宽度为200px的盒子，那么我们直接设置宽度为200px，这样看起来就清晰多了。当我们再设置它的左右边框和左右填充后，它的内容会自动调整。这样就更直接和一目了然了不是吗。
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;box-sizing的应用场景&quot;&gt;box-sizing的应用场景&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;特殊场景的布局&lt;/li&gt;
+&lt;/ol&gt;
+
+假设我们有这样的一个场景，设置子类元素的margin或者border时，可能会撑破父层元素的尺寸，这时我就需要使用box-sizing: border-box来将border包含进元素的尺寸中，这样就不会存在撑破父层元素的情况了。
+
+&lt;ol&gt;
+  &lt;li&gt;统一风格的表单元素&lt;/li&gt;
+&lt;/ol&gt;
+
+表单中有一些input元素其实还是展现的是传统IE盒模型，带有一些默认的样式，而且在不同平台或者浏览器下的表现不一，造成了表单展现的差异。此时我们可以通过box-sizing属性来构建一个风格统一的表单元素。
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;flex弹性布局&quot;&gt;flex弹性布局&lt;/h3&gt;
+
+&lt;h3 id=&quot;未知宽高元素如何上下左右垂直居中&quot;&gt;未知宽高元素如何上下左右垂直居中&lt;/h3&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;vertical&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;align&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;justify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;css预处理器&quot;&gt;css预处理器&lt;/h3&gt;
 
 </description>
         <pubDate>Mon, 14 Aug 2017 00:00:00 +0800</pubDate>
